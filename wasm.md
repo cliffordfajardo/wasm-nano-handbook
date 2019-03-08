@@ -71,6 +71,13 @@ At runtime you use JavaScript to invoke functions that are exported by your WebA
 WebAssembly is still a very young technology. Future plans include threading support, garbage collection support, multiple value returns.
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
+## Why can it run anywhere?
+
+"run anywhere" because:
+
+- the web has a VM
+- it's closer to machine language, so VMs are easier to implement. And there is even a project for a cross-platform WebAssembly virtual machine: Life is written in Go, built for running computationally heavy code on practically any device you can imagine.
+
 ## How to write WASM
 
 WASM is low-level, so rust and C++ are easy to compile to rust: they're medium-level, and don't need garbage collection.
@@ -98,7 +105,7 @@ Most WebAssembly module developers will code in languages like C and Rust and th
 
 Fast to load (= fast to transport the compiled file over the network)
 and parse
-and execute
+and execute (e.g. wasm can convert a + into a single cpu instruction)
 
 The advantage of WASM is that it is a much lower level representation of the program than the equivalent JavaScript. This makes it possible for the engine to run the code much faster than the more sophisticated and expressive JavaScript. The limited range of expression that WASM allows probably means that you aren't going to be writing directly to it. Instead the idea is that a compiler will produce WASM from other langauges.
 https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html
@@ -123,12 +130,25 @@ e.g.: a call stack
 
 Src: https://www.youtube.com/watch?v=6Y3W94_8scw Demystifying web assembly
 
+### Core concepts
+
+https://webassembly.github.io/spec/core/intro/introduction.html#design-goals ++++ and  
+https://webassembly.github.io/spec/core/intro/overview.html ++++
+
 ## WASM flavors / representations
 
-which one is the assembly?
+- Binary format // https://webassembly.github.io/spec/core/binary/index.html
+- Text format = WAT. s-expressions, flat syntax, or mixed // https://webassembly.github.io/spec/core/text/index.html
+  ...which one is the assembly?
+
+WebAssembly modules are distributed in a binary format.  
+Decoding processes that format and converts it into an internal representation of a module.
+In the spec, this representation is modelled by abstract syntax, but a real implementation could compile directly to machine code instead.
 
 Binary opcode:
 0x6a (= add operation)
+
+for wasm it looks like:
 
 (Stack representation:
 Just for us to understand
@@ -157,7 +177,7 @@ AST (abstract syntax tree) representation (= s-expressions), more human-readable
 
 Src: https://www.youtube.com/watch?v=6Y3W94_8scw
 
-text representation:
+text representation = WAT = assembly:
 
 If you’re writing code to run directly on a microprocessor, the instruction that the processor understands is a low-level machine code; bytes and so on.
 3:06 Most assembly languages will have a slightly more readable version - the assembly language. You’ll have opcodes being represented as mnemonics instead of bytes. So the text format you see for WASM is just a more human version of the binary format which is the underlying WASM itself. It’s a very light syntactic sugar - there’s almost a 1-1 mapping between the text format and the binary format.
@@ -194,6 +214,11 @@ And at the moment WASM's threading model is the same as JavaScript's: a single t
 
 - heavily CPU-bound number computations e.g. games (via opengl)
 - you'll be consuming compiled binaries
+- Deliver existing C/C++ applications over the web (Talking about things like games, 3D Graphics and more).
+- Develop in your language of choice (for example .NET or Java).
+- Accelerate hot code portions of ordinary JavaScript apps.
+
+Src: https://www.inovex.de/blog/webassembly-production/
 
 ## What success stories are there of people using WASM?
 
@@ -213,7 +238,7 @@ https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
 # WASM history and ecosystem
 
-## History and ecosystem
+## History and group
 
 WASM is an MVP
 2015: WASM community group
@@ -223,6 +248,29 @@ WASM is an MVP
 ASM paved the way to WASM.
 
 ## the WASM organism
+
+## WASM official projects
+
+- wasmint: Library for interpreting / debugging wasm code
+- binaryen: compiler infrastructure and toolchain library for WebAssembly, in C++
+- wabt: The WebAssembly Binary Toolkit
+- wasm-jit-prototype: standalone VM using LLVM JIT
+- design: WebAssembly Design Documents
+
+WABT: https://github.com/WebAssembly/wabt
+WABT (we pronounce it "wabbit") is a suite of tools for WebAssembly, including:
+
+wat2wasm: translate from WebAssembly text format to the WebAssembly binary format
+wasm2wat: the inverse of wat2wasm, translate from the binary format back to the text format (also known as a .wat)
+wasm-objdump: print information about a wasm binary. Similiar to objdump.
+wasm-interp: decode and run a WebAssembly binary file using a stack-based interpreter
+wat-desugar: parse .wat text form as supported by the spec interpreter (s-expressions, flat syntax, or mixed) and print "canonical" flat format
+wasm2c: convert a WebAssembly binary file to a C source and header
+wasm-strip: remove sections of a WebAssembly binary file
+wasm-validate: validate a file in the WebAssembly binary format
+wast2json: convert a file in the wasm spec test format to a JSON file and associated wasm binary files
+wasm-opcodecnt: count opcode usage for instructions
+spectest-interp: read a Spectest JSON file, and run its tests in the interpreter
 
 # WASM in the browser
 
@@ -309,9 +357,9 @@ WASM 2.0: multi-threading model and garbage collection (C# and Java), multi-valu
 
 webpack support would be awesome: rust-loader, cpp-loader
 
-Q: where at is the direct access to web apis? (wasm only)
+Q: where is the direct access to web apis?
 
-WASM has the power of
+WASM has the power of:
 
 - Breaking down the monopoly. The web is the most ubiquitous platform that we have at the moment, and it’s quite bad that we only have one language that has first class support. The web will open up to many other developers like C#, Java... !
 - Existing web developers, who are comfortable with JavaScript or TypeScript, will start looking at the performance benefits of WASM, and they’ll want to be part of it too.

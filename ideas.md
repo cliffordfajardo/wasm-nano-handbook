@@ -1,6 +1,7 @@
 # Talks/blogposts
 
 - WASM for webdevs
+- Web dev consciousness / Deep dev - it used to be opssible to code without understanding all that, but now we need to be more conscious/aware
 - WASM beyond the web - Ignore the W
 - WASM: the vision
 - WASM and threads
@@ -20,7 +21,7 @@
 # Tools
 
 - JS to WASM
-- stack machine visualizer
+- stack machine visualizer (within the wasm explorer)
 - wasmap: a map/graph to get a visual overview of WASM's various use cases, and how they're connected
 
 # Website/Curated lists
