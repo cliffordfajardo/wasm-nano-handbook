@@ -1,14 +1,83 @@
 ## Performance - sizes
 
+TBD
+
+## A short browser history
+
+- 1995: /index.html = static HTML content
+- 2005: /index.php = dynamic content generated from server-side code
+- TODAY: /api/v1/todos = semi-raw data in a browser-understandable format
+
+So far JS was the only language that could be run by browsers ; it was mostly designed for user interactions, but now we can build fully-fledged apps with it
+--> How to make it faster?
+
+- use a framework
+- precompile: TypeScript, Dart
+
+Wait. Can a webpage run at hardware-native speed?
+Yes, With WASM.
+
+source: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
+
+## Where did JavaScript come from?
+
+Prior to JS, the web was a very static place: If you wanted to create interactivity in the browser, it involved a round-trip to the server.
+
+JS was designed to support a modest amount of interactivity client-side, such as form validation.
+
+So JS was developed in a short space of time, and everyone knows it’s a bit of a quirky language. Browser makers spend a lot of time testing to make sure changes don’t break existing websites.
+
+No one expected it to become as fundamental as it has become.
+
+JS has become a runaway success - not just within the browser, but extensively on the mobile or smart watches. You can run JavaScript programs anywhere.
+JS is now very mature - it’s evolving at a rapid space. When new language features come along, transpilers can be used to backport those features into older versions of JavaScript.
+
+## Prerequisite: main building blocks of a browser
+
+what happens at runtime? what gets loaded onto the browser, what gets executed, and by what????
+
+When a browser receives JS code, it needs to execute it.
+But JS is a high-level language, that the computer doesn't understand as is.
+
+Need for a JS ENGINE (also referred to as a COMPILER): a program that takes human-readable source code (in our case JavaScript), and from it generates machine-readable instructions (= MACHINE code = NATIVE code) for your computer.
+"Compiling" in the browser context implicitely means "compiling to MACHINE CODE".
+
+In the past:
+Before V8 and other compilers, Javascript was interpreted (= dealt with by interpreter). That was slow.
+
+Now:
+From 2012 on, browsers have been implementing new Javascript engines, trying to COMPILE some portions of code, to speed Javascript up. Most browsers today do high-perf, optimized JIT (just-in-time) compiling.
+
+For example, V8 is Google’s open source high-perf JavaScript and WebAssembly engine. It's written in C++ and implements ECMAScript and WebAssembly. V8 can run standalone or embedded into any C++ application ; it's used in Google Chrome, Node.js and others.
+
+Sources:
+https://v8.dev/
+https://stackoverflow.com/questions/21571709/difference-between-machine-language-binary-code-and-a-binary-file
+
+### Disambiguation: engine vs VM
+
+An engine, like V8, is a type of VM.
+A runtime is a VM ; i.e. everything needed for the code to run.
+
+- What happens when I run C code on my computer? And rust code? and JS code? what's compiled, what's not, what uses a vm?
+-
+
+### Zoom: what an engine does
+
+Actually, an engine is more than just a compiler. Hdere's what it does.
+
+With JS code:
+
+With webassembly code:
+
 ## JS
 
 JS is a non-blocking single-threaded language.
-
 It's run in non-blocking, asynchrony-enabling environements.
 
 ## How browsers work
 
-### Building blocks:
+### The inner workings of a browser lens: Building blocks:
 
 - JS engine = V8 = chrome's runtime = node's runtime <-- that's the part we're interested in.  
   V8 has a (call) stack (for execution contexts, where the stack frames are - just one because one thread => one call stack. It records where in the program we are. If we step into a function we push, if we return we pop off.) and a heap (for memory allocation). If the stask has stuff on it, it's stuck. We don't want that, that freezes the UI.
@@ -21,12 +90,12 @@ see https://www.youtube.com/watch?v=8aGhZQkoFbQ 3:36 and 12:57 for diagrams
 
 NB: V8 is the engine that's used both in node and the browser. In node, the event loop is provided by libuv.
 
-### Architecture
+### The architecture lens
 
-rendering engine, memory
+rendering engine, memory, UI etc
 // TBD diagrams
 
-### Threads and processes
+### The thread lens: Threads and processes
 
 https://developers.google.com/web/updates/2018/09/inside-browser-part1
 
