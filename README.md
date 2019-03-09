@@ -1,6 +1,6 @@
 # wasm-nano-handbook
 
-**!!! WIP** 
+🚧 **!!! WIP** 🚧
 
 This handbook aims at helping developers:
 * understand WASM and its future // the theory
