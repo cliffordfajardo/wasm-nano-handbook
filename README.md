@@ -17,7 +17,7 @@ The content of this repo strive to be:
 ### Goal 
 Make this the starting point for a blog post series / a ref website on WASM.
 
-### Content covered  
+### Content  
 * What WASM is and where it comes from 
 * The vision (for web and outside of it)
 * What one needs to know about how browser work in the context of WASM 
