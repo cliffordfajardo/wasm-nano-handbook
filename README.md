@@ -1,10 +1,10 @@
-# wasm-one-pagers 
+# wasm-nano-handbook
 
 **!!! WIP** 
 
-"WASM one pagers" aim at being a toolbox to:
+This handbook aims at helping developers:
 * understand WASM and its future // the theory
-* get started with it today, no matter your background  // the practice
+* get started with it today, no matter their background  // the practice
 
 ### DNA 
 The content of this repo strive to be: 
