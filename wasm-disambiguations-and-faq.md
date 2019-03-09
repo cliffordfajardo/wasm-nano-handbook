@@ -8,16 +8,23 @@ Web developers can use JS/WASM/... to access WebGL when they need to do 3D graph
 
 More: https://getpocket.com/a/read/2365657803
 
-## WASM vs ASM
+## WASM vs ASM and PNaCl
 
-ASM is a mozilla-built PoC of a low-level virtual machine out of JavaScript. They took a very strict subset of the language, and like WASM they have the concept of memory being an array. They defined their own language, on top of JavaScript. They built into their own browser something that understood the language they’d created, and optimised for it. The whole thing was a very clever and slightly crazy experiment, but it worked.
+ASM and PNaCl paved the way for WASM.
+
+- Portable Native Client (PNaCl) (Google): compile to safe native for C & C++ in browsers. Was never even fully enabled in Chrome, use cases: Google+ had an image editor.
+
+- ASM (Mozilla): PoC of a low-level virtual machine built out of JavaScript. They took a very strict subset of the language, built into their own browser something that understood the language they’d created, and optimised for it. Was demonstrated at Mozilla in partnership with the gaming companies like Epic Games (with Unreal Engine) and Unity (Unity engine and IDE). It got successful: once ASM.js crossed over into other browsers, it became clear that it was gonna cross over into all the browsers.
+
+PNaCl is not gonna go cross-browser, but a lot of the work was LLVM based. It was getting ahead of what we did with ASM.js, so it’s the perfect marriage now. It was originally considered ill-starred, but it’s actually turning out great to have people working on WebAssembly who used to work on ASM.js and PNaCl.
 
 ASM and WASM are similar - they define an assembly-like set of instructions.
-Problems of ASM.js:
+Limitations of ASM.js:
 
 - it is coded in JavaScript so is quite verbose and difficult to understand syntax.
+- ASM.js is (a subset) of JS => still need to parse JS
+- ... but probably need to run a dedicated parser for that subset ; costly parsing problem compared to what could be done with a more efficient, compressed abstract syntax tree (AST), which is what WebAssembly is aiming at.
 - In addition, it is only optimised for Firefox (?).
-  In hind-sight, it looks like a very early proof of concept for WASM.
 
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 

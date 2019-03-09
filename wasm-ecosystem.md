@@ -2,7 +2,9 @@
 
 Aka Who is WASM?
 
-## the WASM organism
+## The WASM team
+
+The WebAssembly team includes people from Google, Microsoft, Mozilla, Apple, and others under the banner of the W3C WebAssembly Community Group.
 
 ## WASM official projects
 

@@ -20,6 +20,18 @@ https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
 And at the moment WASM's threading model is the same as JavaScript's: a single thread of execution. When you invoke a WASM function, your JavaScript virtual machine yields to WASM. So you won’t have JavaScript and WASM running in parallel. You can have web workers, just like you can in JavaScript, so you can parallelise like that.
 
+// wasm can support many compiled languages, certainly the static ones right now — particularly the ones that use LLVM. Microsoft has their own compiler so they’ll be doing wasm from a different compiler framework, but that’s great. The more, the merrier.
+
+Certainly GCC or similar could generate wasm, but I think to get to the dynamic languages, like I mentioned Dart, or Ruby, or Python, even JavaScript — that’s gonna require some extensions that I mentioned earlier, like: garbage collection hooks, JIT support, things like that. Otherwise they just won’t be competitive.
+
+There’s good precedent. The JVM grew over many years, thanks to John Rose grew things like `invokedynamic` and other hooks for just in time compilation optimizations like polymorphic inline caching so the JVM is actually a credible dynamic language platform.
+
+All of these runtimes have become polyglot VMs — JavaScript VMs. Java hasn’t died just because the JVM now supports Clojure, and Scala, and other languages. We’re almost at the second golden age of programming languages, you know, take Rust, Haskell, Idris, and other languages.
+
+The more the merrier, I say. It’s not gonna become the tower of Babel because I think JavaScript will be the lingua franca of the browser, today and tomorrow. If you’re writing front-end code or really anything that’s not on the critical path when you profile.
+
+https://medium.com/javascript-scene/why-we-need-webassembly-an-interview-with-brendan-eich-7fb2a60b0723
+
 ## 1 and 2: toolchain
 
 ### x to wasm
@@ -34,7 +46,10 @@ Once the module is fetched, it will be compiled at runtime.
 Sources: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
 
 NB:
-Most WebAssembly module developers will code in languages like C and Rust and then compile to WebAssembly, but there are other ways to create a WebAssembly module. For example, there is an experimental tool that helps you build a WebAssembly module using TypeScript, or you can code in the text representation of WebAssembly directly.
+Most WebAssembly module developers will code in languages like C and Rust and then compile to WebAssembly, but there are other ways to create a WebAssembly module:
+
+- use TypeScript (experiemental)
+- code in the text representation of WebAssembly directly.
 
 ## 3 JS to WASM
 
@@ -54,6 +69,8 @@ The advantage of WASM is that it is a much lower level representation of the pro
 https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html
 
 ### How the browser deals with WASM modules / how WASM runs on the web
+
+it’s the same one engine (1vm) that deals with wasm and JS.
 
 // todo
 What an engine does: actually, an engine is more than just a compiler.
@@ -76,3 +93,22 @@ That’s how you currently load wasm modules through JavaScript to invoke compil
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
 ---
+
+## Languages
+
+
+| Language   | Type system                       |       Garbage-collected | Multi-threaded |   Cool | LLVM support |
+| ---------- | :-------------------------------- | ----------------------: | -------------: | -----: | -----------: |
+| C          | static, weakly typed              |                      no |            yes | -----: |       -----: |
+| C++        | static, ~strongly typed (Generic) |                      no |            yes | -----: |       -----: |
+| C#         | static, ~strongly typed           |                     yes |            yes | -----: |       -----: |
+| python     | dynamic, ~strongly typed          | yes (ref counting + GC) |            yes | -----: |       -----: |
+| Java       | static, strongly typed            |                     yes |            yes | -----: |       -----: |
+| JavaScript | dynamic, weakly typed             |                     yes |            yes | -----: |       -----: |
+| Rust       | static, strongly typed            |          no (Ownership) |            yes | -----: |       -----: |
+| wasm       | static, strongly typed            |              no, coming |            yes | -----: |       -----: |
+
+
+
+* statically typed language: each variable's type is determined at compile time and not run-time 
+* strongly typed: the language is strict about what should be typed ; ( (the interpreter keeps track of all variables types)

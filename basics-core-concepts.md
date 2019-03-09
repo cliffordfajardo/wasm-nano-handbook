@@ -1,6 +1,4 @@
-## CPU and GPU
-
-### CPU vs GPU
+## CPU vs GPU
 
 CPU = central processing unit.
 
@@ -21,12 +19,16 @@ Source:
 https://superuser.com/questions/308771/why-are-we-still-using-cpus-instead-of-gpus
 https://developers.google.com/web/updates/2018/09/inside-browser-part1
 
-### CPU, GPU and RAM
+## CPU, GPU and RAM
 
 The RAM is a temporary storage area from which retrieval is faster than from disk / permanent storage.
 When the CPU needs to process some data, the data will be first loaded onto the RAM so that the CPU can retrieve it faster, which will speed things up alltogether. CPU is the brain, RAM is the book, permanent storage is the bookshelf.
 NB: GPU also uses RAM, new systems have GPU integrated in the CPU.
 Source: https://superuser.com/questions/78362/what-is-the-relationship-between-cpu-usage-and-ram
+
+## The stack and the heap
+
+TBD
 
 ## Processes and threads
 

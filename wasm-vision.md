@@ -1,5 +1,7 @@
 ## What is the core problem that web assembly is trying to solve?
 
+respond to real engineering problems that we’ve had with ASM.js. Loading a big game from Epic or Unity can take 20 - 30 seconds. That’s too long. With a compressed abstract syntax tree encoding that’s 20 times faster, just a couple seconds, that’s what you want. So there’s a real reason for wasm, and it is a valid reason.
+
 5:45 Personally, when I look at the way we run applications in the web at the moment, I think they are incredibly inefficient and convoluted.
 6:00 JavaScript used Babel or TypeScript, to create a modern typed language around JavaScript.
 6:10 We have complicated and advanced build tools that do things like tree shaping, minification, transpiling and so on - it can be quite obscure.
@@ -14,6 +16,8 @@
 7:40 Web assembly in simple terms solves that problem.
 
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+
+BUT ALSO: beyond WASM:
 
 ## What is WASM
 
@@ -59,18 +63,37 @@ At runtime you use JavaScript to invoke functions that are exported by your WebA
 WebAssembly is still a very young technology. Future plans include threading support, garbage collection support, multiple value returns.
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
-## Why can it run anywhere?
+## Where does it come from
 
-"run anywhere" because:
+See chapter on ASM+PNaCl
 
-- the web has a VM
-- it's closer to machine language, so VMs are easier to implement. And there is even a project for a cross-platform WebAssembly virtual machine: Life is written in Go, built for running computationally heavy code on practically any device you can imagine.
+## Why can it run anywhere? / Why is it so portable?
+
+WASM could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity.
+
+https://webassembly.org/docs/non-web/
+
+Because:
+
+- it runs on the web (JS VM supports WASM), which is on a lot of platform
+- Non-Web environments may include JavaScript VMs (e.g. node.js), however WebAssembly is also being designed to be capable of being executed without a JavaScript VM present.
+  - the plan is to keep non-Web path such that it doesn’t require Web APIs (the core features will be within wasm itself: certain features that are core to WASM semantics that are similar to functions found in native libc would be part of the core WASM spec as primitive operators)
+  - because it's closer to machine language (it supports C/C++ level semantics), VMs are easier to implement on multiple platforms
+  - There is even a project for a cross-platform WASM virtual machine: Life is written in Go, built for running computationally heavy code on practically any device you can imagine.
+
+e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs.
+
+## Where does WASM come from
 
 ## Why it will change the world / Benefits
 
 - Faster web applications
 - Developer experience: no more tower of Babel
 - Web dev accessible to all developers
+- Help JS win: shared array buffer extension, eventually all the browsers and webviews will support wasm syntax to serve the compile target master and free JavaScript so it can serve the JavaScript master.
+- Laboratory for the future of the web
+- Remember that JS will evolve, too: SIMD, ...
+- wasm will grow to include lots and lots of expressiveness for lots and lots of languages, JS included.
 
 ## Warning
 
@@ -111,6 +134,10 @@ https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 Challenge at the moment: there’s quite a lot of complexity involved in interfacing between JavaScript and web assembly. Calling functions is really easy - you can send stuff backwards and forwards, but it’s the types that you’re sending back and forth that is the challenge.
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
+Next challenges:
+
+- Security
+
 ### Future
 
 Currently: WebAssembly 1.0 has shipped in 4 major browser engines.
@@ -127,3 +154,15 @@ WASM has the power of:
 - Existing web developers, who are comfortable with JavaScript or TypeScript, will start looking at the performance benefits of WASM, and they’ll want to be part of it too.
 
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+
+wasm can start to grow extra semantics that need not be put into JavaScript.
+
+At first, WebAssembly starts out just like ASM.js, but with a compressed syntax, that’s a binary syntax. But once all the browsers support both wasm and ASM.js, and after a decent interval of browser updates, then wasm can start to grow extra semantics that need not be put into JavaScript.
+
+They may in fact be put into both JavaScript and wasm because it’s the same one engine (1vm), but there are certain things we might not want to ever put into JS that could be put into wasm for the benefit of other languages like C++ or Haskell. For example:
+
+- shared memory array buffers to get multi-threaded games. Too complicated for JS: risk for race conditions in JavaScript, fragile process with bug hazards
+- zero cost exceptions might not make sense in JavaScript. They require some compiler and runtime cleverness, but they do make sense for C++, and Swift.
+- call/cc (call-with-current-continuation). Call/cc is too powerful a tool. It has challenges for JavaScript engines in implementation and security hazards. You have these non-local functional gotos. You can call a continuation and be off in a different stack. So it’s not like the local, limited continuations like we have in generators in ES6. It’s a deeper continuation. So call/cc could be put into wasm, into the engine that handles both wasm and JavaScript down the road.
+
+https://medium.com/javascript-scene/why-we-need-webassembly-an-interview-with-brendan-eich-7fb2a60b0723

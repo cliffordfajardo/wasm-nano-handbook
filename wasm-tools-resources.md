@@ -1,3 +1,8 @@
+# Core
+
+https://webassembly.github.io/spec/core/intro/overview.html ++++
+https://webassembly.org/
+
 # Tools
 
 https://mbebenita.github.io/WasmExplorer/
