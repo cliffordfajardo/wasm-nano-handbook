@@ -4,17 +4,15 @@
 
 "WASM one pagers" aim at being your brain toolbox to:
 * understand WASM and its future
-* to get started with it in practice - no matter your background. 
-
-This repo is the result of an extended research on WASM, using multiple sources (listed inline).    
+* to get started with it in practice - no matter your background.   
 
 ### DNA 
 The content of this repo aims at being: 
-* comprehensive: cover the basics one needs to know to understand WASM, starting from the fundamentals  
-* accessible: dev with little knowledge about browser internals and lower-level languages should be able to understand it
-* unbiased: multiple sources are used 
-* modular/digestible: it's split up in small chunks that should fit on ~1 page
-* evolutive: this is just the start!  
+* Comprehensive: cover the basics one needs to know to understand WASM, starting from the fundamentals  
+* Accessible: dev with little knowledge about browser internals and lower-level languages should be able to understand it
+* Unbiased: multiple sources are used - official WASM documentation, Google dev, Mozilla, independent developers, w3c experts
+* Modular/digestible: it's split up in small chunks that should fit on ~1 page
+* Evolutive: this is just the start!  
 
 ### Goal 
 Make this the starting point for a blog post series / a ref website on WASM.
