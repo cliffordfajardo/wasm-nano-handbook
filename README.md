@@ -2,12 +2,12 @@
 
 **!!! WIP** 
 
-"WASM one pagers" aim at being your brain toolbox to:
-* understand WASM and its future
-* get started with it in practice, no matter your background.   
+"WASM one pagers" aim at being a toolbox to:
+* understand WASM and its future // the theory
+* get started with it today, no matter your background  // the practice
 
 ### DNA 
-The content of this repo aims at being: 
+The content of this repo strive to be: 
 * Comprehensive: cover the basics one needs to know to understand WASM, starting from the fundamentals  
 * Accessible: dev with little knowledge about browser internals and lower-level languages should be able to understand it
 * Unbiased: multiple sources are used - official WASM documentation, Google dev, Mozilla, independent developers, w3c experts
