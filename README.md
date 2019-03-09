@@ -4,7 +4,7 @@
 
 "WASM one pagers" aim at being your brain toolbox to:
 * understand WASM and its future
-* to get started with it in practice - no matter your background.   
+* get started with it in practice, no matter your background.   
 
 ### DNA 
 The content of this repo aims at being: 
