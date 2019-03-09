@@ -10,16 +10,18 @@
 - WASM and threads
 - WASM interfacing, high-level: use cases and examples of going from other languages to WASM
 - WASM interfacing, low-level: how going from X to WASM and back to X works
+- WASM and machine learning
 - How to introduce wasm in your webapp today (a human-readable guide to WASM)
 - A parallel between frontend toolchain and wasm toolchain
-- Understandign stack machines
+- Understanding stack machines
 - Your road to WASM
 - WASM: the basics
-- Nice use cases of WASM in prod, and how to do it yourself.
+- Nice use cases of WASM in prod, and how to do it yourself
 
 # Gists
 
 - wasm to js
+- rust basics
 
 # Tools
 
