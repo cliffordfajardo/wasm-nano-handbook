@@ -1,25 +1,26 @@
-## What is the core problem that web assembly is trying to solve?
+## What is the core problem that WASM is trying to solve?   
 
-respond to real engineering problems that we’ve had with ASM.js. Loading a big game from Epic or Unity can take 20 - 30 seconds. That’s too long. With a compressed abstract syntax tree encoding that’s 20 times faster, just a couple seconds, that’s what you want. So there’s a real reason for wasm, and it is a valid reason.
+* Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented).
+* Browsers so far could only be targeted with one single language: JS. 
 
-5:45 Personally, when I look at the way we run applications in the web at the moment, I think they are incredibly inefficient and convoluted.
-6:00 JavaScript used Babel or TypeScript, to create a modern typed language around JavaScript.
-6:10 We have complicated and advanced build tools that do things like tree shaping, minification, transpiling and so on - it can be quite obscure.
-6:25 To pass that code to the browser, it’s only option is to transpile it down to one of the more basic JavaScript versions and send it as text.
-6:35 It’s pretty inefficient.
+WASM to the rescue: 
+* WASM has a compressed Abstract Syntax Tree encoding that’s 20 times faster. 
+* WASM is a compile target.  
+
 6:40 The browser then has to parse the text into an Abstract Syntax Tree, then run it in an interpreter, then move it through various different optimisation levels so that your code gets faster.
-6:50 On the development side, we’ve got some advanced tooling.
-6:55 On the browser, we’ve got an advanced runtime with multiple levels of optimisation.
-7:00 In the middle, we’ve got a horrible mechanism by where we’re delivering it in a basic and very inefficient text format, because that’s the way the web was designed.
-7:15 The impact of the bottleneck is twofold; one is the time it takes to deliver that to the browser, and the other is the overall performance and the time it takes to warm up the JavaScript code to run quickly within the browser.
-7:30 Ignoring the fact that web assembly brings different languages to the web, JavaScript itself is pretty inefficiently executed.
-7:40 Web assembly in simple terms solves that problem.
-
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
-BUT ALSO: beyond WASM:
+BUT ALSO: beyond WASM: 
 
-## What is WASM
+## Brief History of WASM 
+
+Projects such as ASM.js and PINCl have paved the way to WASM. 
+WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines. 
+2015: WASM community group
+2017: cross browser consensus
+2018: draft of the specification 1.0: WASM core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), WASM JS interface (interactions between WASM modules and JS, data storage, sandboxing), WASM web API (rules about module compilation and interactions between the dom and the WASM modules)
+
+## So: What is WASM
 
 WASM is an efficient, low-level assembly-like language / bytecode.
 
@@ -63,10 +64,6 @@ At runtime you use JavaScript to invoke functions that are exported by your WebA
 WebAssembly is still a very young technology. Future plans include threading support, garbage collection support, multiple value returns.
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
-## Where does it come from
-
-See chapter on ASM+PNaCl
-
 ## Why can it run anywhere? / Why is it so portable?
 
 WASM could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity.
@@ -83,20 +80,28 @@ Because:
 
 e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs.
 
-## Where does WASM come from
-
 ## Why it will change the world / Benefits
 
-- Faster web applications
-- Developer experience: no more tower of Babel
-- Web dev accessible to all developers
-- Help JS win: shared array buffer extension, eventually all the browsers and webviews will support wasm syntax to serve the compile target master and free JavaScript so it can serve the JavaScript master.
-- Laboratory for the future of the web
-- Remember that JS will evolve, too: SIMD, ...
-- wasm will grow to include lots and lots of expressiveness for lots and lots of languages, JS included. 
+1) WASM will accelerate the future of web development  
+* New performance-demanding use cases become accessible to the web
+* New libraries become accessible to the web
+* WASM breaks down the JS monopoly... 
+WASM enables linguistic diversity will ; this will dramatically diversify the languages available for building front-end applications and tools. Web development will become accessible to developers coming from other languages ; JS developers will benefit from their experience, and inversely.
+* ... and helps JS win   
+WASM will grow to include lots and lots of expressiveness for lots and lots of languages, JS included. 
+With shared array buffer extension, eventually all the browsers and webviews will support WASM syntax to serve the compile target master, and free JS so it can serve the JS master.
+* WASM can be used as a laboratory for the future of the web
 
+2) UX: WASM will make (the web) faster
+WebAssembly Will Enable Parallelism 
+https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html  
 
-https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html
+3) WASM will smooth developer experience 
+- Not just on the web! Languages interop is complicated, and WASM can help.  
+Developer experience: no more tower of Babel
+
+4) Much more
+
 
 
 
@@ -104,7 +109,7 @@ https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.ht
 
 WASM is still early stage. no native strings, no exception handling and so on. These things can be emulated within the basic WASM but the resulting code tends to be slow. The next step is for a W3C working group to be formed to complete the formal specification.
 
-https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html feb 2017
+https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html 
 
 ## WASM use cases
 
@@ -116,16 +121,7 @@ https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-u
 
 Src: https://www.inovex.de/blog/webassembly-production/
 
-## Brief History of WASM
-
-WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines. 
-2015: WASM community group
-2017: cross browser consensus
-2018: draft of the specification 1.0: WASM core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), WASM JS interface (interactions between WASM modules and JS, data storage, sandboxing), WASM web API (rules about module compilation and interactions between the dom and the WASM modules)
-
-ASM paved the way to WASM.
-
-## Future of WASM
+## Future of WASM // OK
 
 ### Future
 
@@ -148,8 +144,8 @@ They may in fact be put into both JavaScript and WASM because it’s the same on
 
 ### Challenges today
 
-* interop between for example JS and WASM is still complex: calling functions is really easy - you can send stuff backwards and forwards, but it’s the types that you’re sending back and forth that is the challenge 
-* see planned features
+* Interop between for example JS and WASM is still complex: calling functions is really easy - you can send stuff backwards and forwards, but it’s the types that you’re sending back and forth that is the challenge 
+* See planned features
 
 
 
