@@ -3,7 +3,7 @@
 🚧 **!!! WIP** 🚧
 
 This handbook aims at helping developers:
-* understand WASM and its future // the theory
+* understand WASM and its future // the theory.
 * get started with it today, no matter their background  // the practice
 
 ### DNA 
