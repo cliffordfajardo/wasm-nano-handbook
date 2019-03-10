@@ -59,7 +59,14 @@ TBD
 
 ## Zoom: WASM in the web
 
-### Why WASM is faster than JS
+### Why WASM is faster than JS 
+
+
+6:40 The browser then has to parse the text into an Abstract Syntax Tree, then run it in an interpreter, then move it through various different optimisation levels so that your code gets faster. 
+WASM syntax is already an AST.
+Sources: https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+
+
 
 Fast to load (= fast to transport the compiled file over the network)
 and parse
