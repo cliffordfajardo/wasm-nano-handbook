@@ -93,7 +93,12 @@ e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even 
 - Help JS win: shared array buffer extension, eventually all the browsers and webviews will support wasm syntax to serve the compile target master and free JavaScript so it can serve the JavaScript master.
 - Laboratory for the future of the web
 - Remember that JS will evolve, too: SIMD, ...
-- wasm will grow to include lots and lots of expressiveness for lots and lots of languages, JS included.
+- wasm will grow to include lots and lots of expressiveness for lots and lots of languages, JS included. 
+
+
+https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html
+
+
 
 ## Warning
 
@@ -111,9 +116,9 @@ https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-u
 
 Src: https://www.inovex.de/blog/webassembly-production/
 
-## History and group
+## Brief History of WASM
 
-WASM is an MVP
+WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines. 
 2015: WASM community group
 2017: cross browser consensus
 2018: draft of the specification 1.0: WASM core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), WASM JS interface (interactions between WASM modules and JS, data storage, sandboxing), WASM web API (rules about module compilation and interactions between the dom and the WASM modules)
@@ -140,29 +145,22 @@ Next challenges:
 
 ### Future
 
-Currently: WebAssembly 1.0 has shipped in 4 major browser engines.
+#### Near
 
-WASM 2.0: multi-threading model and garbage collection (C# and Java), multi-value returns, host binding (it will be easier to expose JavaScript objects to WASM), Integrating WASM modules with JavaScript modules.
+Features planned for WASM 2.0:  
+* multi-threading model and garbage collection // C# and Java support will become possible
+* multi-value returns
+* host binding (it will be easier to expose JavaScript objects to WASM) 
 
-webpack support would be awesome: rust-loader, cpp-loader
-
-Q: where is the direct access to web apis?
-
-WASM has the power of:
-
-- Breaking down the monopoly. The web is the most ubiquitous platform that we have at the moment, and it’s quite bad that we only have one language that has first class support. The web will open up to many other developers like C#, Java... !
-- Existing web developers, who are comfortable with JavaScript or TypeScript, will start looking at the performance benefits of WASM, and they’ll want to be part of it too.
-
-https://www.infoq.com/podcasts/colin-eberhardt-webassembly
-
-wasm can start to grow extra semantics that need not be put into JavaScript.
-
-At first, WebAssembly starts out just like ASM.js, but with a compressed syntax, that’s a binary syntax. But once all the browsers support both wasm and ASM.js, and after a decent interval of browser updates, then wasm can start to grow extra semantics that need not be put into JavaScript.
-
-They may in fact be put into both JavaScript and wasm because it’s the same one engine (1vm), but there are certain things we might not want to ever put into JS that could be put into wasm for the benefit of other languages like C++ or Haskell. For example:
-
-- shared memory array buffers to get multi-threaded games. Too complicated for JS: risk for race conditions in JavaScript, fragile process with bug hazards
-- zero cost exceptions might not make sense in JavaScript. They require some compiler and runtime cleverness, but they do make sense for C++, and Swift.
-- call/cc (call-with-current-continuation). Call/cc is too powerful a tool. It has challenges for JavaScript engines in implementation and security hazards. You have these non-local functional gotos. You can call a continuation and be off in a different stack. So it’s not like the local, limited continuations like we have in generators in ES6. It’s a deeper continuation. So call/cc could be put into wasm, into the engine that handles both wasm and JavaScript down the road.
-
+#### Distant  
+ 
 https://medium.com/javascript-scene/why-we-need-webassembly-an-interview-with-brendan-eich-7fb2a60b0723
+
+Once all the browsers support both WASM and ASM.js, then WASM can start to grow extra semantics that need not be put into JS.
+They may in fact be put into both JavaScript and WASM because it’s the same one engine (1vm). But there are certain things we might not want to ever put into JS that could be put into WASM:
+- shared memory array buffers to get multi-threaded games. Too complicated for JS: risk for race conditions in JavaScript, fragile process with bug hazards
+- zero cost exceptions might not make sense in JavaScript. They require some compiler and runtime cleverness, but they do make sense for C++, and Swift. Might benefit other languages like C++ or Haskell
+- call/cc (call-with-current-continuation). Call/cc is too powerful a tool. It has challenges for JS engines in implementation and security hazards. You have these non-local functional gotos. You can call a continuation and be off in a different stack. So it’s not like the local, limited continuations like we have in generators in ES6. It’s a deeper continuation. So call/cc could be put into wasm, into the engine that handles both wasm and JavaScript down the road.
+
+
+
