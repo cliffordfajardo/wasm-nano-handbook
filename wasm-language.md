@@ -1,25 +1,25 @@
-ℹ️ _This is raw material - can be reshaped/rephrase into publishing material for a more engaging reading experience._  
+ℹ️ _This is raw material - can be reshaped into publishing material for a more engaging reading experience._  
 
 ----
 
-# WASM is a stack machine
+## WASM core concepts
 
-WASM is a STACK MACHINE language. 
-
+1) WASM is a **stack machine** language.  
 * A **stack** is a LIFO (last in first out) data structure that has two operations: push and pop.
-* A **stack machine**  is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack.
+* A **stack machine**  is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack. 
+2) WebAssembly only supports **4 types**.   
+2 integer types and 2 floating point types.  
+To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both WASM and JS. 
+3) Code is organized into separate **functions**.    
+4) A WASM binary takes the form of a **module**. 
+With import/export functionalities, and can also define a start function that is automatically executed.
+5) A WASM implementation will typically be embedded into a **host environment**.   
+This environment defines how loading of modules and import/exports work. 
 
-WebAssembly only supports 4 types - 2 integer types and 2 floating point types. To model strings you share the same piece of linear memory - memory that can read from and write to from both WebAssembly and JavaScript.
-
-Stack is a LIFO data structure that has 2 operations: push things onto the stack, or pop them off the stack.
-e.g.: a call stack
-
-Src: https://www.youtube.com/watch?v=6Y3W94_8scw Demystifying web assembly
-
-# Core concepts
-
-https://webassembly.github.io/spec/core/intro/introduction.html#design-goals ++++ and  
-https://webassembly.github.io/spec/core/intro/overview.html ++++
+More:  
+* https://www.youtube.com/watch?v=6Y3W94_8scw Demystifying web assembly
+* https://webassembly.github.io/spec/core/intro/introduction.html#design-goals 
+* https://webassembly.github.io/spec/core/intro/overview.html ++++  
 
 # WASM flavors / representations
 
