@@ -2,7 +2,7 @@
 
 _Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
 
-Well, exactly - WASM aims at solving the reasons why we need yet another tool in web dev every 2 months, causing JS fatigue. But it can also do much more - WASM is a big vision for the future of the web, and of programming in general.
+Well, exactly - WASM aims at solving the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - WASM is a vision for the future of the web, and of programming in general.
 
 So, what is the core problem that WASM is trying to solve?   
 
@@ -13,17 +13,17 @@ WASM to the rescue:
 * WASM has a compressed Abstract Syntax Tree encoding that’s 20 times faster. 
 * WASM is a compilation target.   
 
-Additionally:  
-Because WASM is a compilation target, its impact will ripple to other languages too. More on that later.
-
+Additionally:   
+Because WASM is a compilation target, its impact will ripple to other languages too.   
+More on that later.
 
 ## Brief History of WASM 
 
 Projects such as ASM.js and PINCl have paved the way to WASM. 
-WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines. 
-2015: WASM community group
-2017: cross browser consensus
-2018: draft of the specification 1.0: WASM core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), WASM JS interface (interactions between WASM modules and JS, data storage, sandboxing), WASM web API (rules about module compilation and interactions between the dom and the WASM modules)
+WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines.  
+* 2015: WASM community group
+* 2017: cross browser consensus
+* 2018: draft of the specification 1.0: WASM core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), WASM JS interface (interactions between WASM modules and JS, data storage, sandboxing), WASM web API (rules about module compilation and interactions between the dom and the WASM modules).
 
 ## So: What is WASM
 
@@ -105,26 +105,22 @@ https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.ht
 - Not just on the web! Languages interop is complicated, and WASM can help.  
 Developer experience: no more tower of Babel
 
-4) Much more
-
-
+4) More
 
 
 ## Warning
 
-WASM is still early stage. no native strings, no exception handling and so on. These things can be emulated within the basic WASM but the resulting code tends to be slow. The next step is for a W3C working group to be formed to complete the formal specification.
+WASM is still early stage. No native strings, no exception handling and so on. These things can be emulated within the basic WASM but the resulting code tends to be slow. The next step is for a W3C working group to be formed to complete the formal specification.
 
 https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html 
 
 ## WASM use cases
 
-- heavily CPU-bound number computations e.g. games (via opengl)
-- you'll be consuming compiled binaries
-- Deliver existing C/C++ applications over the web (Talking about things like games, 3D Graphics and more).
-- Develop in your language of choice (for example .NET or Java).
-- Accelerate hot code portions of ordinary JavaScript apps.
-
-Src: https://www.inovex.de/blog/webassembly-production/
+- web: heavily CPU-bound number computations e.g. games (via opengl)
+- web/others: you'll be consuming compiled binaries
+- web: Deliver existing C/C++ applications over the web (Talking about things like games, 3D Graphics and more).
+- web/others: Develop in your language of choice (for example .NET or Java).
+- web: Accelerate hot code portions of ordinary JavaScript apps.
 
 ## Future of WASM // OK
 
