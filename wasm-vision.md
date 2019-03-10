@@ -1,10 +1,6 @@
 ## WASM: origins 
 
-_Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
-
-Well, exactly - WASM aims at solving the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - WASM is a vision for the future of the web, and of programming in general.
-
-So, what is the core problem that WASM is trying to solve?   
+What is the core problem that WASM is trying to solve?   
 
 * Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented).
 * Browsers so far could only be targeted with one single language: JS. 
@@ -15,7 +11,11 @@ WASM to the rescue:
 
 Additionally:   
 Because WASM is a compilation target, its impact will ripple to other languages too.   
-More on that later.
+More on that later. 
+
+
+_Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
+Well, exactly - WASM aims at relieving some of the the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - WASM is a vision for the future of the web, and of programming in general.
 
 ## Brief timeline of WASM 
 
@@ -30,18 +30,17 @@ WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines.
 WASM is an efficient, low-level assembly-like language / bytecode.
 
 Core features:
-
-- performant // near-native-speed
+- performant // it runs at near-native-speed
 - portable // it's a compilation target
 - safe // no memory overflow
 
-It **runs in all modern browsers**.
+It: 
+* **runs in all modern browsers**. 
+* can be targeted with a wide range of languages
 
 It's also...:
 
-- a shortcut to your JS engine's optimizer
-
-- a secure, safe, fast runtime that you can target with a wide range of languages.
+- a shortcut to the JS engine's optimizer
 
 - a compilation target for low-level code (e.g. C, C++), and has bindings that enable that code to access the capabilities of the browser.
 
