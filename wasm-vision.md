@@ -148,9 +148,9 @@ Next challenges:
 #### Near
 
 Features planned for WASM 2.0:  
-* multi-threading model and garbage collection // C# and Java support will become possible
+* multi-threading model and garbage collection // C# and Java support will become easier
 * multi-value returns
-* host binding (it will be easier to expose JavaScript objects to WASM) 
+* host binding // JS objects will be more easily exposed to WASM 
 
 #### Distant  
  
