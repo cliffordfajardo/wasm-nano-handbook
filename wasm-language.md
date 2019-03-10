@@ -5,14 +5,18 @@
 ## WASM core concepts
 
 1) WASM is a **stack machine** language.  
-* A **stack** is a LIFO (last in first out) data structure that has two operations: push and pop.
-* A **stack machine**  is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack. 
-2) WebAssembly only supports **4 types**.   
+* A stack is a LIFO (last in first out) data structure that has two operations: push and pop.
+* A stack machine is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack.  
+
+2) WASM only supports **4 types**.   
 2 integer types and 2 floating point types.  
-To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both WASM and JS. 
+To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both WASM and JS.  
+
 3) Code is organized into separate **functions**.    
-4) A WASM binary takes the form of a **module**. 
-With import/export functionalities, and can also define a start function that is automatically executed.
+
+4) A WASM binary takes the form of a **module**.  
+With import/export functionalities, and can also define a start function that is automatically executed. 
+
 5) A WASM implementation will typically be embedded into a **host environment**.   
 This environment defines how loading of modules and import/exports work. 
 
