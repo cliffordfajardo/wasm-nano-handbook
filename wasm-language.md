@@ -35,9 +35,8 @@ More:
 
 ## WASM shapes    
 
-
-So the text format you see for WASM is just a more human version of the binary format which is the underlying WASM itself.  
-It’s a very light syntactic sugar - there’s almost a 1-1 mapping between the text format and the binary format.
+* Binary format: for the VM 
+* Text format: for humans 
 
 ### Binary format: .wasm  
 
