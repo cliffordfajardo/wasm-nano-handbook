@@ -16,7 +16,7 @@ i32.add // Call add, that takes 2 args, by just popping them off the stack
 call $log // Push the result on the stack"
 ```
 
-2) WASM only supports **4 types**.   
+2) WASM supports **4 types**.   
 2 integer types and 2 floating point types.  
 To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both WASM and JS.  
 
@@ -35,16 +35,23 @@ More:
 
 ## WASM flavors / representations   
 
-### Binary format (`.wasm`)
+### Binary format
 
-### Text format (`.wat`) 
+### Text format
 
 
+how do these formats match file extensions???
 
+
+assembly is machine-specific. 
+
+... vm-specific!!
 
 ast? 
 
-Assembly
+Assembly? 
+
+
 
 
 - Binary format // https://webassembly.github.io/spec/core/binary/index.html
