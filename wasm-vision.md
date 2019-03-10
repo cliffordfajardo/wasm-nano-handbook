@@ -17,7 +17,7 @@ Additionally:
 Because WASM is a compilation target, its impact will ripple to other languages too.   
 More on that later.
 
-## Brief History of WASM 
+## Brief timeline of WASM 
 
 Projects such as ASM.js and PINCl have paved the way to WASM. 
 WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines.  
@@ -25,7 +25,7 @@ WASM is an MVP. Currently, WASM 1.0 has shipped in 4 major browser engines.
 * 2017: cross browser consensus
 * 2018: draft of the specification 1.0: WASM core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), WASM JS interface (interactions between WASM modules and JS, data storage, sandboxing), WASM web API (rules about module compilation and interactions between the dom and the WASM modules).
 
-## So: What is WASM
+## So: What is WASM?
 
 WASM is an efficient, low-level assembly-like language / bytecode.
 
@@ -85,7 +85,7 @@ Because:
 
 e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs.
 
-## Why it will change the world / Benefits
+## Why it will change the world? / Benefits
 
 1) WASM will accelerate the future of web development  
 * New performance-demanding use cases become accessible to the web
@@ -101,8 +101,8 @@ With shared array buffer extension, eventually all the browsers and webviews wil
 WebAssembly Will Enable Parallelism 
 https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html  
 
-3) WASM will smooth developer experience 
-- Not just on the web! Languages interop is complicated, and WASM can help.  
+3) WASM will smooth DevX
+Not just on the web! Languages interop is complicated, and WASM can help.  
 Developer experience: no more tower of Babel
 
 4) More
@@ -117,12 +117,12 @@ https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-u
 ## WASM use cases
 
 - web: heavily CPU-bound number computations e.g. games (via opengl)
+- web: Deliver existing C/C++/... applications over the web (Talking about things like games, 3D Graphics and more) 
+- web: Accelerate hot code portions of ordinary JavaScript apps 
 - web/others: you'll be consuming compiled binaries
-- web: Deliver existing C/C++ applications over the web (Talking about things like games, 3D Graphics and more).
 - web/others: Develop in your language of choice (for example .NET or Java).
-- web: Accelerate hot code portions of ordinary JavaScript apps.
 
-## Future of WASM // OK
+## Future of WASM
 
 ### Future
 
