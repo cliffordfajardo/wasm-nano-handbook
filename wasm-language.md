@@ -1,9 +1,11 @@
+_This is raw content, just the core ideas - would need to be reshaped for a more engaging reading experience._
+
 # WASM is a stack machine
 
 WASM is a STACK MACHINE language. 
 
-* A *stack* is a LIFO (last in first out) data structure that has two operations: push and pop.
-* A *stack machine* is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack.
+* A **stack** is a LIFO (last in first out) data structure that has two operations: push and pop.
+* A **stack machine**  is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack.
 
 WebAssembly only supports 4 types - 2 integer types and 2 floating point types. To model strings you share the same piece of linear memory - memory that can read from and write to from both WebAssembly and JavaScript.
 
