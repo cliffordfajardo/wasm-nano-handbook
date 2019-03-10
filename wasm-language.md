@@ -13,7 +13,7 @@ Basic stack example:
 i32.const 1 // Add 1 to the stack
 i32.const 2 // Add 2 to the stack
 i32.add // Call add, that takes 2 args, by just popping them off the stack
-call $log // Push the result on the stack"
+call $log // Push the result onto the stack"
 ```
 
 2) WASM supports **4 types**.   
@@ -33,9 +33,16 @@ More:
 * https://webassembly.github.io/spec/core/intro/introduction.html#design-goals 
 * https://webassembly.github.io/spec/core/intro/overview.html ++++  
 
-## WASM flavors / representations   
+## WASM shapes    
 
-### Binary format 
+
+So the text format you see for WASM is just a more human version of the binary format which is the underlying WASM itself.  
+It’s a very light syntactic sugar - there’s almost a 1-1 mapping between the text format and the binary format.
+
+### Binary format: .wasm  
+
+"Dense linear encoding of the abstract syntax" i.e. efficient form of binary that allows for fast decoding, small file size, and reduced memory usage.  
+Good for: network transfer, use by JS engine (which will only need to decode it).
 
 ```wasm
 reduce_sum_u8reduce_sum_u8_vec
@@ -43,45 +50,15 @@ rgbas_to_rgbsavg_vec_f64avg_rgb_f64__web_malloc-
 __web_free.__web_tablememory__heap_base
 __data_end	DA4�&#18<*254)('MFKIJCHUVGB�bchegv}�x�ynz������
 ���#A�k"$ A8jAj Aj)7 A8jAj Aj)7  )78@@ -8AG 
-```
+``` 
+Opcodes are represented as bytes, e.g.:
+`0x6a` // add operation. 
 
-### Text format
+Remember: Assembly code (e.g. WASM) is VM-specific.
 
-
-how do these formats match file extensions???
-
-
-assembly is machine-specific. 
-
-... vm-specific!!
-
-ast? 
-
-Assembly? 
-
-
-
-
-- Binary format // https://webassembly.github.io/spec/core/binary/index.html
-- Text format = WAT. s-expressions, flat syntax, or mixed // https://webassembly.github.io/spec/core/text/index.html
-  ...which one is the assembly?
-
-WebAssembly modules are distributed in a binary format.  
-Decoding processes that format and converts it into an internal representation of a module.
-In the spec, this representation is modelled by abstract syntax, but a real implementation could compile directly to machine code instead.
-
-Binary opcode:
-0x6a (= add operation)
-
-for wasm it looks like:
-
-
-
-
-
-
-AST (abstract syntax tree) representation (= s-expressions), more human-readable:
-
+### Text format: .wat
+.wat is the human-readable form of .wasm. It’s a light syntactic sugar ; the text format and the binary format map almost 1:1.  
+Good for: humans. E.g. source maps (browsers display "wasm" but it reality what you see is "wat")
 ```
 (call $log
 	(i32.add
@@ -89,26 +66,28 @@ AST (abstract syntax tree) representation (= s-expressions), more human-readable
 		(i32.const 2)
 	)
 )
-```
+```   
+* Opcodes are represented as mnemonics instead of bytes.
+* S-expressions are used. Code written in s-expressions can be concisely expressed in a tree structure, which is why s-expressions were chosen for WebAssembly’s text format.  
 
-Src: https://www.youtube.com/watch?v=6Y3W94_8scw
 
-text representation = WAT = assembly:
+### The abstract syntax tree (AST)
+... is not a format in itself.  It's the "underlying logic" of the code.
+.wat and .wasm both map 1-1 to the abstract syntax tree.
 
-If you’re writing code to run directly on a microprocessor, the instruction that the processor understands is a low-level machine code; bytes and so on.
-3:06 Most assembly languages will have a slightly more readable version - the assembly language. You’ll have opcodes being represented as mnemonics instead of bytes. So the text format you see for WASM is just a more human version of the binary format which is the underlying WASM itself. It’s a very light syntactic sugar - there’s almost a 1-1 mapping between the text format and the binary format.
-https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+### Module 
+A module is the "distributable, loadable, and executable unit of code in WebAssembly" - the packaged version, if you will. At runtime, a module can be instantiated with a set of import values to produce an instance.
 
-```javascript
-(local i32 i64)
-  get_global 0
-  i32.const 96
-  i32.sub
-  tee_local 2
-  set_global 0
-  get_local 2
-  i32.const 8
-  i32.add
-  i32.const 16
-  i32.add
-```
+WebAssembly modules are distributed in a binary format.  
+Decoding processes that format and converts it into an internal representation of a module.
+In the spec, this representation is modelled by abstract syntax, but a real implementation could compile directly to machine code instead.
+
+
+Sources:  
+* https://hub.packtpub.com/the-elements-of-webassembly-wat-and-wasm-explained-tutorial/
+* https://www.youtube.com/watch?v=6Y3W94_8scw  
+* https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+More details: 
+* https://hub.packtpub.com/the-elements-of-webassembly-wat-and-wasm-explained-tutorial/
+* https://webassembly.github.io/spec/core/binary/index.html
+* https://webassembly.github.io/spec/core/text/index.html
