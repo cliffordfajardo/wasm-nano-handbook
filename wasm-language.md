@@ -8,6 +8,14 @@
 * A stack is a LIFO (last in first out) data structure that has two operations: push and pop.
 * A stack machine is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack.  
 
+Basic stack example:
+```
+i32.const 1 // Add 1 to the stack
+i32.const 2 // Add 2 to the stack
+i32.add // Call add, that takes 2 args, by just popping them off the stack
+call $log // Push the result on the stack"
+```
+
 2) WASM only supports **4 types**.   
 2 integer types and 2 floating point types.  
 To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both WASM and JS.  
@@ -25,7 +33,19 @@ More:
 * https://webassembly.github.io/spec/core/intro/introduction.html#design-goals 
 * https://webassembly.github.io/spec/core/intro/overview.html ++++  
 
-# WASM flavors / representations
+## WASM flavors / representations   
+
+### Binary format (`.wasm`)
+
+### Text format (`.wat`) 
+
+
+
+
+ast? 
+
+Assembly
+
 
 - Binary format // https://webassembly.github.io/spec/core/binary/index.html
 - Text format = WAT. s-expressions, flat syntax, or mixed // https://webassembly.github.io/spec/core/text/index.html
@@ -40,19 +60,10 @@ Binary opcode:
 
 for wasm it looks like:
 
-(Stack representation:
-Just for us to understand
 
-```
-i32.const 1
-i32.const 2
-i32.add
-call $log
-```
 
-"add 1 to the stack, add 2 to the stack, call add (add takes 2 args, by just popping them off the stack), push the result on the stack"
 
-)
+
 
 AST (abstract syntax tree) representation (= s-expressions), more human-readable:
 
