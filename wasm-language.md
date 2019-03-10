@@ -9,7 +9,7 @@
 * A stack machine is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack.  
 
 Basic stack example:
-```
+```wasm
 i32.const 1 // Add 1 to the stack
 i32.const 2 // Add 2 to the stack
 i32.add // Call add, that takes 2 args, by just popping them off the stack
