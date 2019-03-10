@@ -1,4 +1,4 @@
-ℹ️ _This is raw content, just the core ideas - would need to be reshaped for a more engaging reading experience._  
+ℹ️ _This is raw material - can be reshaped/rephrase into publishing material for a more engaging reading experience._  
 
 ----
 
