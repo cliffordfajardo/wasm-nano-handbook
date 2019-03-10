@@ -1,16 +1,21 @@
-## What is the core problem that WASM is trying to solve?   
+## WASM: origins 
+
+_Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
+
+Well, exactly - WASM aims at solving the reasons why we need yet another tool in web dev every 2 months, causing JS fatigue. But it can also do much more - WASM is a big vision for the future of the web, and of programming in general.
+
+So, what is the core problem that WASM is trying to solve?   
 
 * Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented).
 * Browsers so far could only be targeted with one single language: JS. 
 
 WASM to the rescue: 
 * WASM has a compressed Abstract Syntax Tree encoding that’s 20 times faster. 
-* WASM is a compile target.  
+* WASM is a compilation target.   
 
-6:40 The browser then has to parse the text into an Abstract Syntax Tree, then run it in an interpreter, then move it through various different optimisation levels so that your code gets faster.
-https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+Additionally:  
+Because WASM is a compilation target, its impact will ripple to other languages too. More on that later.
 
-BUT ALSO: beyond WASM: 
 
 ## Brief History of WASM 
 
