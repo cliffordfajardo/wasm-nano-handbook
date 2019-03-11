@@ -2,6 +2,8 @@
 
 🚧 **!!! WIP** 🚧
 
+Wasm is a large territory to explore.  
+
 This handbook aims at helping developers, **no matter their background**:
 * **understand** Wasm and its future // the theory
 * **get started** with it today  // the practice
