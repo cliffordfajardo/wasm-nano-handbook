@@ -20,22 +20,25 @@ The WebAssembly team includes people from Google, Microsoft, Mozilla, Apple, and
   - wasm-opcodecnt: count opcode usage for instructions
   - spectest-interp: read a Spectest JSON file, and run its tests in the interpreter 
   
-# Core/Official
+## Core doc
 
 * https://webassembly.github.io/spec/core/intro/overview.html ++++
-* https://webassembly.org/
+* https://webassembly.org/ 
+* https://github.com/WebAssembly/design 
+* MDN:https://developer.mozilla.org/en-US/docs/WebAssembly 
+* Rust: bindgen, stdweb
 
-# Curated lists
+## Curated lists
 
 * https://github.com/mbasso/awesome-WASM
 * https://github.com/appcypher/awesome-wasm-langs#haskell 
 
-# Tools
+## Tools
 
 * https://mbebenita.github.io/WasmExplorer/
 * https://webassembly.studio/
 
-# Benchmarks
+## Benchmarks
 
 * https://pspdfkit.com/blog/2018/a-real-world-webassembly-benchmark/
 * https://medium.com/@torch2424/webassembly-is-fast-a-real-world-benchmark-of-webassembly-vs-es6-d85a23f8e193
