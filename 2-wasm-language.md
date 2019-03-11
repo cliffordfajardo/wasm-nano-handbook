@@ -1,7 +1,3 @@
-ℹ️ _This is raw material - can be reshaped into publishing material for a more engaging reading experience._  
-
-----
-
 ## WASM core concepts
 
 1) WASM is a **stack machine** language.  
@@ -77,7 +73,8 @@ Good for: humans. E.g. source maps (browsers display "wasm" but it reality what 
 .wat and .wasm both map 1-1 to the abstract syntax tree.
 
 ### Module 
-A module is the "distributable, loadable, and executable unit of code in WebAssembly" - the packaged version, if you will. At runtime, a module can be instantiated with a set of import values to produce an instance.
+A module is the "distributable, loadable, and executable unit of code in WebAssembly" - the packaged version, if you will. 
+At runtime, a module can be instantiated with a set of import values to produce an instance.
 
 WebAssembly modules are distributed in a binary format.  
 Decoding processes that format and converts it into an internal representation of a module.
