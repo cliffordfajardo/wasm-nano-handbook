@@ -3,8 +3,10 @@
 Wasm is a large territory to explore.  
 
 This handbook aims at helping developers, **no matter their background**:
-* **Understand** Wasm and its future // the theory
-* **Use** it today  // the practice  
+
+* **Understand** Wasm and its ecosystem and its future // theory
+* **Use** it today // practice   
+
 in a time-efficient way.
 
 ### DNA 
