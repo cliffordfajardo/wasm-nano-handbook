@@ -4,12 +4,13 @@ Wasm is a large territory to explore.
 
 This handbook aims at helping developers, **no matter their background**:
 * **Understand** Wasm and its future // the theory
-* **Use** it today  // the practice
+* **Use** it today  // the practice  
+in a time-efficient way.
 
 ### DNA 
 Wasm-nano-handbook strive to be:  
 
-<span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a big topic as Wasm :) This handbook is split up in small modular chunks, categorized as core or asides.  
+<span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) This handbook is split up in small modular chunks, categorized as core or asides.  
 
 <span style="font-size:larger;">🧘‍</span>**Accessible**: dev with little knowledge about browser internals and lower-level languages should be equipped to understand it  
 
