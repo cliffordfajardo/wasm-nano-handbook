@@ -1,7 +1,9 @@
+## Use cases today 
 1. Deliver existing C/C++ applications over the web (Talking about things like games, 3D Graphics and more).
-2. Develop in your language of choice (for example .NET or Java).
-3. Accelerate hot code portions of ordinary JavaScript apps.
+2. Develop in your language of choice (for example .NET or Java)
+3. Accelerate hot code portions of ordinary JavaScript apps
 4. In the backend
+5. Use as lib
 
 ## Which browsers support WASM today?
 
