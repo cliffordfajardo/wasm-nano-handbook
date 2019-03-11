@@ -121,3 +121,26 @@ https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
 * statically typed language: each variable's type is determined at compile time and not run-time 
 * strongly typed: the language is strict about what should be typed ; ( (the interpreter keeps track of all variables types)
+
+
+
+
+
+It's also...:
+- a web standard that defines a binary format, and a corresponding assembly-like text format for executable code in web pages
+- interactive apps in the browser depend on the JS VM, which runs the JS language. That's how it's been. Wasm brings in another virtual machine, another runtime. But contrary to JS that is rather high-level, Wasm is much more low-level.
+Wasm is PORTABLE, size and loadtime-efficient format suitable for compilation to the web (and others).
+
+It's not a binary blob launched in your browser ; it's a human-readable code bytecode that is compiled at runtime.
+source: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
+
+It is processed by the JavaScript engine alongside JavaScript.
+https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html
+WebAssembly is really the first W3C based open standard for running native code in the browser, and they recently standardized their support for threading.
+
+WebAssembly brings another kind of virtual machine to the browser that is a much more low-level language.
+One of the goals of WebAssembly is to make a new assembly language that is a compilation target for a wide range of other languages such as C++, Java, C# and Rust. C++ is highly mature, Rust is maturing rapidly. Java and C# are a little further behind because of the lack of garbage collection support in WebAssembly. At some point in the future WebAssembly will have it’s own garbage collection perhaps by using the Javascript garbage collector.
+At runtime you use JavaScript to invoke functions that are exported by your WebAssembly instance. It should be noted that at the moment there is quite a lot of complexity involved in interfacing between WebAssembly and JavaScript. A lot of this complexity comes from the type system.
+WebAssembly is still a very young technology. Future plans include threading support, garbage collection support, multiple value returns.
+https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+
