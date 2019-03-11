@@ -14,7 +14,9 @@ i32.const 1 // Add 1 to the stack
 i32.const 2 // Add 2 to the stack
 i32.add // Call add, that takes 2 args, by just popping them off the stack
 call $log // Push the result onto the stack"
-```
+``` 
+
+WASM implements a stack-machine ; it is a virtual stack and not the program stack.
 
 2) WASM supports **4 types**.   
 2 integer types and 2 floating point types.  
