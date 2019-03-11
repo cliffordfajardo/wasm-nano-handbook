@@ -37,13 +37,18 @@ https://webassembly.org/docs/non-web/
 
 Because:
 
-- it runs on the web (JS VM supports Wasm), which is on a lot of platform
-- Non-Web environments may include JavaScript VMs (e.g. node.js), however WebAssembly is also being designed to be capable of being executed without a JavaScript VM present.
-  - the plan is to keep non-Web path such that it doesn’t require Web APIs (the core features will be within Wasm itself: certain features that are core to Wasm semantics that are similar to functions found in native libc would be part of the core Wasm spec as primitive operators)
-  - because it's closer to machine language (it supports C/C++ level semantics), VMs are easier to implement on multiple platforms
-  - There is even a project for a cross-platform Wasm virtual machine: Life is written in Go, built for running computationally heavy code on practically any device you can imagine.
+- it runs on the web (JS VM supports Wasm), which is on a lot of platforms 
+- Non-Web environments may include JavaScript VMs (e.g. node.js), however WebAssembly is also being designed to be capable of being executed without a JavaScript VM present. 
+-  it takes advantage of common hardware capabilities available on a wide range of platforms, including mobile and IoT.
+ - the plan is to keep non-Web path such that it doesn’t require Web APIs (the core features will be within Wasm itself: certain features that are core to Wasm semantics that are similar to functions found in native libc would be part of the core Wasm spec as primitive operators)
+ - because it's closer to machine language (it supports C/C++ level semantics), VMs are easier to implement on multiple platforms
+ - There is even a project for a cross-platform Wasm virtual machine: Life is written in Go, built for running computationally heavy code on practically any device you can imagine. 
+- its AMI is platform-agnostic: 
+WebAssembly does not specify any APIs or syscalls, only an import mechanism where the set of available imports is defined by the host environment. In a Web environment, functionality is accessed through the Web APIs defined by the Web Platform. Non-Web environments can choose to implement standard Web APIs, standard non-Web APIs (e.g. POSIX), or invent their own.
 
-e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs.
+e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs. 
+
+
 
 ## Why it will change the world? / Benefits
 
