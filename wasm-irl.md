@@ -1,5 +1,3 @@
-## What success stories are there of people using WASM?
-
 - Source Maps with Rust and WebAssembly: 
   https://hacks.mozilla.org/2018/01/oxidizing-source-maps-with-rust-and-webassembly/
 -
