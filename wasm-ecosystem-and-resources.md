@@ -1,12 +1,8 @@
-# WASM ecosystem
-
-Aka Who is WASM?
-
-## The WASM team
+## Who is Wasm?
 
 The WebAssembly team includes people from Google, Microsoft, Mozilla, Apple, and others under the banner of the W3C WebAssembly Community Group.
 
-## WASM official projects
+## Wasm official projects
 
 - binaryen: compiler infrastructure and toolchain library for WebAssembly, in C++
 - wasm-jit-prototype: standalone VM using LLVM JIT
@@ -22,4 +18,26 @@ The WebAssembly team includes people from Google, Microsoft, Mozilla, Apple, and
   - wasm-validate: validate a file in the WebAssembly binary format
   - wast2json: convert a file in the wasm spec test format to a JSON file and associated wasm binary files
   - wasm-opcodecnt: count opcode usage for instructions
-  - spectest-interp: read a Spectest JSON file, and run its tests in the interpreter
+  - spectest-interp: read a Spectest JSON file, and run its tests in the interpreter 
+  
+# Core/Official
+
+* https://webassembly.github.io/spec/core/intro/overview.html ++++
+* https://webassembly.org/
+
+# Curated lists
+
+* https://github.com/mbasso/awesome-WASM
+* https://github.com/appcypher/awesome-wasm-langs#haskell 
+
+# Tools
+
+* https://mbebenita.github.io/WasmExplorer/
+* https://webassembly.studio/
+
+# Benchmarks
+
+* https://pspdfkit.com/blog/2018/a-real-world-webassembly-benchmark/
+* https://medium.com/@torch2424/webassembly-is-fast-a-real-world-benchmark-of-webassembly-vs-es6-d85a23f8e193
+* https://lemire.me/blog/2018/10/23/is-webassembly-faster-than-javascript/
+
