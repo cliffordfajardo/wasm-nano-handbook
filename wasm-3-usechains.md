@@ -1,13 +1,10 @@
 ## Use cases today 
-1. Deliver existing C/C++ applications over the web (Talking about things like games, 3D Graphics and more).
-2. Develop in your language of choice (for example .NET or Java)
-3. Accelerate hot code portions of ordinary JavaScript apps
+1. Deliver existing applications over the web, such as games, 3D Graphics... C++ mostly
+2. Develop in the developers' language of choice
+3. Accelerate hot code portions of ordinary JS apps
 4. In the backend
 5. Use as lib
 
-## Which browsers support WASM today?
-
-Since late 2017, WASM v1 is supported in all modern major browsers (Chrome, Firefox, Safari and Edge)
 
 ## What languages are targeted by WASM today?
 
@@ -103,24 +100,12 @@ https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
 ---
 
-## Languages
-
-
-| Language   | Type system                       |       Garbage-collected | Multi-threaded |   Cool | LLVM support |
-| ---------- | :-------------------------------- | ----------------------: | -------------: | -----: | -----------: |
-| C          | static, weakly typed              |                      no |            yes | -----: |       -----: |
-| C++        | static, ~strongly typed (Generic) |                      no |            yes | -----: |       -----: |
-| C#         | static, ~strongly typed           |                     yes |            yes | -----: |       -----: |
-| python     | dynamic, ~strongly typed          | yes (ref counting + GC) |            yes | -----: |       -----: |
-| Java       | static, strongly typed            |                     yes |            yes | -----: |       -----: |
-| JavaScript | dynamic, weakly typed             |                     yes |            yes | -----: |       -----: |
-| Rust       | static, strongly typed            |          no (Ownership) |            yes | -----: |       -----: |
-| wasm       | static, strongly typed            |              no, coming |            yes | -----: |       -----: |
 
 
 
-* statically typed language: each variable's type is determined at compile time and not run-time 
-* strongly typed: the language is strict about what should be typed ; ( (the interpreter keeps track of all variables types)
+## Which browsers support WASM today?
+
+Since late 2017, WASM v1 is supported in all modern major browsers (Chrome, Firefox, Safari and Edge)
 
 
 
