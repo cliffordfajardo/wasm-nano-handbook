@@ -7,14 +7,14 @@ The WebAssembly team includes people from Google, Microsoft, Mozilla, Apple, and
 - binaryen: compiler infrastructure and toolchain library for WebAssembly, in C++
 - wasm-jit-prototype: standalone VM using LLVM JIT
 - design: WebAssembly Design Documents 
-- wabt: The WebAssembly Binary Toolkit // https://github.com/WebAssembly/wabt is a suite of tools for WebAssembly, such as wat2wasm (translate from WebAssembly text format to the WebAssembly binary format) or wasm2c (convert a WebAssembly binary file to a C source and header)
+- wabt: The WebAssembly Binary Toolkit is a suite of tools for WebAssembly, such as wat2wasm (translate from WebAssembly text format to the WebAssembly binary format) or wasm2c (convert a WebAssembly binary file to a C source and header): https://github.com/WebAssembly/wabt
   
 ## Core doc
 
 * https://webassembly.github.io/spec/core/intro/overview.html ++++
 * https://webassembly.org/ 
 * https://github.com/WebAssembly/design 
-* MDN:https://developer.mozilla.org/en-US/docs/WebAssembly 
+* MDN: https://developer.mozilla.org/en-US/docs/WebAssembly 
 * Rust: bindgen, stdweb
 
 ## Curated lists
