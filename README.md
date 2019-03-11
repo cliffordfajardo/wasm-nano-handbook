@@ -10,11 +10,11 @@ in a time-efficient way.
 ### DNA 
 Wasm-nano-handbook strive to be:  
 
-<span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) This handbook is split up in small modular chunks, categorized as core or asides.  
+<span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) The content is split up in small modular chunks, categorized as core or asides  
 
-<span style="font-size:larger;">🧘‍</span>**Accessible**: dev with little knowledge about browser internals and lower-level languages should be equipped to understand it  
+<span style="font-size:larger;">🧘‍</span>**Accessible**: devs with little knowledge about browser internals and lower-level languages should be equipped to understand it  
 
-<span style="font-size:larger;">🔋</span>**Comprehensive**: covers the basics, but also make more advanced notions available as asides  
+<span style="font-size:larger;">🔋</span>**Comprehensive**: the basics are covered, but more advanced notions are also available as asides  
 
 <span style="font-size:larger;">⚖️</span>**Unbiased**: multiple sources are used - official documentation, Google dev, Mozilla, independent developers, w3c 
 
