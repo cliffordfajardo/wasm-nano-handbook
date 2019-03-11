@@ -1,8 +1,4 @@
-# wasm-nano-handbook
-
-🚧 **!!! WIP** 🚧 
- 
------
+# wasm-nano-handbook 🚧 **!!! WIP** 🚧 
 
 Wasm is a large territory to explore.  
 
@@ -11,11 +7,12 @@ This handbook aims at helping developers, **no matter their background**:
 * **get started** with it today  // the practice
 
 ### DNA 
-Wasm nano handbook strive to be: 
-* Nano: as nano as possible for such a big topic as Wasm :) This handbook is split up in small modular chunks, categorized as core or asides.
+Wasm nano handbook strive to be:  
+
+* 📦 Nano: as nano as possible for such a big topic as Wasm :) This handbook is split up in small modular chunks, categorized as core or asides.
 * Accessible: dev with little knowledge about browser internals and lower-level languages should be able to understand it
 * Comprehensive: covers the basics but also more advanced notions (progressively, in an appendix)
-* Unbiased: multiple sources are used - official documentation, Google dev, Mozilla, independent developers, w3c
+* ⚖️ Unbiased: multiple sources are used - official documentation, Google dev, Mozilla, independent developers, w3c
 * Evolutive: this is just the start!  
 
 ### Extra 
