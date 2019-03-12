@@ -35,7 +35,8 @@ Compile+ptimize:
 * Wasm:
   * already optimized via LLVM (AOT=ahead-of-time) 
   * No need to run observation rounds for types since it's already typed
-  * No need to compile different versions of the code depending on the observed types.  
+  * No need to compile different versions of the code depending on the observed types 
+  * streaming compilation (newer)
   
 Reoptimize: 
 * JS: 2 costs: 1)throw out the optimized version and fallback to baseline version, 2) reoptimization
@@ -63,7 +64,17 @@ Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brenda
 * To deal with strings, one must use Wasm's Memory API  ; basically a way for Wasm and JS to share memory.
 * wasm-bindgen: TBD
 
-https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+https://www.infoq.com/podcasts/colin-eberhardt-webassembly 
+
+
+## Next browser features 
+* Direct DOM calls 
+* Shared memory between threads 
+* SIMD 
+* Exceptions
+* Garbage collection  
+* ES6 module integration 
+* Dev tools
 
 ---
 
