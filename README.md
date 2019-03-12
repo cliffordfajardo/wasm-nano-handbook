@@ -7,7 +7,7 @@ This handbook aims at helping developers, **no matter their background**:
 * **Understand** Wasm, its ecosystem and its future // theory
 * **Use** it today // practice   
 
-in a time-efficient way.
+in a **time-efficient** way.
 
 ### DNA 
 Wasm-nano-handbook strive to be:  
