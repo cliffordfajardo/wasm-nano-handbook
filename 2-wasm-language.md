@@ -33,8 +33,12 @@ To model strings, one would share the same piece of linear memory ; for example 
 
 3) Code is organized into separate **functions**.    
 
-4) A WASM binary takes the form of a **module**.  
-With import/export functionalities, and can also define a start function that is automatically executed. 
+4) A WASM binary takes the form of a **module**, that has: 
+* Function: index of functions defined in this module  
+* Type: functions signatures defined in thie module  
+* Code: tha actual function bodies
+* Import/export functionalities 
+* Can also define a start function that is automatically executed. 
 
 5) A WASM implementation will typically be embedded into a **host environment**.   
 This environment defines how loading of modules and import/exports work. 
@@ -49,8 +53,8 @@ More:
 * "Binary" format: for the VM 
 * Text format: for humans 
 
-### Binary format: .wasm  
-
+### "Binary" format: .wasm  
+"Binary" ... actually hexa
 "Dense linear encoding of the abstract syntax" i.e. efficient form of binary that allows for fast decoding, small file size, and reduced memory usage.  
 Good for: network transfer, use by JS engine (which will only need to decode it).
 
