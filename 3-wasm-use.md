@@ -10,8 +10,11 @@
 
 ## Wasm adoption modes, example of a JS/TS app 
  
+<p align="center">
 <img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/waam-use-cases.png"> 
-© Maud Nalpas  
+© Maud Nalpas   
+</p>
+
 
 **Wasm (Mode 1):**   
 Update your dependencies to replace them by Wasm modules when available.  
