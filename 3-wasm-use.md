@@ -22,7 +22,7 @@ Benefits:
 Actually rewrite some hot code portions of yours in Wasm.  
 Benefits: 
 * An even smaller, faster codebase  
-* More dev resources can be allocated to the JS codebase + more heterogeneous team i.e. cross-learning.  
+* More dev resources can be allocated to the codebase, and the team can grow heterogeneous, emulating cross-learning.  
 
 ### Get started
 * Examples in prod: TBD
