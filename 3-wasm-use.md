@@ -2,8 +2,8 @@
 1. Use as lib
 2. Accelerate hot code portions of ordinary JS apps 
 3. Develop for the web in the developers' language of choice
-4. Deliver existing applications over the web, such as games, 3D Graphics... C++ mostly 
-5. Others: see wasmer + iOT
+4. Deliver existing applications over the web, such as games / 3D Graphics
+5. Others: see wasmer with docker use case + iOT // TBD
 
 ## 1 and 2: example of a JS/TS app  
 
