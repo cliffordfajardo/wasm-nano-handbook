@@ -2,15 +2,18 @@
 
 What is the core problem that Wasm is trying to solve?    
 
+Web apps today are limited:
+
+Wasm's original propose is to improve the web.
+
 * Browsers so far could only be targeted with one single language: JS.
 * Loading and executing JS is still slower than native code Anita is Copy intensives on mobile. 
 
 Previous attempts to solve one or the other have met a mitigated success: no consitent performance gain and, not crossrowsers.
 Wasm is the result of a concerted approach to solve these, based on the learnings of these previous approaches.
 
-So, the reason for Wasm to exist is the web. 
-
-But its impact go wag beyond it.
+So, Wam is born for the web.  
+But:  beacuse it's also a compilatiin target (more on ghat later), its impact go wag beyond it.
 
 
 * Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented). 
