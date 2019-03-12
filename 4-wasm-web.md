@@ -1,51 +1,64 @@
-### Assembly 
-Machine has: 
-* CPU: registers (short term memory) + ALU (arithmetic logic unit) 
-* RAM
+## Which browsers support WASM today?
+
+Since late 2017, WASM v1 is supported in all modern major browsers: Chrome, Firefox, Safari and Edge.
 
 ## Why WASM is faster than JS  
 
+### Intro
+
 * JS was created in 1995 ; it was interpreted, so still slow. 
-* In 2008, the performance war started, leading to JIT (just in time compilers). They lead to a manyfold perf improvement: JS was running 10 times faster. JIT compilers make JS run faster, by monitoring it as it's running and sending hot code paths to be optimized. Also, the JIT has added some overhead runtime: optim+deoptim, plus memory (e.g. to store baseline and optimized version of a function).   
+* In 2008, the performance war started, leading to JIT (just in time compilers). They lead to a manyfold perf improvement: JS was running 10 times faster. JIT compilers make JS run faster, by monitoring it as it's running and sending hot code paths to be optimized. Also, the JIT has added some overhead runtime: optim+deoptim, plus memory (e.g. to store baseline and optimized version of a function).    
 
+Source: hacks.mozilla.org 
 
-Source: hacks.mozilla.org
+### Short version
 
+Today with JS, the engine must do on the main thread:   
+Parse → Compile+Optimize → Re-optimize → Execute → Garbage Collection.   
 
-6:40 The browser then has to parse the text into an Abstract Syntax Tree, then run it in an interpreter, then move it through various different optimisation levels so that your code gets faster. 
-WASM syntax is already an AST.
-Sources: https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+With Wasm:    
+Decode → Compile+Optimize → Execute.   
 
+### Details 
 
+Step -1:  
+Fetching Wasm is faster (less network bandwith because Wasm files are more compact than JS even compressed).
 
-Fast to load (= fast to transport the compiled file over the network)
-and parse
-and execute (e.g. wasm can convert a + into a single cpu instruction)
+Parse/Decode:   
+* The browser must parse JS into an Abstract Syntax Tree then converted into an Immediate Representation (bytecode),  
+* Wasm syntax is already an IR/AST.  
 
-The advantage of WASM is that it is a much lower level representation of the program than the equivalent JavaScript. This makes it possible for the engine to run the code much faster than the more sophisticated and expressive JavaScript. The limited range of expression that WASM allows probably means that you aren't going to be writing directly to it. Instead the idea is that a compiler will produce WASM from other langauges.
-https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html
+Compile+ptimize:  
+* JS: with JIT, JS is compiled _during_ execution.  
+* Wasm:
+  * already optimized via LLVM (AOT=ahead-of-time) 
+  * No need to run observation rounds for types since it's already typed
+  * No need to compile different versions of the code depending on the observed types.  
+  
+Reoptimize: 
+* JS: 2 costs: 1)throw out the optimized version and fallback to baseline version, 2) reoptimization
+* Wasm: no need to deoptimize ; it's predicatble thanks to types.  
 
-### How the browser deals with WASM modules / how WASM runs on the web
+Execute:  
+* JS: can run efficiently when properly optimized ; but most devs don't know about JIT internals / focus on code readability.
+* Wasm: executes faster because is better optimized. 
 
-it’s the same one engine (1vm) that deals with wasm and JS.
+GC: 
+* JS: GC takes time ; it's well planned by now but still is an overhead!! 
+* Wasm: doesn't have GC since memory is manually managed.
 
-// todo
-What an engine does: actually, an engine is more than just a compiler.
-With JS code:
-With webassembly code:...
-// todo
+### How the browser deals with WASM modules / how WASM runs on the web   
 
-Imagine we're creating a WASM module that just adds a couple of numbers together:
+* Wasm is shipped as a module (.wasm). It has sections within it that export and import functions (similar to JS modules).  
+* This module can be loaded in JS, and the Wasm code can be invoked from JS. 
+* Under the hood, rather than that function being interpreted as JS code, that function will be running in the Wasm virtual machine ; i.e. will be compiled at runtime. 
 
-- Build
-- write it in a high level language (rust or C++)
-- take a toolchain for that language to compile it into a wasm binary.
-- Run
+Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brendan Eich).
 
-* Because The wasm binary itself has sections within it that export and import functions (similar to JavaScript modules, which export and import functions): the JS code will load up the wasm code, and you’ll be able to see it and invoke it from JavaScript.
-* Under the hood, rather than that function being interpreted as JavaScript code, that function will be running in the web assembly virtual machine.
-
-That’s how you currently load wasm modules through JavaScript to invoke compiled code.
+### Interop:   
+* Atm Wasm can only use numbers (int and floating points) as params and return values  
+* To deal with strings, one must use Wasm's Memory API  ; basically a way for Wasm and JS to share memory.
+* wasm-bindgen: TBD
 
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
@@ -54,9 +67,15 @@ https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
 
 
-## Which browsers support WASM today?
 
-Since late 2017, WASM v1 is supported in all modern major browsers (Chrome, Firefox, Safari and Edge)
+
+
+### trash me maybe 
+
+The advantage of WASM is that it is a much lower level representation of the program than the equivalent JavaScript. This makes it possible for the engine to run the code much faster than the more sophisticated and expressive JavaScript. The limited range of expression that WASM allows probably means that you aren't going to be writing directly to it. Instead the idea is that a compiler will produce WASM from other langauges.
+https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html
+
+
 
 
 
@@ -76,4 +95,20 @@ WebAssembly brings another kind of virtual machine to the browser that is a much
 One of the goals of WebAssembly is to make a new assembly language that is a compilation target for a wide range of other languages such as C++, Java, C# and Rust. C++ is highly mature, Rust is maturing rapidly. Java and C# are a little further behind because of the lack of garbage collection support in WebAssembly. At some point in the future WebAssembly will have it’s own garbage collection perhaps by using the Javascript garbage collector.
 At runtime you use JavaScript to invoke functions that are exported by your WebAssembly instance. It should be noted that at the moment there is quite a lot of complexity involved in interfacing between WebAssembly and JavaScript. A lot of this complexity comes from the type system.
 WebAssembly is still a very young technology. Future plans include threading support, garbage collection support, multiple value returns.
-https://www.infoq.com/podcasts/colin-eberhardt-webassembly
+https://www.infoq.com/podcasts/colin-eberhardt-webassembly 
+
+
+
+// todo
+What an engine does: actually, an engine is more than just a compiler.
+What it does:
+With JS code:
+With webassembly code:...
+// todo
+Imagine we're creating a WASM module that just adds a couple of numbers together:
+
+- Build
+- write it in a high level language (rust or C++)
+- take a toolchain for that language to compile it into a wasm binary.
+- Run
+----
