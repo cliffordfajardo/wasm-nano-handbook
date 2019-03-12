@@ -3,9 +3,9 @@
 What is the core problem that Wasm is trying to solve?    
 
 * Browsers so far could only be targeted with one single language: JS.
-* Loading and executing JS is still slower than natuve code. 
+* Loading and executing JS is still slower than native code Anita is Copy intensives on mobile. 
 
-Previous attempts to solve one or the other have met a mitigated success: no consitent perfnimprovement, not cross browsers.
+Previous attempts to solve one or the other have met a mitigated success: no consitent performance gain and, not crossrowsers.
 Wasm is the result of a concerted approach to solve these, based on the learnings of these previous approaches.
 
 So, the reason for Wasm to exist is the web. 
