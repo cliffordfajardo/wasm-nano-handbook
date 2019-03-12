@@ -1,4 +1,4 @@
-## Use modes today - from a developer's perspective
+## Usage modes today - from a developer's perspective
 1. Use as lib
 2. Accelerate hot code portions of ordinary JS apps 
 3. Develop for the web in the developers' language of choice
