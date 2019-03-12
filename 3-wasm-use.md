@@ -8,9 +8,15 @@
 
 
 
-## Wasm adoption mode, example of a web app 
+## Wasm adoption modes, example of a web app 
  
-<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/waam-use-cases.png">
+<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/waam-use-cases.png"> 
+© Maud Nalpas  
+
+
+Benefits: 
+* A smaller, faster codebase  
+* More dev resources can be allocated to the JS codebase + more heterogeneous team i.e. cross-learning
 
 
 
