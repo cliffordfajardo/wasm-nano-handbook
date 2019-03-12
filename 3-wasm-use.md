@@ -6,11 +6,27 @@
 5. In other areas than the web
 5. Use as lib
 
-## Use cases and their toolchains - Get started!
 
-### 1 
+it will be compiled at runtime
 
-### 2
+
+Compiler toolchains:
+
+Rust to Wasm: 
+
+C or C++ to Wasm: 
+
+C --> LLVM IR // clang   
+LLVM IR --> Wasm // LLVM Wasm was backend or Emscripten  using asm2wasm 
+
+
+it will be compiled at runtime
+
+What about wasm to the target machine's assembly code?  
+The browser will take care of that.
+
+
+## Get started!
 
 
 ## What languages are targeted by WASM today?
@@ -38,7 +54,6 @@ The more the merrier, I say. It’s not gonna become the tower of Babel because 
 
 https://medium.com/javascript-scene/why-we-need-webassembly-an-interview-with-brendan-eich-7fb2a60b0723
 
-## 1 and 2: toolchain
 
 ### x to wasm
 
