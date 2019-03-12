@@ -1,104 +1,60 @@
-## Use cases today 
-1. Deliver existing applications over the web, such as games, 3D Graphics... C++ mostly
-2. Develop for the web in the developers' language of choice
-3. Accelerate hot code portions of ordinary JS apps
-4. In the backend
-5. In other areas than the web
-5. Use as lib 
+## Use modes today - from a developer's perspective
+1. Use as lib
+2. Accelerate hot code portions of ordinary JS apps 
+3. Develop for the web in the developers' language of choice
+4. Deliver existing applications over the web, such as games, 3D Graphics... C++ mostly 
+5. Others: see wasmer + iOT
 
+## 1 and 2: example of a JS/TS app  
 
-
-## Wasm adoption modes, example of a JS/TS app 
+Wasm adoption modes:
  
 <p align="center">
 <img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/waam-use-cases.png"> 
 © Maud Nalpas   
 </p>
 
-
-**Wasm (Mode 1):**   
+### Wasm (Mode 1)   
 Update your dependencies to replace them by Wasm modules when available.  
 In theory if the API doesn't change, there's no work to do on your side. One example of that could be the React team updating their reconciliation algo to use Wasm.   
 Benefits: 
 * A smaller, faster codebase 
 
-**Wasm (Mode 2):**   
+### Wasm (Mode 2)
 Actually rewrite some hot code portions of yours in Wasm.  
 Benefits: 
 * An even smaller, faster codebase  
-* More dev resources can be allocated to the JS codebase + more heterogeneous team i.e. cross-learning.
+* More dev resources can be allocated to the JS codebase + more heterogeneous team i.e. cross-learning.  
+
+### Get started
+* Examples in prod: TBD
+* Tutorials: TBD
+* Mode 1: npm packages (+ all the hidden ones) 
+* Mode 2: TBD. Refer to section 3 to see with languages are supported. 
 
 
+## 3    
 
+What languages can be compiled to Wasm today?    
+Most of them - but with different levels of maturity.    
+The ones that are static and LLVM are best supported for now. 
 
-it will be compiled at runtime
+* C, C++:  highly mature, because it was used throughout the development of WASM and asm.js.
+* Rust: gaining maturity rather quickly, because the nature of Rust makes it easy to target Wasm, e.g. Rust’s ownership model
+* Java and C# (and JavaScript as well) still need a garbage collector and threading 
 
+Alternatively:    
+* Experimental support:
+  * Turboscript
+  * TypeScript 
+  * Walt
+* Code in `.wat` directly.    
 
-Compiler toolchains:
+Note: This will evolve. You might be able to write Wasm from TypeScript someday!
 
-Rust to Wasm: 
+### Get started
+* C, C++: Emscripten // TBD add links 
+* Rust: stdweb or bindgen, parcel wasm hasher // TBD add links 
 
-C or C++ to Wasm: 
-
-C --> LLVM IR // clang   
-LLVM IR --> Wasm // LLVM Wasm was backend or Emscripten  using asm2wasm 
-
-
-it will be compiled at runtime
-
-What about wasm to the target machine's assembly code?  
-The browser will take care of that.
-
-
-## Get started!
-
-
-## What languages are targeted by WASM today?
-
-Almost any language that you think of can target WASM at the moment - they have just got different levels of maturity.
-
-1. C++ is highly mature, because it was used throughout the development of WASM and asm.js.
-2. Rust is gaining maturity quite quickly, because the nature of Rust makes it easy to target Wasm, e.g. Rust’s ownership model
-3. Java and C# (and JavaScript as well) need a garbage collector and threading.
-
-But WASM doesn’t use a garbage collector, so a common approach is to take a garbage collector and compile it to WASM. You can find C++ garbage collector implementations, and you can compile and ship that as part of your application. That’s going to add extra size, bloat and is pretty inefficient. So At some point in the future, WASM will likely support garbage collection. Maybe: rather than having its own garbage collector, it will interact with the host’s garbage collector.
-https://www.infoq.com/podcasts/colin-eberhardt-webassembly
-
-And at the moment WASM's threading model is the same as JavaScript's: a single thread of execution. When you invoke a WASM function, your JavaScript virtual machine yields to WASM. So you won’t have JavaScript and WASM running in parallel. You can have web workers, just like you can in JavaScript, so you can parallelise like that.
-
-// wasm can support many compiled languages, certainly the static ones right now — particularly the ones that use LLVM. Microsoft has their own compiler so they’ll be doing wasm from a different compiler framework, but that’s great. The more, the merrier.
-
-Certainly GCC or similar could generate wasm, but I think to get to the dynamic languages, like I mentioned Dart, or Ruby, or Python, even JavaScript — that’s gonna require some extensions that I mentioned earlier, like: garbage collection hooks, JIT support, things like that. Otherwise they just won’t be competitive.
-
-There’s good precedent. The JVM grew over many years, thanks to John Rose grew things like `invokedynamic` and other hooks for just in time compilation optimizations like polymorphic inline caching so the JVM is actually a credible dynamic language platform.
-
-All of these runtimes have become polyglot VMs — JavaScript VMs. Java hasn’t died just because the JVM now supports Clojure, and Scala, and other languages. We’re almost at the second golden age of programming languages, you know, take Rust, Haskell, Idris, and other languages.
-
-The more the merrier, I say. It’s not gonna become the tower of Babel because I think JavaScript will be the lingua franca of the browser, today and tomorrow. If you’re writing front-end code or really anything that’s not on the critical path when you profile.
-
-https://medium.com/javascript-scene/why-we-need-webassembly-an-interview-with-brendan-eich-7fb2a60b0723
-
-
-### x to wasm
-
-WASM is low-level, so rust and C++ are easy to compile to rust: they're medium-level, and don't need garbage collection.
-
-- Write native code: C, C++ or Rust
-- Compile it to a wasm module ; currently LLVM targets work best. The compiler tool chain that currently has the most support for WebAssembly is called LLVM. There are a number of different front-ends and back-ends that can be plugged into LLVM.
-
-Once the module is fetched, it will be compiled at runtime.
-
-Sources: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
-
-NB:
-Most WebAssembly module developers will code in languages like C and Rust and then compile to WebAssembly, but there are other ways to create a WebAssembly module:
-
-- use TypeScript (experiemental)
-- code in the text representation of WebAssembly directly.
-
-## 3 JS to WASM
-
-## 4
-
-TBD
-
+## 4 
+Mostly with C++.  
