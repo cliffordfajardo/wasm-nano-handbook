@@ -3,6 +3,16 @@
 What is the core problem that Wasm is trying to solve?    
 
 * Browsers so far could only be targeted with one single language: JS.
+* Loading and executing JS is still slower than natuve code. 
+
+Previous attempts to solve one or the other have met a mitigated success: no consitent perfnimprovement, not cross browsers.
+Wasm is the result of a concerted approach to solve these, based on the learnings of these previous approaches.
+
+So, the reason for Wasm to exist is the web. 
+
+But its impact go wag beyond it.
+
+
 * Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented). 
 
 Wasm to the rescue: 
@@ -13,11 +23,12 @@ Additionally:
 Because Wasm is a compilation target, its impact will ripple to other languages too.   
 
 _Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
-Well, exactly - Wasm aims at relieving some of the the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - Wasm is a vision for the future of the web, and of programming in general.
+Well, exactly - Wasm aims at relieving some of the the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - Wasm is a vision for the future ofhe web, and of programming in general.
 
 ## So: What is Wasm?
 
-**Wasm is an efficient, low-level assembly-like language / bytecode.**
+**Wasm is an efficient, low-level assembly-like language / bytecode,** that runs on all modern browsers (1) (2) at near-native speed and (3) that is a compilation target for a wide range of other languages.
+
 
 Core features:
 - performant // it runs at near-native-speed, in a way it's a shortcut to the JS engine's optimizer
@@ -66,7 +77,7 @@ With shared array buffer extension, eventually all the browsers and webviews wil
 WebAssembly Will Enable Parallelism 
 https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html  
 
-3) DevX: Wasm will smooth 
+3) DevX: Wasm could make our lives easie
 Not just on the web! Languages interop is complicated, and Wasm can help.  
 Developer experience: no more tower of Babel
 
