@@ -2,7 +2,9 @@
 
 Since late 2017, WASM v1 is supported in all modern major browsers: Chrome, Firefox, Safari and Edge.
 
-## Why WASM is faster than JS  
+## What makes Wasm fast  
+
+TBD add sources
 
 ### Intro
 
@@ -47,7 +49,7 @@ GC:
 * JS: GC takes time ; it's well planned by now but still is an overhead!! 
 * Wasm: doesn't have GC since memory is manually managed.
 
-### How the browser deals with WASM modules / how WASM runs on the web   
+## How the browser deals with WASM modules / how WASM runs on the web   
 
 * Wasm is shipped as a module (.wasm). It has sections within it that export and import functions (similar to JS modules).  
 * This module can be loaded in JS, and the Wasm code can be invoked from JS. 
@@ -55,7 +57,8 @@ GC:
 
 Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brendan Eich).
 
-### Interop:   
+## JS <-> Wasm interop 
+
 * Atm Wasm can only use numbers (int and floating points) as params and return values  
 * To deal with strings, one must use Wasm's Memory API  ; basically a way for Wasm and JS to share memory.
 * wasm-bindgen: TBD
@@ -63,11 +66,6 @@ Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brenda
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 
 ---
-
-
-
-
-
 
 
 ### trash me maybe 
@@ -96,8 +94,6 @@ One of the goals of WebAssembly is to make a new assembly language that is a com
 At runtime you use JavaScript to invoke functions that are exported by your WebAssembly instance. It should be noted that at the moment there is quite a lot of complexity involved in interfacing between WebAssembly and JavaScript. A lot of this complexity comes from the type system.
 WebAssembly is still a very young technology. Future plans include threading support, garbage collection support, multiple value returns.
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly 
-
-
 
 // todo
 What an engine does: actually, an engine is more than just a compiler.
