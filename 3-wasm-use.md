@@ -4,7 +4,15 @@
 3. Accelerate hot code portions of ordinary JS apps
 4. In the backend
 5. In other areas than the web
-5. Use as lib
+5. Use as lib 
+
+
+
+## Wasm adoption mode, example of a web app 
+ 
+<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/waam-use-cases.png">
+
+
 
 
 it will be compiled at runtime
