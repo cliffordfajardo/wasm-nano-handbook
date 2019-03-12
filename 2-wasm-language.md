@@ -1,4 +1,4 @@
-## Wasm is assembly
+## Wasm is Assembly
 
 Also see: https://github.com/maudnals/wasm-nano-handbook/blob/master/basics-language-to-machine.md
 
@@ -6,8 +6,10 @@ Recall:
 * Assembly is "symbolic machine code" ie human readable. 
 * Assembly code depends on the machine type 
 
-When delivering code on a user's machine across the web, we don't know what the target architecture will be. So, Wasm is a special assembly: it's a machine language for a virtual machine.
-// here add schema. 
+When delivering code on a user's machine across the web, we don't know what the target architecture will be. So, Wasm is a special assembly: it's a machine language for a virtual machine.  
+
+
+// TBD add schema + source. 
 
 
 
