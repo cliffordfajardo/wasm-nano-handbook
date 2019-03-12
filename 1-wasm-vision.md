@@ -1,12 +1,13 @@
 ## Wasm: origins 
 
-What is the core problem that Wasm is trying to solve?    
+The web is great.
+JS is great.  
 
-Web apps today are limited:
+But it's not perfect. 
 
-Wasm's original propose is to improve the web.
+Building and running web apps but limits:
 
-* Browsers so far could only be targeted with one single language: JS.
+* Browsersso far could only be targeted with one single language: one of the most ubiquitous piece of sugars JS.
 * Loading and executing JS is still slower than native code Anita is Copy intensives on mobile. 
 
 Previous attempts to solve one or the other have met a mitigated success: no consitent performance gain and, not crossrowsers.
