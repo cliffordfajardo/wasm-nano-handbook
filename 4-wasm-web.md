@@ -1,7 +1,15 @@
+### Assembly 
+Machine has: 
+* CPU: registers (short term memory) + ALU (arithmetic logic unit) 
+* RAM
 
-## Zoom: WASM in the web
+## Why WASM is faster than JS  
 
-### Why WASM is faster than JS 
+* JS was created in 1995 ; it was interpreted, so still slow. 
+* In 2008, the performance war started, leading to JIT (just in time compilers). They lead to a manyfold perf improvement: JS was running 10 times faster. JIT compilers make JS run faster, by monitoring it as it's running and sending hot code paths to be optimized. Also, the JIT has added some overhead runtime: optim+deoptim, plus memory (e.g. to store baseline and optimized version of a function).   
+
+
+Source: hacks.mozilla.org
 
 
 6:40 The browser then has to parse the text into an Abstract Syntax Tree, then run it in an interpreter, then move it through various different optimisation levels so that your code gets faster. 
