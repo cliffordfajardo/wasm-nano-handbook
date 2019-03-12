@@ -8,15 +8,22 @@
 
 
 
-## Wasm adoption modes, example of a web app 
+## Wasm adoption modes, example of a JS/TS app 
  
 <img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/waam-use-cases.png"> 
 © Maud Nalpas  
 
-
+**Wasm (Mode 1):**   
+Update your dependencies to replace them by Wasm modules when available.  
+In theory if the API doesn't change, there's no work to do on your side. One example of that could be the React team updating their reconciliation algo to use Wasm.   
 Benefits: 
-* A smaller, faster codebase  
-* More dev resources can be allocated to the JS codebase + more heterogeneous team i.e. cross-learning
+* A smaller, faster codebase 
+
+**Wasm (Mode 2):**   
+Actually rewrite some hot code portions of yours in Wasm.  
+Benefits: 
+* An even smaller, faster codebase  
+* More dev resources can be allocated to the JS codebase + more heterogeneous team i.e. cross-learning.
 
 
 
