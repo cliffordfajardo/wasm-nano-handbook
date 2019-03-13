@@ -16,10 +16,10 @@ But it's not perfect.
 Building and running web apps has limits, that we've known about for years:
 
 * (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with one single language: JS.
-* (2) Despite advanced optimizations on how the browsers handle JS, loading and executing JS is still slower than native code.  
+* (2) Despite advanced optimizations on how browsers handle JS, loading and executing JS is still slower than native code.  
 
-These are not small problems. They have a big impact:    
-* Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap - but nothing comes for free, and our CPus took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
+These are not small problems. They have had a big impact:    
+* Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap - but nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
 * Web experiences can get slow   
 * Some use cases are simply impossible on the web   
 * The power of millions of native developers is not leveraged for the web   
