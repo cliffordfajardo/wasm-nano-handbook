@@ -134,7 +134,22 @@ WASM is low-level, so rust and C++ are easy to compile to rust: they're medium-l
 Once the module is fetched, it will be compiled at runtime.
 Sources: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
 
-### trash me maybe 
+### trash me maybe  
+
+
+* Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented). 
+
+Wasm to the rescue: 
+* It has a compressed Abstract Syntax Tree encoding that’s 20 times faster. 
+* It is a compilation target    
+
+Additionally:   
+Because Wasm is a compilation target, its impact will ripple to other languages too.   
+
+_Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
+Well, exactly - Wasm aims at relieving some of the the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - Wasm is a vision for the future ofhe web, and of programming in general. 
+
+loading and executing JS i
 
 The advantage of WASM is that it is a much lower level representation of the program than the equivalent JavaScript. This makes it possible for the engine to run the code much faster than the more sophisticated and expressive JavaScript. The limited range of expression that WASM allows probably means that you aren't going to be writing directly to it. Instead the idea is that a compiler will produce WASM from other langauges.
 https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html
