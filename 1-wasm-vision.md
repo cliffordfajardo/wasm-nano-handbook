@@ -32,8 +32,8 @@ Later on, they joined forces to find a sustainable, cross-browsers, cross-platfo
 
 **So, Wasm is born for the web.**    
 
-But there is way more to it.   
-Because it's also a compilation target (more on that later), its impact go way beyond the web. 
+But in fast, there is way more to it.   
+Because it's also a compilation target (more on that later), **its impact go way beyond the web**.  
 
 
 ## So: What is Wasm?
@@ -74,7 +74,11 @@ e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even 
 
 ## Why it will change the world? / Benefits
 
-1) Wasm will accelerate the future of web development  
+1) UX: Wasm will make (the web) faster
+WebAssembly Parallelism 
+https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html   
+
+2) Wasm will accelerate the future of web development  
 * New performance-demanding use cases become accessible to the web
 * New libraries become accessible to the web
 * Wasm breaks down the JS monopoly... 
@@ -84,11 +88,7 @@ Wasm will grow to include lots and lots of expressiveness for lots and lots of l
 With shared array buffer extension, eventually all the browsers and webviews will support Wasm syntax to serve the compile target master, and free JS so it can serve the JS master.
 * Wasm can be used as a laboratory for the future of the web
 
-2) UX: Wasm will make (the web) faster
-WebAssembly Will Enable Parallelism 
-https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html  
-
-3) DevX: Wasm could make our lives easie
+3) DevX: Wasm could make our lives easier
 Not just on the web! Languages interop is complicated, and Wasm can help.  
 Developer experience: no more tower of Babel
 
