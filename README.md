@@ -31,8 +31,7 @@ All sources are listed inline.
 ### Content  
 
 [Origins and Vision][origin-and-vision]  
-[The language][language]  
-[Wasm in the web][origin-and-vision]    
+[The language][language]     
 [Using Wasm][use]   
 [Wasm in the web][web]   
 [Ecosystem][ecosystem]   
