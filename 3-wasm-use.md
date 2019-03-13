@@ -47,7 +47,7 @@ The ones that are static and LLVM are best supported for now.
 
 * C, C++:  highly mature, because it was used throughout the development of WASM and asm.js.
 * Rust: gaining maturity rather quickly, because the nature of Rust makes it easy to target Wasm, e.g. Rust’s ownership model
-* Java and C# (and JavaScript as well) still need a garbage collector and threading 
+* Java and C# (and JavaScript as well) still need a garbage collector. The way this works today, is that they take compile their GC to Wasm, and ship everything to the app page ; still experimental though.
 
 Alternatively:    
 * Experimental support:
