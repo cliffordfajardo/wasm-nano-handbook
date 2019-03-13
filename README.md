@@ -33,9 +33,9 @@ Wasm-nano-handbook strives to be:
 
 <span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) The content is split up in small modular chunks, categorized as core or asides. Estimated reading time for the entire core content should remain < 1 hour.   
 
-<span style="font-size:larger;">🔋</span>**Comprehensive**: the basics are covered, but more advanced notions are also available as asides  
+<span style="font-size:larger;">🔋</span>**Batteries included**: the basics are covered, but more advanced notions are also available as asides  
 
-<span style="font-size:larger;">🧘‍</span>**Accessible**: devs with little knowledge about browser internals and lower-level languages should be able to understand the basics
+<span style="font-size:larger;">🧘‍</span>**Accessible**: devs with little knowledge about browser internals and lower-level languages should be able to read through
 
 <span style="font-size:larger;">⚖️</span>**Unbiased**: multiple sources are used - official documentation, Google dev, Mozilla, independent developers, w3c 
 
