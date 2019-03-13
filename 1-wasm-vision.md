@@ -15,7 +15,7 @@ But it's not perfect.
 
 Building and running web apps has limits, that we've known about for years:
 
-* (1) Browsers, one of the most ubiquitous piece of software, could only be targeted with one single language: JS.
+* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with one single language: JS.
 * (2) Despite advanced optimizations on how the browsers handle JS, loading and executing JS is still slower than native code.  
 
 These are not small problems. They have a big impact:    
