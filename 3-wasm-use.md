@@ -7,9 +7,6 @@
 
 
 
-
-
-
 ## Main usage modes
 1. Use as dependency
 2. Accelerate hot code portions of ordinary JS apps 
