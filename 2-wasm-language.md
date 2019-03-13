@@ -5,7 +5,7 @@
 </p>
 
 
-# Wasm is Assembly
+## Wasm is Assembly
 
 Also see: https://github.com/maudnals/wasm-nano-handbook/blob/master/basics-language-to-machine.md
 
@@ -20,7 +20,7 @@ When delivering code on a user's machine across the web, we don't know what the 
 
 
 
-## WASM core concepts
+## WASM is a stack machine
 
 1) WASM is a **stack machine** language.  
 * A stack is a LIFO (last in first out) data structure that has two operations: push and pop.
