@@ -1,4 +1,4 @@
-# WebAssembly: origins and vision // 🚧WIP
+# Origins and vision // 🚧WIP
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
