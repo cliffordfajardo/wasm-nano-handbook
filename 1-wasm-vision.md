@@ -8,21 +8,24 @@
 
 ## Wasm: origins 
 
-The web is great.
-JS is great.  
+The web is great.  
+JS is great.   
 
 But it's not perfect. 
 
-Building and running web apps but limits:
+Building and running web apps has limits, that we've known about for years:
 
-* Browsersso far could only be targeted with one single language: one of the most ubiquitous piece of sugars JS.
-* Loading and executing JS is still slower than native code Anita is Copy intensives on mobile. 
+* (1) Browsers, one of the most ubiquitous piece of software, could only be targeted with one single language: JS.
+* (2) Loading and executing JS is still slower than native code, and resource-intensive especially on smaller devices.  
 
-Previous attempts to solve one or the other have met a mitigated success: no consitent performance gain and, not crossrowsers.
-Wasm is the result of a concerted approach to solve these, based on the learnings of these previous approaches.
+Previous attempts to solve one or the other have brought use forward ; but their success was always mitigated: there was a performance gain but it wasn't consistent, the approach worked but for just cross-browsers, or it didn't work well cross-platforms e.g. on mobile devices.  
+But the people and organizations working on these approaches learned a lot.   
 
-So, Wam is born for the web.  
-But:  beacuse it's also a compilatiin target (more on ghat later), its impact go wag beyond it.
+Wasm is the result of their concerted approach to solve (1) and (2).  
+
+**So, Wasm is born for the web.**   
+
+But:  because it's also a compilatiin target (more on that later), its impact go way beyond the web.
 
 
 * Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented). 
