@@ -1,4 +1,11 @@
-## Wasm is Assembly
+# Language  
+
+<p align="center">
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/language.jpg">  
+</p>
+
+
+# Wasm is Assembly
 
 Also see: https://github.com/maudnals/wasm-nano-handbook/blob/master/basics-language-to-machine.md
 
