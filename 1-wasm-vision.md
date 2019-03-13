@@ -15,8 +15,8 @@ But it's not perfect.
 
 Building and running web apps has limits, that we've known about for years:
 
-* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with one single language: JS.
-* (2) Despite advanced optimizations on how browsers handle JS, it still loads and runs still slower than native code.  
+* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JS.
+* (2) Despite advanced optimizations on how browsers handle JS, it still loads and runs still **slower** than native code.  
 
 These are not small problems. They have had a big impact:    
 * Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap. But nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
@@ -28,12 +28,12 @@ These are not small problems. They have had a big impact:
 Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: there was a performance gain but it wasn't consistent, the approach worked but not on all browsers, or it didn't work well cross-platforms e.g. on mobile devices. (TBD link)
 But the people and organizations working on these approaches learned a lot.    
 
-Later on, they joined forces to find a sustainable, cross-browsers, cross-platforms solution to (1) and (2): WebAssembly, or Wasm for short.  
+Later on, they joined forces to find a sustainable, cross-browsers, cross-platforms solution to (1) and (2): **WebAssembly, or Wasm for short**.  
 
 **So, Wasm is born for the web.**    
 
 But in fast, there is way more to it.   
-Because it's also a compilation target (more on that later), **its impact go way beyond the web**.  
+Because it's also a compilation target, **its impact go way beyond the web**.    
 
 
 ## So: What is Wasm?
