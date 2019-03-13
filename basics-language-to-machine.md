@@ -1,6 +1,11 @@
+// 🚧WIP 
+
+
 ## LLVM and compilers
 
-tbd
+backend frontend of a compiler    
+immediate representation     
+LLVM backend vs emscripten
 
 ## Code format
 
