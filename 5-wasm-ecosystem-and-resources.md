@@ -1,4 +1,4 @@
-# The ecosytem // 🚧WIP
+# The ecosytem // 🚧 WIP
 
 ## "Who is Wasm?"
 
@@ -18,6 +18,9 @@ The WebAssembly team includes people from Google, Microsoft, Mozilla, Apple, and
 * https://github.com/WebAssembly/design 
 * MDN: https://developer.mozilla.org/en-US/docs/WebAssembly 
 * Rust: bindgen, stdweb
+
+## Community
+* Rust + Wasm 
 
 ## Curated lists
 
