@@ -7,7 +7,26 @@ This handbook aims at helping developers, **no matter their background**:
 * **Understand** Wasm, its ecosystem and its future // theory
 * **Use** it today // practice   
 
-in a **time-efficient** way.
+in a **time-efficient** way. 
+
+### Content  
+
+#### 1. [Origins and Vision][origin-and-vision]  
+#### 2. [The language][language]     
+#### 3. [Using Wasm][use]   
+#### 4. [Wasm in the web][web]   
+#### 5. [Ecosystem][ecosystem]   
+#### 6. [Wasm in real-life][irl]    
+#### 7. [FAQ[faq]   
+
+[origin-and-vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md 
+[language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md
+[use]: https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md
+[web]: https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md
+[ecosystem]: https://github.com/maudnals/wasm-nano-handbook/blob/master/5-wasm-ecosystem-and-resources.md
+[irl]: https://github.com/maudnals/wasm-nano-handbook/blob/master/6-wasm-irl.md
+[faq]: https://github.com/maudnals/wasm-nano-handbook/blob/master/7-wasm-disambiguations-and-faq.md
+
 
 ### DNA 
 Wasm-nano-handbook strive to be:  
@@ -27,23 +46,4 @@ The `_ideas` file lists talk / blogposts / tools / demo project ideas about Wasm
 
 ### Sources 
 All sources are listed inline. 
-
-### Content  
-
-#### I. [Origins and Vision][origin-and-vision]  
-#### II. [The language][language]     
-#### III. [Using Wasm][use]   
-#### IV. [Wasm in the web][web]   
-#### V. [Ecosystem][ecosystem]   
-#### VI. [Wasm in real-life][irl]    
-#### VII. [FAQ[faq]   
-
-[origin-and-vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md 
-[language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md
-[use]: https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md
-[web]: https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md
-[ecosystem]: https://github.com/maudnals/wasm-nano-handbook/blob/master/5-wasm-ecosystem-and-resources.md
-[irl]: https://github.com/maudnals/wasm-nano-handbook/blob/master/6-wasm-irl.md
-[faq]: https://github.com/maudnals/wasm-nano-handbook/blob/master/7-wasm-disambiguations-and-faq.md
-
 
