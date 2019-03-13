@@ -11,7 +11,7 @@
 
 Since late 2017, WASM v1 is supported in **all** modern major browsers: Chrome, Firefox, Safari and Edge.
 
-## What makes Wasm fast  
+## What makes Wasm fast in the browser
 
 TBD add sources
 
