@@ -17,7 +17,7 @@
  
 <p align="center">
 <img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-case.png"> 
-© Maud Nalpas   
+<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
 ### Wasm (Mode 1)   
