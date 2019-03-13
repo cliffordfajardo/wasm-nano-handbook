@@ -1,4 +1,14 @@
-## Usage modes today - from a developer's perspective
+# Usage modes today - from a developer's perspective 
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg"> 
+<span style="font-size:smaller;">© Maud Nalpas<span>   
+</p>
+
+
+
+
+## Main usage modes
 1. Use as dependency
 2. Accelerate hot code portions of ordinary JS apps 
 3. Develop for the web in the developers' language of choice
