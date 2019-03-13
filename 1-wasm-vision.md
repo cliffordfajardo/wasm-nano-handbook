@@ -16,19 +16,19 @@ But it's not perfect.
 Building and running web apps has limits, that we've known about for years:
 
 * (1) Browsers, one of the most ubiquitous piece of software, could only be targeted with one single language: JS.
-* (2) Loading and executing JS is still slower than native code, and resource-intensive especially on smaller devices.  
+* (2) Despite advanced optimizations on how the browsers handle JS, loading and executing JS is still slower than native code.  
 
-These are not small problems ; they have big impacts:  
-* Our computers and mobile CPUs work hard 
+These are not small problems. They have a big impact:    
+* Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap - but nothing comes for free, and our CPus took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
 * Web experiences can get slow   
 * Some use cases are simply impossible on the web   
 * The power of millions of native developers is not leveraged for the web   
-* The JS toolchain is not trivial.  
+* The JS toolchain is convoluted.  
 
-Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: there was a performance gain but it wasn't consistent, the approach worked but not on all browsers, or it didn't work well cross-platforms e.g. on mobile devices.  
-But the people and organizations working on these approaches learned a lot.   
+Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: there was a performance gain but it wasn't consistent, the approach worked but not on all browsers, or it didn't work well cross-platforms e.g. on mobile devices. (TBD link)
+But the people and organizations working on these approaches learned a lot.    
 
-Later on, they joined forces to find a sustainable, cross-browsers, cross-platforms solution to (1) and (2): Wasm was created.  
+Later on, they joined forces to find a sustainable, cross-browsers, cross-platforms solution to (1) and (2): WebAssembly, or Wasm for short.  
 
 **So, Wasm is born for the web.**   
 
