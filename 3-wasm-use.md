@@ -1,5 +1,5 @@
 ## Usage modes today - from a developer's perspective
-1. Use as lib
+1. Use as dependency
 2. Accelerate hot code portions of ordinary JS apps 
 3. Develop for the web in the developers' language of choice
 4. Deliver existing applications over the web, such as games / 3D Graphics
