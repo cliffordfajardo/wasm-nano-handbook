@@ -19,10 +19,10 @@ Building and running web apps has limits, that we've known about for years:
 * (2) Despite advanced optimizations on how browsers handle JS, it still loads and runs still slower than native code.  
 
 These are not small problems. They have had a big impact:    
-* Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap - but nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
-* Web experiences can get slow   
-* Some use cases are simply impossible on the web   
-* The power of millions of native developers is not leveraged for the web   
+* Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap. But nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
+* Web experiences can get slow.   
+* Some use cases are simply impossible on the web.   
+* The power of millions of native developers is not leveraged for the web.   
 * The JS toolchain is convoluted.  
 
 Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: there was a performance gain but it wasn't consistent, the approach worked but not on all browsers, or it didn't work well cross-platforms e.g. on mobile devices. (TBD link)
@@ -30,24 +30,11 @@ But the people and organizations working on these approaches learned a lot.
 
 Later on, they joined forces to find a sustainable, cross-browsers, cross-platforms solution to (1) and (2): WebAssembly, or Wasm for short.  
 
-**So, Wasm is born for the web.**   
+**So, Wasm is born for the web.**    
 
-But:  because it's also a compilatiin target (more on that later), its impact go way beyond the web.
+But there is way more to it.   
+Because it's also a compilation target (more on that later), its impact go way beyond the web. 
 
-
-* Web apps are slow and complicated - it takes to deliver JS to the browser (because JS is sent in a non-compact text format), and it takes time + it is complicated to execute it (to warm up the JS code to run quickly within the browser). We end up with: on the one hand, a complicated dev toolchain to reduce the payloads sent to the browser (think Babel, minification, tree shaking, minification, transpiling etc.) ; on the other hand, an advanced runtime with multiple levels of optimisation (JIT compilers and optimizers do a great job but the whole JS running path is still slow complicated). Projects such as ASM.js took a stab at it, but loading large ASM.js resources was still slow (+ ASM was not universally implemented). 
-
-Wasm to the rescue: 
-* It has a compressed Abstract Syntax Tree encoding that’s 20 times faster. 
-* It is a compilation target    
-
-Additionally:   
-Because Wasm is a compilation target, its impact will ripple to other languages too.   
-
-_Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
-Well, exactly - Wasm aims at relieving some of the the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - Wasm is a vision for the future ofhe web, and of programming in general. 
-
-loading and executing JS i
 
 ## So: What is Wasm?
 
