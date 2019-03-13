@@ -1,9 +1,11 @@
 # Usage modes today - from a developer's perspective 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg"> 
-<span style="font-size:smaller;">© Maud Nalpas<span>   
+<img with=300 src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg"> 
+<sub><sup>© Maud Nalpas</sup></sub>
 </p>
+
+
 
 
 
