@@ -2,7 +2,7 @@
 
 <p align="center">
 <img width="480" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">  
-<div><sub><sup>©maudnals</sup></sub></div>
+<div align="center"><sub><sup>©maudnals</sup></sub></div>
 </p>
 
 
