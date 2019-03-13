@@ -7,7 +7,7 @@ This handbook aims at helping developers, **no matter their background**:
 * **Understand** Wasm, its ecosystem and its future // theory
 * **Use** it today // practice   
 
-in a **time-efficient** way. 
+And this, in a **time-efficient** way. 
 
 ### Content  
 
@@ -29,7 +29,7 @@ in a **time-efficient** way.
 
 
 ### DNA 
-Wasm-nano-handbook strive to be:  
+Wasm-nano-handbook strives to be:  
 
 <span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) The content is split up in small modular chunks, categorized as core or asides. Estimated reading time for the entire core content should remain < 1 hour.   
 
