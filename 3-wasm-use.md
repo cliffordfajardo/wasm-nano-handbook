@@ -8,7 +8,7 @@
 ## Modes 1 and 2: example of a JS/TS app  
  
 <p align="center">
-<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-cases.png"> 
+<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-case.png"> 
 © Maud Nalpas   
 </p>
 
