@@ -1,4 +1,7 @@
-## WASM WebGL?
+# Disambiguations, FAQ // 🚧WIP
+
+
+## WASM vs. WebGL?
 
 They are rather unrelated, but can be used together.
 
