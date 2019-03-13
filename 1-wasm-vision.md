@@ -6,7 +6,7 @@
 
 
 
-## Wasm: origins 
+## Origins 
 
 The web is great.  
 JS is great.   
