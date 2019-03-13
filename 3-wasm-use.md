@@ -2,7 +2,6 @@
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">  
-<div align="center"><sub><sup>©maudnals</sup></sub></div>
 </p>
 
 
@@ -65,3 +64,6 @@ Note: This will evolve. You might be able to write Wasm from TypeScript someday!
 
 ## 4 
 Mostly with C++.  
+
+
+<div align="center"><sub><sup>©maudnals</sup></sub></div>
