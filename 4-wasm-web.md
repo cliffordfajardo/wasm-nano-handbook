@@ -1,9 +1,15 @@
 # Wasm in the web // 🚧WIP
 
 
+<p align="center">
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">  
+</p>
+
+
+
 ## Which browsers support WASM today?
 
-Since late 2017, WASM v1 is supported in all modern major browsers: Chrome, Firefox, Safari and Edge.
+Since late 2017, WASM v1 is supported in **all** modern major browsers: Chrome, Firefox, Safari and Edge.
 
 ## What makes Wasm fast  
 
