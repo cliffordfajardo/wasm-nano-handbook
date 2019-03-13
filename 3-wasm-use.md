@@ -1,7 +1,7 @@
 # Usage modes today - from a developer's perspective 
 
 <p align="center">
-<img with=300 src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg"> 
+<img width="300" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg"> 
 <sub><sup>© Maud Nalpas</sup></sub>
 </p>
 
