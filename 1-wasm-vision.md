@@ -38,12 +38,14 @@ Because it's also a compilation target, **its impact go way beyond the web**.
 
 ## So: What is Wasm?
 
-**Wasm is an efficient, low-level assembly-like language / bytecode,** that runs on all modern browsers (1) (2) at near-native speed and (3) that is a compilation target for a wide range of other languages.
+**Wasm is an efficient, low-level assembly-like language / bytecode,** that: 
+(1) runs on all modern browsers (2) at near-native speed    
+and   
+(3) is a compilation target for a wide range of other languages.
 
 
 Core features:
 - performant // it runs at near-native-speed, in a way it's a shortcut to the JS engine's optimizer
-- **runs in all modern browsers**. 
 - portable // it's a compilation target for a wide range of other languages such as C++ and Rust
 - safe // no memory overflow 
 - standardized // there's consensus around it
