@@ -27,11 +27,11 @@ These are not small problems. They have had a big impact:
 * The power of millions of native developers is not leveraged for the web.   
 * The JS toolchain is convoluted.   
 
-### Solutions
+### Solution
 
 Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: there was a performance gain but it wasn't consistent, the approach worked but not on all browsers, or it didn't work well cross-platforms e.g. on mobile devices. (TBD link)  
 
-### Solution 
+### Re:Solution 
 
 But the people and organizations working on these approaches learned a lot.    
 
