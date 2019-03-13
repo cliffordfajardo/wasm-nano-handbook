@@ -17,7 +17,7 @@ in a **time-efficient** way.
 #### 4. [Wasm in the web][web]   
 #### 5. [Ecosystem][ecosystem]   
 #### 6. [Wasm in real-life][irl]    
-#### 7. [FAQ[faq]   
+#### 7. [FAQ][faq]   
 
 [origin-and-vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md 
 [language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md
