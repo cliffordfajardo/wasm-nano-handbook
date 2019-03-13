@@ -30,13 +30,13 @@ All sources are listed inline.
 
 ### Content  
 
-[Origins and Vision][origin-and-vision]  
-[The language][language]     
-[Using Wasm][use]   
-[Wasm in the web][web]   
-[Ecosystem][ecosystem]   
-[Wasm in real-life][irl]    
-[FAQ[faq]   
+#### I. [Origins and Vision][origin-and-vision]  
+#### II. [The language][language]     
+#### III. [Using Wasm][use]   
+#### IV. [Wasm in the web][web]   
+#### V. [Ecosystem][ecosystem]   
+#### VI. [Wasm in real-life][irl]    
+#### VII. [FAQ[faq]   
 
 [origin-and-vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md 
 [language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md
