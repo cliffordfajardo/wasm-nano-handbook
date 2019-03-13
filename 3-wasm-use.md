@@ -1,4 +1,4 @@
-# Usage modes today - from a developer's perspective 
+# Usage modes today - from a developer's perspective // 🚧WIP
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">  
