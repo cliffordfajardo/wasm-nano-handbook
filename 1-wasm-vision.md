@@ -16,7 +16,7 @@ But it's not perfect.
 Building and running web apps has limits, that we've known about for years:
 
 * (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with one single language: JS.
-* (2) Despite advanced optimizations on how browsers handle JS, loading and executing JS is still slower than native code.  
+* (2) Despite advanced optimizations on how browsers handle JS, it still loads and runs still slower than native code.  
 
 These are not small problems. They have had a big impact:    
 * Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap - but nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
@@ -45,7 +45,9 @@ Additionally:
 Because Wasm is a compilation target, its impact will ripple to other languages too.   
 
 _Do we really need yet another tool? Yet another language? Aren't we of finally having a break from frontend fatigue, with webpack + Angular or React?_
-Well, exactly - Wasm aims at relieving some of the the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - Wasm is a vision for the future ofhe web, and of programming in general.
+Well, exactly - Wasm aims at relieving some of the the reasons why web dev tooling is complicated and evolving so fast. But it can also do much more - Wasm is a vision for the future ofhe web, and of programming in general. 
+
+loading and executing JS i
 
 ## So: What is Wasm?
 
