@@ -1,5 +1,5 @@
 ## Usage modes today - from a developer's perspective
-1. Use as lib
+1. Use as dependency
 2. Accelerate hot code portions of ordinary JS apps 
 3. Develop for the web in the developers' language of choice
 4. Deliver existing applications over the web, such as games / 3D Graphics
@@ -8,7 +8,7 @@
 ## Modes 1 and 2: example of a JS/TS app  
  
 <p align="center">
-<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-cases.png"> 
+<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-case.png"> 
 © Maud Nalpas   
 </p>
 
