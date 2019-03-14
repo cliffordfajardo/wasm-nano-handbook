@@ -11,7 +11,7 @@ _On what WebAssembly is, where it comes from, and where it is taking us to._
 
 ## Origins   
 
-### Dark times
+### Hard times of Old Web Land
 
 OK, that's overdramatic - The web is great, and JS is great!   
 
