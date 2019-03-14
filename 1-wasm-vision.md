@@ -39,7 +39,7 @@ Let's take a closer look at how (1) and (2) impact both the developer experience
 * Web apps can get slow.   
 * Some use cases are simply supported on the web. This is an extension of the previous point: infinitely slow is just not an option.  
 * Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; TBD link. Don't worry if you don't know what this is, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
-* The power of millions of native developers is not leveraged for the web.   
+* The power of millions (yes, millions) of native developers is not leveraged for the web. Inversely JS devs as of today can't build for truly native performance.   
 * The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code that loads and  runs as fast as it gets. That is both amazing and overwhelming - it gets difficult to keep up.
 
 ### Solution
@@ -68,7 +68,7 @@ It's also safe (no memory overflow), and standardized.
 Plus: 
 - has bindings that enable that code to access the capabilities of the browser / of JS
 
-## Why can it run anywhere? / Why is it so portable?
+## Why can it run anywhere? / Why is it so portable? 🚧WIP  
 
 Wasm could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity.
 
@@ -89,7 +89,7 @@ e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even 
 
 
 
-## Why it will change the world? / Benefits
+## Why it will change the world? / Benefits 🚧WIP  
 
 1) UX: Wasm will make (the web) faster
 WebAssembly Parallelism 
@@ -111,7 +111,7 @@ Developer experience: no more tower of Babel
 
 4) More
 
-## Wasm use cases
+## Wasm use cases 🚧WIP  
 
 - web: heavily CPU-bound number computations e.g. games (via opengl)
 - web: Deliver existing C/C++/... applications over the web (Talking about things like games, 3D Graphics and more) 
@@ -119,19 +119,19 @@ Developer experience: no more tower of Babel
 - web/others: you'll be consuming compiled binaries
 - web/others: Develop in your language of choice (for example .NET or Java). 
 
-## Recent history of Wasm  
+## Recent history of Wasm   🚧WIP  
 
 * 2015: Wasm community group
 * 2017: cross-browser consensus
 * 2018: draft of the specification 1.0: core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), JS interface (interactions between Wasm modules and JS, data storage, sandboxing), web API (rules about module compilation and interactions between the dom and the Wasm modules).
 
-## Wasm today
+## Wasm today 🚧WIP  
 
 * Wasm 1.0 is an MVP, that has shipped in 4 major browser engines. 
 * It is still early stage: no native strings nor exception handling ; these can be emulated within the basic Wasm but the resulting code is slow. Also, interop between for example JS and Wasm is still complex (calling functions is easy, but it’s the types to send back and forth that is the challenge)
 https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html 
 
-## Future of Wasm
+## Future of Wasm 🚧WIP  
 
 ### Future
 
@@ -146,7 +146,7 @@ Features planned for Wasm 2.0:
  
 https://medium.com/javascript-scene/why-we-need-webassembly-an-interview-with-brendan-eich-7fb2a60b0723
 
-Once all the browsers support both Wasm and ASM.js, then Wasm can start to grow extra semantics that need not be put into JS.
+Once all the browsers support both Wasm and ASM.js,  Wasm can start to grow extra semantics that need not be put into JS.
 They may in fact be put into both JavaScript and Wasm because it’s the same one engine (1vm). But there are certain things we might not want to ever put into JS that could be put into Wasm:
 - shared memory array buffers to get multi-threaded games. Too complicated for JS: risk for race conditions in JavaScript, fragile process with bug hazards
 - zero cost exceptions might not make sense in JavaScript. They require some compiler and runtime cleverness, but they do make sense for C++, and Swift. Might benefit other languages like C++ or Haskell
