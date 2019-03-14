@@ -1,7 +1,7 @@
 # Origins and vision // 🚧WIP  
 
 _On what WebAssembly is, where it comes from, and where it is taking us to._   
-_Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md)_
+_Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md)._
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
