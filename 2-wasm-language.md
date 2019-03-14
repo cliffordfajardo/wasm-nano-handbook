@@ -5,9 +5,9 @@
 </p>
 
 
-## Wasm is Assembly
+## Wasm is Assembly 
 
-Also see: https://github.com/maudnals/wasm-nano-handbook/blob/master/basics-language-to-machine.md
+More about [Assembly](https://github.com/maudnals/wasm-nano-handbook/blob/master/basics-language-to-machine.md) 
 
 Recall:
 * Assembly is "symbolic machine code" ie human readable. 
