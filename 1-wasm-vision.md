@@ -22,36 +22,35 @@ When building and running web apps, we must face two significant constraints:
 When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, and JS developers won't go extinct.  
 Right?   
 
-Yes. But it's not about today ; it's about the **delta** between now and the future .  
-Compare what the web is today with _what the web could become_.   
-It suddenly makes a lot of sense to break free of these constraints.   
+Yes. But it's not just about today ; it's about the **delta** between now and the future .  
+Compare what the web is now with _what the web could become_.   
+It suddenly makes a lot of sense to break free from these constraints.    
 
 <p align="center">
 <img width="720" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/delta-2.jpg">   
  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p> 
-(c) maudnals
 
-Let's take a closer look at how of (1) and (2) impact both the developer experience and the user experience:    
+Let's take a closer look at how (1) and (2) impact both the developer experience and the user experience:    
 * Web apps can get slow.   
 * Some use cases are simply supported on the web. This is an extension of the previous point: infinitely slow is just not an option.  
-* Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; more on that later / TBD link. If you don't know what this is, no worries, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
+* Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; more on that later / TBD link. Don't worry if you don't know what this is, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
 * The power of millions of native developers is not leveraged for the web.   
-* The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code fast, and to help it run faster. A ton.
+* The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code fast, and to help it run faster. That is both amazing and overwhelming - it gets difficult to keep up.
 
 ### Solution
 
-Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: there was a performance gain but it wasn't consistent, the approach worked but not on all browsers, or it didn't work well cross-platforms e.g. on mobile devices. (TBD link)  
+Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: the performance was better, but not consitently ; or the approach worked but not on all browsers ; or, it didn't work well cross-platforms e.g. on mobile devices. (TBD link and details)  
 
 ### Re:Solution 
 
-But the people and organizations working on these approaches learned a lot.    
+Luckily the people and organizations working on these approaches learned a lot.     
 
-Later on, they joined forces to find a sustainable, cross-browsers, cross-platforms solution to (1) and (2): **WebAssembly, or Wasm for short**.  
+Later on, they joined forces to think of a sustainable, cross-browsers, cross-platforms solution to (1) and (2): **WebAssembly, or Wasm for short**.  
 
-**So, Wasm is born for the web.**    
+**So, Wasm is born for the web.**     
 
-But in fact, there is way more to it - because it's also a compilation target, **its impact go way beyond the web**.    
+But in fact, there is way more to it - because it's also a compilation target, **its benefits go way beyond the web**.    
 
 
 ## So: What is Wasm?
@@ -60,7 +59,6 @@ But in fact, there is way more to it - because it's also a compilation target, *
 (1) runs on all modern browsers (2) at near-native speed    
 and   
 (3) is a compilation target for a wide range of other languages.
-
 
 Core features:
 - performant // it runs at near-native-speed, in a way it's a shortcut to the JS engine's optimizer
