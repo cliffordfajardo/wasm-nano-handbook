@@ -31,7 +31,7 @@ And this, in a **time-efficient** way.
 ### DNA 
 Wasm-nano-handbook strives to be:  
 
-<span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) The content is split up in small modular chunks, categorized as core or asides. Estimated reading time for the entire core content should remain < 1 hour.   
+<span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) The content is split up in small modular chunks, categorized as core or asides. Estimated reading time for the entire core content should remain < 2 hours.   
 
 <span style="font-size:larger;">🔋</span>**Batteries included**: the basics are covered, but more advanced notions are also available as asides  
 
