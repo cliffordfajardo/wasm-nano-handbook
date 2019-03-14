@@ -41,8 +41,8 @@ Let's take a closer look at how (1) and (2) impact both the developer experience
 ### Solution
 
 (1) and (2) are not new problems. There has been previous attempts to solve them in the past, from different actors.   
-All these approaches were innovative and solved some part of the problem, but nonereally won the game. Their success was always mitigated: the performance was better, but not consistently better ; or the approach worked but not on all browsers ; or not cross-platforms e.g. not on mobile devices. (TBD link and details)    
-Luckily, all these approaches have brought use forward: the people and organizations working on them have learned immensely. 
+All these approaches were innovative and solved some part of the problem, but none of them really won the game. Their success was always mitigated: the performance was better, but not consistently better ; or the approach worked but not on all browsers ; or not cross-platforms e.g. not on mobile devices. (TBD link and details: Alex Danilo on browser plugins, ASM.js, PNaCl, p-code ; google i/o 17 https://www.youtube.com/watch?v=6v4E6oksar0)    
+Luckily, all these approaches have brought us forward: the people and organizations working on them have learned immensely.  
 
 ### Re:Solution 
 
@@ -56,16 +56,11 @@ But in fact, there is way more to it - because it's also a compilation target, *
 ## So: What is Wasm?
 
 **Wasm is an efficient, low-level assembly-like language / bytecode,** that:   
-(1) runs on all modern browsers (2) at near-native speed    
-and   
-(3) is a compilation target for a wide range of other languages.
+runs on all modern browsers (portable)   
+at near-native speed (performant)     
+and is a compilation target for a wide range of other languages such as C++ and Rust (portable)   
 
-Core features:
-- performant // it runs at near-native-speed, in a way it's a shortcut to the JS engine's optimizer
-- portable // it's a compilation target for a wide range of other languages such as C++ and Rust
-- safe // no memory overflow 
-- standardized // there's consensus around it
-
+It's also safe (no memory overflow), and standardized.
 Plus: 
 - has bindings that enable that code to access the capabilities of the browser / of JS
 
@@ -118,11 +113,9 @@ Developer experience: no more tower of Babel
 - web: Deliver existing C/C++/... applications over the web (Talking about things like games, 3D Graphics and more) 
 - web: Accelerate hot code portions of ordinary JavaScript apps 
 - web/others: you'll be consuming compiled binaries
-- web/others: Develop in your language of choice (for example .NET or Java).
+- web/others: Develop in your language of choice (for example .NET or Java). 
 
-## Past of Wasm 
-
-Projects such as ASM.js and PNaCl have paved the way to Wasm.  
+## Recent history of Wasm  
 
 * 2015: Wasm community group
 * 2017: cross-browser consensus
