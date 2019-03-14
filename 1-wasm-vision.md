@@ -27,7 +27,7 @@ Compare what the web is today with _what the web could become_.
 It suddenly makes a lot of sense to break free of these constraints.   
 
 <p align="center">
-<img width="720" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/delta.jpg">   
+<img width="720" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/delta-2.jpg">   
  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p> 
 (c) maudnals
