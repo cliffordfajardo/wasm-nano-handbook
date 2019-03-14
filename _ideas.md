@@ -3,6 +3,7 @@
 - [ideology/vision] How WASM will JS win: laboratory + relief, see https://medium.com/javascript-scene/why-we-need-webassembly-an-interview-with-brendan-eich-7fb2a60b0723
 - [howto][use cases] WASM in practice: compare several toolchains ; something like todoWASM
 - [basics] A parallel between frontend toolchain and wasm toolchain
+- [underTheHood] Concurrency, threads, parallelism, workers, SIMD - What Wasm changes
 - [howto] WASM for webdevs
 - [howto] Your road to WASM
 - [ideology/vision] WASM beyond the web: https://webassembly.org/docs/non-web/, wasmer talk
