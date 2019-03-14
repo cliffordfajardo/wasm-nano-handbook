@@ -34,17 +34,17 @@ It suddenly makes a lot of sense to break free from these constraints.
 Let's take a closer look at how (1) and (2) impact both the developer experience and the user experience:    
 * Web apps can get slow.   
 * Some use cases are simply supported on the web. This is an extension of the previous point: infinitely slow is just not an option.  
-* Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; more on that later / TBD link. Don't worry if you don't know what this is, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
+* Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; TBD link. Don't worry if you don't know what this is, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
 * The power of millions of native developers is not leveraged for the web.   
-* The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code fast, and to help it run faster. That is both amazing and overwhelming - it gets difficult to keep up.
+* The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code that loads and  runs as fast as it gets. That is both amazing and overwhelming - it gets difficult to keep up.
 
 ### Solution
 
-Previous attempts to solve (1) and (2) have brought use forward, but their success was always mitigated: the performance was better, but not consitently ; or the approach worked but not on all browsers ; or, it didn't work well cross-platforms e.g. on mobile devices. (TBD link and details)  
+(1) and (2) are not new problems. There has been previous attempts to solve them in the past, from different actors.   
+All these approaches were innovative and solved some part of the problem, but nonereally won the game. Their success was always mitigated: the performance was better, but not consistently better ; or the approach worked but not on all browsers ; or not cross-platforms e.g. not on mobile devices. (TBD link and details)    
+Luckily, all these approaches have brought use forward: the people and organizations working on them have learned immensely. 
 
 ### Re:Solution 
-
-Luckily the people and organizations working on these approaches learned a lot.     
 
 Later on, they joined forces to think of a sustainable, cross-browsers, cross-platforms solution to (1) and (2): **WebAssembly, or Wasm for short**.  
 
