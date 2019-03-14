@@ -10,19 +10,25 @@
 
 ### Dark times
 
-Ok, that's overdramatic - The web is great, and JS is great!   
+OK, that's overdramatic - The web is great, and JS is great!   
 
 But they're not perfect.    
 
 When building and running web apps, we must face two significant constraints:  
 
-* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JS. Or so was it, until recently.
+* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JavaScript. Or so was it, until recently.
 * (2) JS loads and runs **slower** than native code.   
 
-These limitations impact both developer experience and user experience:    
-* Web experiences can get slow.   
-* Some use cases are simply supported on the web. This is an extension of the previous point: infinitely slow is not an option!  
-* Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have worked hard on this problem ; they designed advanced optimization techniques such as "JIT", Just-in-Time compiling (more on that later / TBD link). This proved very effective: JS today runs manyfold faster that it used too. It was a huge leap, but nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
+When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, and JS developers won't go extinct. Right?   
+
+Yes. But it's not about today ; it's a bout the delta. Compare what the web is today with the _what the web could become_.   
+It suddenly makes a lot of sense to break free of these constraints.   
+
+
+Let's take a closer look at how of (1) and (2) impact both the developer experience and the user experience:    
+* Web apps can get slow.   
+* Some use cases are simply supported on the web. This is an extension of the previous point: infinitely slow is just not an option.  
+* Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; more on that later / TBD link. If you don't know what this is, no worries, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
 * The power of millions of native developers is not leveraged for the web.   
 * The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code fast, and to help it run faster. A ton.
 
