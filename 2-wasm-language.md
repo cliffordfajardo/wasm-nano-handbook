@@ -20,7 +20,9 @@ When delivering code on a user's machine across the web, we don't know what the 
 
 
 
-## WASM is a stack machine
+## WASM is a stack machine  
+
+// TBD add illustration
 
 1) WASM is a **stack machine** language.  
 * A stack is a LIFO (last in first out) data structure that has two operations: push and pop.
