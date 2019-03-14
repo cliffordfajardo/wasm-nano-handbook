@@ -14,13 +14,13 @@ The web is great, and JS is great!
 
 But they're not perfect.   
 
-When building and running web apps, we're constrained:
+When building and running web apps, we must face significant constraints:
 
 * (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JS.
-* (2) Despite advanced optimizations on how browsers handle JS, it still loads and runs **slower** than native code.  
+* (2) JS still loads and runs **slower** than native code.  
 
-This has had a big impact:    
-* Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap. But nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
+These limitations :    
+* Browser engines teams have been able to make JS run manyfold faster, by building such as JIT (TBD link). It was a huge leap. But nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
 * Web experiences can get slow.   
 * Some use cases are simply impossible on the web.   
 * The power of millions of native developers is not leveraged for the web.   
