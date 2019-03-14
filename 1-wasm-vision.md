@@ -10,21 +10,21 @@
 
 ### Dark times
 
-The web is great, and JS is great!
+Ok, that's overdramatic - The web is great, and JS is great!   
 
-But they're not perfect.   
+But they're not perfect.    
 
-When building and running web apps, we must face significant constraints:
+When building and running web apps, we must face two significant constraints:  
 
-* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JS.
-* (2) JS still loads and runs **slower** than native code.  
+* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JS. Or so was it, until recently.
+* (2) JS loads and runs **slower** than native code.   
 
-These limitations :    
-* Browser engines teams have been able to make JS run manyfold faster, by building such as JIT (TBD link). It was a huge leap. But nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
+These limitations impact both developer experience and user experience:    
 * Web experiences can get slow.   
-* Some use cases are simply impossible on the web.   
+* Some use cases are simply supported on the web. This is an extension of the previous point: infinitely slow is not an option!  
+* Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have worked hard on this problem ; they designed advanced optimization techniques such as "JIT", Just-in-Time compiling (more on that later / TBD link). This proved very effective: JS today runs manyfold faster that it used too. It was a huge leap, but nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
 * The power of millions of native developers is not leveraged for the web.   
-* The JS toolchain is convoluted.   
+* The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code fast, and to help it run faster. A ton.
 
 ### Solution
 
