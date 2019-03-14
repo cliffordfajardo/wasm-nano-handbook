@@ -1,4 +1,7 @@
-# Origins and vision // 🚧WIP
+# Origins and vision // 🚧WIP  
+
+_On what WebAssembly is, where it comes from, and where it is taking us to._ 
+
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
