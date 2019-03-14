@@ -10,17 +10,16 @@
 
 ### Problem?
 
-The web is great.  
-JS is great.   
+The web is great, and JS is great!
 
-But it's not perfect.  
+But they're not perfect.   
 
-We're limited when building and running web apps - by pitfalls that we've known about for years:
+When building and running web apps, we're constrained:
 
 * (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JS.
-* (2) Despite advanced optimizations on how browsers handle JS, it still loads and runs still **slower** than native code.  
+* (2) Despite advanced optimizations on how browsers handle JS, it still loads and runs **slower** than native code.  
 
-These are not small problems. They have had a big impact:    
+This has had a big impact:    
 * Browser engines teams have been able to make JS run manyfold faster thanks to improvements such as JIT (TBD link). It was a huge leap. But nothing comes for free, and our CPUs took a toll. Running JS fast resource-intensive, especially on smaller devices such as smartphones. 
 * Web experiences can get slow.   
 * Some use cases are simply impossible on the web.   
@@ -39,8 +38,7 @@ Later on, they joined forces to find a sustainable, cross-browsers, cross-platfo
 
 **So, Wasm is born for the web.**    
 
-But in fast, there is way more to it.   
-Because it's also a compilation target, **its impact go way beyond the web**.    
+But in fact, there is way more to it - because it's also a compilation target, **its impact go way beyond the web**.    
 
 
 ## So: What is Wasm?
