@@ -11,7 +11,7 @@ And this, in a **time-efficient** way.
 
 ### Content  
 
-#### 1. [Origins and Vision][origin-and-vision]  
+#### 1. [Origins and Vision][origin-and-vision]  **👈Start here** 
 #### 2. [The language][language]     
 #### 3. [Using Wasm][use]   
 #### 4. [Wasm in the web][web]   
