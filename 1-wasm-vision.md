@@ -22,10 +22,15 @@ When building and running web apps, we must face two significant constraints:
 When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, and JS developers won't go extinct.  
 Right?   
 
-Yes. But it's not about today ; it's a bout the delta.  
+Yes. But it's not about today ; it's about the **delta** between now and the future .  
 Compare what the web is today with _what the web could become_.   
 It suddenly makes a lot of sense to break free of these constraints.   
 
+<p align="center">
+<img width="720" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/delta.jpg">   
+ <div align="center"><sub><sup>©maudnals</sup></sub></div> 
+</p> 
+(c) maudnals
 
 Let's take a closer look at how of (1) and (2) impact both the developer experience and the user experience:    
 * Web apps can get slow.   
