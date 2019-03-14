@@ -19,10 +19,11 @@ When building and running web apps, we must face two significant constraints:
 * (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JavaScript. Or so was it, until recently.
 * (2) JS loads and runs **slower** than native code.   
 
-When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, and JS developers won't go extinct. (◕⌓◕;)
+When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, and JS developers won't go extinct. (◕⌓◕;)  
+
 Right?   
 
-Yes. But it's not just about today ; it's about the **delta** between now and the future .  
+Right. But it's not just about today ; it's about the **delta** between now and the future .  
 Compare what the web is now with _what the web could become_.   
 It suddenly makes a lot of sense to break free from these constraints.    
 
