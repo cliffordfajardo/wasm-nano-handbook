@@ -44,9 +44,11 @@ Let's take a closer look at how (1) and (2) impact both the developer experience
 
 ### Solution
 
-(1) and (2) are not new problems. There has been previous attempts to solve them in the past, from different actors.   
+(1) and (2) are not new problems. Different actors and organizations have attempted to solve them in the past.   
+
 All these approaches were innovative and solved some part of the problem, but none of them really won the game. Their success was always mitigated: the performance was better, but not consistently better ; or the approach worked but not on all browsers ; or not cross-platforms e.g. not on mobile devices. (TBD link and details: Alex Danilo on browser plugins, ASM.js, PNaCl, p-code ; google i/o 17 https://www.youtube.com/watch?v=6v4E6oksar0)    
-Luckily, all these approaches have brought us forward: the people and organizations working on them have learned immensely.  
+
+Luckily, all these approaches have brought us forward: the people and organizations working on them built up a solid experience.  
 
 ### Re:Solution 
 
