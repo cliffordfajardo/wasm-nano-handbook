@@ -1,13 +1,12 @@
 # Wasm for the web // 🚧WIP    
 
-_On how Wasm runs in the environment that gave it life._    
-_Up Next: TBD_  
+_On how Wasm runs in the environment that gave life to it._    
+_Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbook/blob/master/5-wasm-exosystem-and-resources)_  
 
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">  
 </p>  
-
 
 [1. Wasm, JS, and the browser(s)](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-js-and-the-browsers)   
 [2. Wasm is fast, Wasm is fast](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-is-fast-wasm-is-fast)  
