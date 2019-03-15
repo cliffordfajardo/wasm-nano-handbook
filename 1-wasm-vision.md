@@ -6,7 +6,14 @@ _Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
   <div align="center"><sub><sup>©maudnals</sup></sub></div> 
-</p>
+</p>   
+
+
+[1. Origins]()   
+[2. So, what is Wasm?]()      
+[3. Game-changer]()  
+[4. Use cases]()      
+[5. Time travel]()  
 
 
 
@@ -106,7 +113,9 @@ https://webassembly.org/
 
 
 
-## Why it will change the world? / Benefits 🚧WIP  
+##  Only good parts
+
+Why it will change the world? / Benefits 🚧WIP  
 
 1) UX: Wasm will make (the web) faster
 WebAssembly Parallelism 
@@ -128,7 +137,7 @@ Developer experience: no more tower of Babel
 
 4) More
 
-## Wasm use cases 🚧WIP  
+## Use cases 
 
 - web: heavily CPU-bound number computations e.g. games (via opengl)
 - web: Deliver existing C/C++/... applications over the web (Talking about things like games, 3D Graphics and more) 
@@ -136,19 +145,21 @@ Developer experience: no more tower of Babel
 - web/others: you'll be consuming compiled binaries
 - web/others: Develop in your language of choice (for example .NET or Java). 
 
-## Recent history of Wasm   🚧WIP  
+## Time travel 
+
+### The past - Recent history of Wasm   🚧WIP  
 
 * 2015: Wasm community group
 * 2017: cross-browser consensus
 * 2018: draft of the specification 1.0: core spec (=syntax, naming, building, validayion, execution + the standard for the binary format ie types and values), JS interface (interactions between Wasm modules and JS, data storage, sandboxing), web API (rules about module compilation and interactions between the dom and the Wasm modules).
 
-## Wasm today 🚧WIP  
+### Wasm today 🚧WIP  
 
 * Wasm 1.0 is an MVP, that has shipped in 4 major browser engines. 
 * It is still early stage: no native strings nor exception handling ; these can be emulated within the basic Wasm but the resulting code is slow. Also, interop between for example JS and Wasm is still complex (calling functions is easy, but it’s the types to send back and forth that is the challenge)
 https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html 
 
-## Future of Wasm 🚧WIP  
+### Future of Wasm 🚧WIP  
 
 ### Future
 
