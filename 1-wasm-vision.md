@@ -6,17 +6,13 @@ _Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
   <div align="center"><sub><sup>©maudnals</sup></sub></div> 
-  
-   <div align="center">
-[1. Origins]()   
-[2. So, what is Wasm?]()      
-[3. Game-changer]()  
-[4. Use cases]()      
-[5. Time travel]()  
-  </div>
-
 </p>   
-
+ 
+[1. Origins](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md#origins)     
+[2. So, what is Wasm?](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md#so-what-is-wasm)      
+[3. Game-changer](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md#game-changer)  
+[4. Use cases](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md#use-cases)      
+[5. Time travel](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md#time-travel)  
 
 
 
