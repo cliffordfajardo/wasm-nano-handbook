@@ -11,7 +11,7 @@ _Up Next: TBD_
 
 [1.  Wasm is Assembly ](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#wasm-is-assembly)   
 [2. Wasm is a stack machine](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#wasm-is-a-stack-machine)      
-[3. Two shapes](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#two-shapes) 
+[3. Two shapes](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#two-shapes)   
 [4. Module](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#module)   
 
 
