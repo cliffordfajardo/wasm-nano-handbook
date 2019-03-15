@@ -1,7 +1,7 @@
 # Language  // 🚧WIP
 
 _On how Wasm code looks, feels, and executes._    
-_Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-web.md)._
+_Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md)._
 
 
 <p align="center">
