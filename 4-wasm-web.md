@@ -1,7 +1,7 @@
 # Wasm for the web // 🚧WIP    
 
 _On how Wasm runs in the environment that gave life to it._    
-_Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbook/blob/master/5-wasm-exosystem-and-resources)_  
+_Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbook/blob/master/5-wasm-ecosystem-and-resources)_  
 
 
 <p align="center">
