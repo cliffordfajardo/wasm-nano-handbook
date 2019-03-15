@@ -23,7 +23,7 @@ When building and running web apps, we must face two significant constraints:
 * (1) Browsers, one of the most ubiquitous pieces of software, can only be targeted with **one single language**: JavaScript. Or so was it, until recently.
 * (2) JS loads and runs **slower** than native code.   
 
-When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, and JS developers won't go extinct. (◕⌓◕;)  
+When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, JS is evolving, and JS developers won't go extinct. 
 
 Right?   
 
@@ -38,7 +38,7 @@ It suddenly makes a lot of sense to break free from these constraints.
 
 Let's take a closer look at how (1) and (2) impact both the developer experience and the user experience:    
 * Web apps can get slow.   
-* Some use cases are simply supported on the web. This is an extension of the previous point: infinitely slow is just not an option.  
+* Some use cases are simply not supported on the web. This is an extension of the previous point: infinitely slow is just not an option.  
 * Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; TBD link. Don't worry if you don't know what this is, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.    
 * The power of millions (yes, millions) of native developers is not leveraged for the web. Inversely JS devs as of today can't build for truly native performance.   
 * The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code that loads and  runs as fast as it gets. That is both amazing and overwhelming - it gets difficult to keep up.
