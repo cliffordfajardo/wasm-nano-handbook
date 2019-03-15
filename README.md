@@ -1,6 +1,6 @@
 # wasm-nano-handbook
 
-Wasm is a large territory to explore.  
+Wasm is a large, ever-expanding territory to explore.
 
 This handbook aims at helping developers, **no matter their background**:
 
@@ -12,7 +12,7 @@ And this, in a **time-efficient** way.
 
 **🚧 This is WIP, publication to come (GitBook + blogpost series).**
 
-### Content  
+## Content  
 
 #### 1. [Origins and Vision][origin-and-vision]  **👈Start here** 
 #### 2. [The language][language]     
@@ -31,7 +31,7 @@ And this, in a **time-efficient** way.
 [faq]: https://github.com/maudnals/wasm-nano-handbook/blob/master/7-wasm-disambiguations-and-faq.md
 
 
-### DNA 
+## DNA 
 Wasm-nano-handbook strives to be:  
 
 <span style="font-size:larger;">📦</span>**Nano**: as nano as possible for such a wide topic :) The content is split up in small modular chunks, categorized as core or asides. Estimated reading time for the entire core content should remain < 2 hours.   
@@ -44,9 +44,9 @@ Wasm-nano-handbook strives to be:
 
 <span style="font-size:larger;">🌱</span>**Evolutive**: this is just the start!  
 
-### Extra 
+## Extra 
 The `_ideas` file lists talk / blogposts / tools / demo project ideas about Wasm. 
 
-### Sources 
+## Sources 
 All sources are listed inline. 
 
