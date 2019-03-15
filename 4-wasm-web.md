@@ -8,14 +8,14 @@ _On how Wasm runs in its favorite environment._
 </p>  
 
 
-[1. Wasm, JS, and the browser(s)](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-js-and-the-browsers)
+[1. Wasm, JS, and the browser(s)](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-js-and-the-browsers)   
 [2. Wasm is fast, Wasm is fast](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-is-fast-wasm-is-fast)  
 [3. Under the hood](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#under-the-hood)     
 [4. Recent V8 improvements](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#recent-v8-improvements)   
 [5. Tools for web developers](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#tools-for-web-developers)   
 
 
-_Before diggin into this chapter, if you're a bit rusty on the basics of browers engine, check out (TBD add link)._ 
+_Before digging into this chapter, if you're a bit rusty on the basics of browers engine, check out (TBD add link)._ 
 
 ----
 
@@ -80,9 +80,9 @@ GC:
 * Wasm: doesn't have GC since memory is manually managed.  
 
 
-### Under the hood 
+## Under the hood 
 
-#### How the browser deals with WASM modules / how WASM runs on the web   
+### How the browser deals with WASM modules / how WASM runs on the web   
 
 * Wasm is shipped as a module (`.wasm`) (tbd link to section on modules). Just like a JS module, it has sections within it that export and import functions.  
 * The Wasm module can be loaded in JS, and the Wasm code can be invoked from JS. 
@@ -90,7 +90,7 @@ GC:
 
 Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brendan Eich).
 
-#### JS <-> Wasm interop 
+### JS <-> Wasm interop 
 
 * At the moment, Wasm can only use numbers (int and floating points) as params and return values  
 * To deal with strings, one must use Wasm's Memory API  ; basically a way for Wasm and JS to share memory.
@@ -113,7 +113,7 @@ Also Next browser features:
 
 src mozilla
 
-## Wasm tools for web developers   
+## Tools for web developers   
 * AssemblyScript 
 * The explorer
 * See toolchain chapter   
