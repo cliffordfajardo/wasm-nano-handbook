@@ -5,7 +5,8 @@ _Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbo
 
 
 <p align="center">
-<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">  
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">   
+  	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>  
 
 [1. Wasm, JS, and the browser(s)](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-js-and-the-browsers)   
