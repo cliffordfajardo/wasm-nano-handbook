@@ -99,7 +99,19 @@ Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brenda
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly  
 
 
-## Recent V8 improvements 
+## Recent V8 improvements    
+
+2018:    
+- debug: source maps  
+- run faster:  
+   - streaming compilation: start compiling before the module has finished downloading  
+   - Liftoff: V8's team built a new compiler called Liftoff. Lift off immediately executes the Wasm bytecode ; in the meantime, Turbofan (the optimizing compiler) optimizes the modules, off the main thread. When Turbofan is done, the module is hot swapped. 
+   - ++++ threads: bring pthread (C++) and others to the web for true parallelism // Danilo "Use the platform"
+
+- streaming compilation 
+- liftoff
+- webassembly threads
+- source maps for wasm
 
 Also Next browser features:  
 
