@@ -10,7 +10,7 @@ This handbook aims at helping developers, **no matter their background**:
 And this, in a **time-efficient** way.    
 
 
-**🚧 This is WIP.  Next: publish as a GitBook (+ share on relevant channels) and a blogpost series.**
+**🚧 This is WIP, publication to come (GitBook + blogpost series).**
 
 ### Content  
 
