@@ -16,7 +16,7 @@ _Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbo
 [5. Tools for web developers](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#tools-for-web-developers)   
 
 
-_Before digging into this chapter: if you're a bit rusty on the basics of browers engine, check out (TBD add link)._ 
+_Before digging into this chapter: if you're a bit rusty on the basics of browsers engines, check out (TBD add link)._ 
 
 ----
 
