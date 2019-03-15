@@ -116,9 +116,10 @@ https://webassembly.org/
 
 Why it will change the world? / Benefits 🚧WIP  
 
-1) UX: Wasm will make (the web) faster
-WebAssembly Parallelism 
-https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html   
+1) UX: Wasm will make (the web) faster   
+Native speed   
+also see WebAssembly Parallelism / Threads
+
 
 2) Wasm will accelerate the future of web development  
 * New performance-demanding use cases become accessible to the web
@@ -128,7 +129,8 @@ Wasm enables linguistic diversity ; this will dramatically diversify the languag
 * ... and helps JS win   
 Wasm will grow to include lots and lots of expressiveness for lots and lots of languages, JS included. 
 With shared array buffer extension, eventually all the browsers and webviews will support Wasm syntax to serve the compile target master, and free JS so it can serve the JS master.
-* Wasm can be used as a laboratory for the future of the web
+* Wasm can be used as a laboratory for the future of the web    
+https://zendev.com/2018/06/26/webassembly-accelerating-future-web-development.html 
 
 3) DevX: Wasm could make our lives easier
 Not just on the web! Languages interop is complicated, and Wasm can help.  
