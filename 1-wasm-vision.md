@@ -5,6 +5,7 @@ _Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
+  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
 
