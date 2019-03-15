@@ -1,7 +1,7 @@
-# Wasm in the web // 🚧WIP    
+# Wasm for the web // 🚧WIP    
 
 _On how Wasm runs in the environment that gave it life._    
-_Up Next: TBD_
+_Up Next: TBD_  
 
 
 <p align="center">
@@ -16,7 +16,7 @@ _Up Next: TBD_
 [5. Tools for web developers](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#tools-for-web-developers)   
 
 
-_Before digging into this chapter, if you're a bit rusty on the basics of browers engine, check out (TBD add link)._ 
+_Before digging into this chapter: if you're a bit rusty on the basics of browers engine, check out (TBD add link)._ 
 
 ----
 
