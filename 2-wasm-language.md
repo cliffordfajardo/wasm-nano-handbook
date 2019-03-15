@@ -7,7 +7,7 @@
 
 ## Wasm is Assembly 
 
-[💡 What is Assembly?](https://github.com/maudnals/wasm-nano-handbook/blob/master/asides/aside-languages.md) 
+💡 [What is Assembly?](https://github.com/maudnals/wasm-nano-handbook/blob/master/asides/aside-languages.md) 
 
 Basics:
 * Assembly is "symbolic machine code" ie human readable. 
