@@ -5,24 +5,31 @@
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">  
 </p>
 
-
+## Wasm tools for web developers  
+* AssemblyScript 
+* The explorer
+* See toolchain chapter
 
 ## Which browsers support WASM today?
 
 Since late 2017, WASM v1 is supported in **all** modern major browsers: Chrome, Firefox, Safari and Edge.
 
-## What makes Wasm fast in the browser
+## What makes Wasm fast in the browser?
 
 TBD add sources
 
-### Intro
+### Disclaimer 
+* performance issues are often rather caused by rendering/paint 
+* GC adds overhead; see Googl devs article 
+
+### A brief history of JS performance in the browser
 
 * JS was created in 1995 ; it was interpreted, so still slow. 
 * In 2008, the performance war started, leading to JIT (just in time compilers). They lead to a manyfold perf improvement: JS was running 10 times faster. JIT compilers make JS run faster, by monitoring it as it's running and sending hot code paths to be optimized. Also, the JIT has added some overhead runtime: optim+deoptim, plus memory (e.g. to store baseline and optimized version of a function).    
 
 Source: hacks.mozilla.org 
 
-### Short version
+### Where we are with Wasm: short version
 
 Today with JS, the engine must do on the main thread:   
 Parse → Compile+Optimize → Re-optimize → Execute → Garbage Collection.   
@@ -30,7 +37,7 @@ Parse → Compile+Optimize → Re-optimize → Execute → Garbage Collection.
 With Wasm:    
 Decode → Compile+Optimize → Execute.   
 
-### Details 
+### Where we are with Wasm: detailed version  
 
 Step -1:  
 Fetching Wasm is faster (less network bandwith because Wasm files are more compact than JS even compressed).
@@ -76,7 +83,10 @@ Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brenda
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly 
 
 
-## Next browser features 
+## Recent V8 improvements 
+
+### Next browser features  
+
 * Direct DOM calls 
 * Shared memory between threads 
 * SIMD 
