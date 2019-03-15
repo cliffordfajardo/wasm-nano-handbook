@@ -1,6 +1,7 @@
 # Wasm in the web // 🚧WIP    
 
-_On how Wasm runs in its favorite environment._ 
+_On how Wasm runs in the environment that gave it life._    
+_Up Next: TBD_
 
 
 <p align="center">
