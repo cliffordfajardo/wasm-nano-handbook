@@ -1,13 +1,13 @@
 # Language  // 🚧WIP
 
 _On how Wasm code looks, feels, and executes._    
-_Up Next: TBD_
+_Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-web.md)_
 
 
 <p align="center">
-<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/language.jpg">  
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/language.jpg">   
+	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
-
 
 [1.  Wasm is Assembly ](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#wasm-is-assembly)   
 [2. Wasm is a stack machine](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#wasm-is-a-stack-machine)      
