@@ -112,7 +112,7 @@ https://webassembly.org/
 
 
 
-##  Only good parts
+##  Game changer
 
 Why it will change the world? / Benefits 🚧WIP  
 
