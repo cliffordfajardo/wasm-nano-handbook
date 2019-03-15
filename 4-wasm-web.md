@@ -9,11 +9,13 @@ Before reading this chapter, if you're a bit rusty on the basics of how browsers
 
 
 
-1. Wasm, JS, and the browser(s)    
-2. Wasm is fast, Wasm is fast  
-3. Under the hood   
-4. Recent V8 improvements  
-5. Tools for web developers
+[1. Wasm, JS, and the browser(s)](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-js-and-the-browsers)
+[2. Wasm is fast, Wasm is fast](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-is-fast-wasm-is-fast)  
+[3. Under the hood](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#under-the-hood)     
+[4. Recent V8 improvements](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#recent-v8-improvements)   
+[5. Tools for web developers](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#tools-for-web-developers)  
+
+----
 
 ## Wasm, JS, and the browser(s)   
 
