@@ -1,4 +1,4 @@
-# The ecosytem // 🚧 WIP
+# Ecosytem // 🚧 WIP
 
 ## "Who is Wasm?"
 
