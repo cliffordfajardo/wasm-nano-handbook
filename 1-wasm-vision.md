@@ -20,14 +20,14 @@ But they're not perfect.
 
 When building and running web apps, we must face two significant constraints:  
 
-* (1) Browsers, one of the most ubiquitous piece of software, can only be targeted with **one single language**: JavaScript. Or so was it, until recently.
+* (1) Browsers, one of the most ubiquitous pieces of software, can only be targeted with **one single language**: JavaScript. Or so was it, until recently.
 * (2) JS loads and runs **slower** than native code.   
 
 When you look at the web today, these might not seem like huge issues. Web apps are running, the world is using them, and JS developers won't go extinct. (◕⌓◕;)  
 
 Right?   
 
-Right. But it's not just about today ; it's about the **delta** between now and the future .  
+Right. But it's not just about today ; it's about the **delta** between now and the future.  
 Compare what the web is now with _what the web could become_.   
 It suddenly makes a lot of sense to break free from these constraints.    
 
@@ -63,15 +63,24 @@ But in fact, there is way more to it - because it's also a compilation target, *
 ## So: What is Wasm?
 
 **Wasm is an efficient, low-level assembly-like language / bytecode,** that:   
-runs on all modern browsers (portable)   
-at near-native speed (performant)     
-and is a compilation target for a wide range of other languages such as C++ and Rust (portable)   
+(3) runs at at near-native speed [performant]
+(4) on all modern browsers [portable]     
+(5) and is a compilation target for a wide range of other languages such as C++ and Rust [portable]. 
 
-It's also safe (no memory overflow), and standardized.
-Plus: 
-- has bindings that enable that code to access the capabilities of the browser / of JS
+Other core features:  
+- (6) safe  
+- (7) debuggable  
+- (8) part of the open web.  
 
-## Why can it run anywhere? / Why is it so portable? 🚧WIP  
+Let's walk through these characteristics, to understand what makes Wasm powerful:   
+
+(3)  Efficiency
+- has bindings that enable that code to access the capabilities of the browser / of JS 
+
+(4) and (5) Portability   
+* One of the strengths of Wasm is the **consensus** there is around it.   
+* But it's also techmically designed for portability. 
+
 
 Wasm could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity.
 
@@ -89,6 +98,11 @@ Because:
 WebAssembly does not specify any APIs or syscalls, only an import mechanism where the set of available imports is defined by the host environment. In a Web environment, functionality is accessed through the Web APIs defined by the Web Platform. Non-Web environments can choose to implement standard Web APIs, standard non-Web APIs (e.g. POSIX), or invent their own.
 
 e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs. 
+
+
+
+Sources:  
+https://webassembly.org/
 
 
 
