@@ -1,10 +1,15 @@
-# Usage modes today - from a developer's perspective // 🚧WIP
+ # Usage modes today - from a developer's perspective // 🚧WIP
+ 
+ _On how to get started with Wasm as a developer, depending on your context._  
+ _Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md)_
 
 <p align="center">
-<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">  
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">   
+ 	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
-
+---  
+ 🚧WIP
 
 ## Main usage modes
 1. Use as dependency
