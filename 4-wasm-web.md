@@ -3,24 +3,33 @@
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">  
-</p>
+</p>  
 
-## Wasm tools for web developers  
-* AssemblyScript 
-* The explorer
-* See toolchain chapter
+Before reading this chapter, if you're a bit rusty on the basics of how browsers work, check out (TBD add link).  
 
-## Which browsers support WASM today?
 
-Since late 2017, WASM v1 is supported in **all** modern major browsers: Chrome, Firefox, Safari and Edge.
 
-## What makes Wasm fast in the browser?
+1. Wasm, JS, and the browser(s)    
+2. Wasm is fast, Wasm is fast  
+3. Under the hood   
+4. Recent V8 improvements  
+5. Tools for web developers
+
+## Wasm, JS, and the browser(s)   
+
+Before we dig deeper into the details of how browsers run Wasm, let's clarify:
+* Wasm won't replace JS. You might have read that Wasm will instead _complement_ JS.    
+In fact, we can even go one step further and say that Wasm will push JS forward.   
+TBD explain.     
+* Wasm (v1) is supported in **all** modern major browsers: Chrome, Firefox, Safari and Edge.
+
+## Wasm is fast, Wasm is fast
 
 TBD add sources
 
 ### Disclaimer 
-* performance issues are often rather caused by rendering/paint 
-* GC adds overhead; see Googl devs article 
+* Performance issues are often rather caused by rendering/paint 
+* GC adds overhead; see Google devs article 
 
 ### A brief history of JS performance in the browser
 
@@ -29,7 +38,7 @@ TBD add sources
 
 Source: hacks.mozilla.org 
 
-### Where we are with Wasm: short version
+#### Where we are with Wasm: short version
 
 Today with JS, the engine must do on the main thread:   
 Parse → Compile+Optimize → Re-optimize → Execute → Garbage Collection.   
@@ -37,7 +46,7 @@ Parse → Compile+Optimize → Re-optimize → Execute → Garbage Collection.
 With Wasm:    
 Decode → Compile+Optimize → Execute.   
 
-### Where we are with Wasm: detailed version  
+#### Where we are with Wasm: detailed version  
 
 Step -1:  
 Fetching Wasm is faster (less network bandwith because Wasm files are more compact than JS even compressed).
@@ -64,28 +73,31 @@ Execute:
 
 GC: 
 * JS: GC takes time ; it's well planned by now but still is an overhead!! 
-* Wasm: doesn't have GC since memory is manually managed.
+* Wasm: doesn't have GC since memory is manually managed.  
 
-## How the browser deals with WASM modules / how WASM runs on the web   
 
-* Wasm is shipped as a module (.wasm). It has sections within it that export and import functions (similar to JS modules).  
-* This module can be loaded in JS, and the Wasm code can be invoked from JS. 
-* Under the hood, rather than that function being interpreted as JS code, that function will be running in the Wasm virtual machine ; i.e. will be compiled at runtime. 
+### Under the hood 
+
+#### How the browser deals with WASM modules / how WASM runs on the web   
+
+* Wasm is shipped as a module (`.wasm`) (tbd link to section on modules). Just like a JS module, it has sections within it that export and import functions.  
+* The Wasm module can be loaded in JS, and the Wasm code can be invoked from JS. 
+* Under the hood, rather than that function being interpreted as JS code, that function will be running in the Wasm virtual machine ; i.e. will be compiled at runtime.  
 
 Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brendan Eich).
 
-## JS <-> Wasm interop 
+#### JS <-> Wasm interop 
 
-* Atm Wasm can only use numbers (int and floating points) as params and return values  
+* At the moment, Wasm can only use numbers (int and floating points) as params and return values  
 * To deal with strings, one must use Wasm's Memory API  ; basically a way for Wasm and JS to share memory.
 * wasm-bindgen: TBD
 
-https://www.infoq.com/podcasts/colin-eberhardt-webassembly 
+https://www.infoq.com/podcasts/colin-eberhardt-webassembly  
 
 
 ## Recent V8 improvements 
 
-### Next browser features  
+Also Next browser features:  
 
 * Direct DOM calls 
 * Shared memory between threads 
@@ -96,6 +108,12 @@ https://www.infoq.com/podcasts/colin-eberhardt-webassembly
 * Dev tools  
 
 src mozilla
+
+## Wasm tools for web developers   
+* AssemblyScript 
+* The explorer
+* See toolchain chapter   
+* hasher parcel repo
 
 ---
 
