@@ -9,7 +9,6 @@
 </p>
 
 ---  
- 🚧WIP
 
 ## Main usage modes
 1. Use as dependency
