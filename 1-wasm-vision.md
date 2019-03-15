@@ -66,7 +66,7 @@ Later on, they joined forces to think of a sustainable, cross-browsers, cross-pl
 But in fact, there is way more to it - because it's also a compilation target, **its benefits go way beyond the web**.    
 
 
-## So: What is Wasm?
+## So, what is Wasm?
 
 **Wasm is an efficient, low-level assembly-like language / bytecode,** that:   
 (3) runs at at near-native speed [performant]
