@@ -1,9 +1,23 @@
 # Language  // 🚧WIP
 
+_On how Wasm code looks, feels, and executes._    
+_Up Next: TBD_
+
+
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/language.jpg">  
 </p>
 
+
+[1.  Wasm is Assembly ](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#wasm-is-assembly)   
+[2. Wasm is a stack machine](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#wasm-is-a-stack-machine)      
+[3. Two shapes](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#two-shapes) 
+[4. Module](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#module)   
+
+
+_Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out (TBD add link)._ 
+
+----
 
 ## Wasm is Assembly 
 
@@ -59,7 +73,7 @@ More:
 * https://webassembly.github.io/spec/core/intro/introduction.html#design-goals 
 * https://webassembly.github.io/spec/core/intro/overview.html ++++  
 
-## WASM shapes    
+## Two shapes
 
 * "Binary" format: for the VM 
 * Text format: for humans 
@@ -70,14 +84,10 @@ More:
 Good for: network transfer, use by JS engine (which will only need to decode it).
 
 ```wasm
-reduce_sum_u8reduce_sum_u8_vec
-rgbas_to_rgbsavg_vec_f64avg_rgb_f64__web_malloc-
-__web_free.__web_tablememory__heap_base
-__data_end	DA4�&#18<*254)('MFKIJCHUVGB�bchegv}�x�ynz������
-���#A�k"$ A8jAj Aj)7 A8jAj Aj)7  )78@@ -8AG 
+... TBD
 ``` 
 Opcodes are represented as bytes, e.g.:
-`0x6a` // add operation. 
+`0x6a` // add operation.  
 
 Remember: Assembly code (e.g. WASM) is VM-specific.
 
@@ -100,7 +110,7 @@ Good for: humans. E.g. source maps (browsers display "wasm" but it reality what 
 ... is not a format in itself.  It's the "underlying logic" of the code.
 .wat and .wasm both map 1-1 to the abstract syntax tree.
 
-### Module 
+## Module 
 A module is the "distributable, loadable, and executable unit of code in WebAssembly" - the packaged version, if you will. 
 At runtime, a module can be instantiated with a set of import values to produce an instance.
 
