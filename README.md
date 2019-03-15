@@ -1,4 +1,4 @@
-# wasm-nano-handbook 🚧 WIP
+# wasm-nano-handbook
 
 Wasm is a large territory to explore.  
 
@@ -7,7 +7,9 @@ This handbook aims at helping developers, **no matter their background**:
 * **Understand** Wasm, its ecosystem and its future // theory
 * **Use** it today // practice   
 
-And this, in a **time-efficient** way. 
+And this, in a **time-efficient** way.   
+
+This is 🚧 WIP.  Next: will be publish this as a GitBook (+ shared on relevant channels) and a blogpost series.
 
 ### Content  
 
