@@ -69,5 +69,5 @@ A process can ask the OS to spin up another process to run different tasks. When
 
 <p align="center">
 <img width="400" src="https://developers.google.com/web/updates/images/inside-browser/part1/workerprocess.svg">   
-  	<div align="center"><sub><sup>Src: @kosamari on https://developers.google.com/web/updates/2018/09/inside-browser-part1</sup></sub></div> 
+  	<div align="center"><sub>Source: @kosamari on https://developers.google.com/web/updates/2018/09/inside-browser-part1</sub></div> 
 </p>  
