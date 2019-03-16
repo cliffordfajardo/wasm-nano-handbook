@@ -2,7 +2,7 @@
 
 Between the moment you type a URL in your browser and the time the page is displayed and usable, a lot is going on.  
 You might have heard the expression "URL to interactive" - it refers to all these steps that happen after you enter a new URL.  
-But once you're using it, there is _still_ a lot going on: rendering, JS execution, etc. And how do service workers fit in there? And what if you open a new tab?
+But once you're using the web app, there is _still_ a lot going on: rendering, JS execution, etc. And what if you open a new tab? And what happens if there are a lot of UI animations?
 
 Many excellent resources detail the different steps of URL to interactive, but I was always missing an overview. To get a holistic view of how browsers run web apps, we need to look at this from **multiple angles**. Each of them represents a specific aspect of the reality.  
 
