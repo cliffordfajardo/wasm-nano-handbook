@@ -92,6 +92,7 @@ Wasm could be used as a portable binary format on many platforms, bringing great
 
 https://webassembly.org/docs/non-web/
 
+(4) and (5) 
 Because:
 
 - it runs on the web (JS VM supports Wasm), which is on a lot of platforms 
@@ -105,7 +106,8 @@ WebAssembly does not specify any APIs or syscalls, only an import mechanism wher
 
 e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs. 
 
-
+> “Open web” is a sweeping term — it encompasses technical concepts like open-source code and open standards. But there’s a single underlying principle connecting all these ideas: An open web is a web by and for all its users, not select gatekeepers or governments. (...) we compare the open web to a global public resource, like clean water or the environment.  
+https://www.yearofopen.org/november-open-perspective-what-is-open-web/what-is-the-open-web-and-why-is-it-important-submitted-by-mark-surman-executive-director-of-the-mozilla-foundation/
 
 Sources:  
 https://webassembly.org/
