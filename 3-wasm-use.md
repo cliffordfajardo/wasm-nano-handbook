@@ -6,21 +6,51 @@
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">   
  	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
-</p>
+</p> 
+
+
+[1. Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#usage-modes)     
+[2. Tool chains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#tool-chains)      
+[3. Mapping: usage mode to tool chains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#mapping-usage-modes-to-tool-chains)  
+[4. A note on dev teams](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#a-note-on-dev-teams)  
 
 ---  
 
-## Main usage modes
+## Usage modes
 1. Use as dependency
 2. Accelerate hot code portions of ordinary JS apps 
 3. Develop for the web in the developers' language of choice
 4. Deliver existing applications over the web, such as games / 3D Graphics
-5. Others: see wasmer with docker use case + iOT // TBD
+5. Others: see wasmer with docker use case + iOT // TBD 
 
-## Modes 1 and 2: example of a JS/TS app  
+
+## Tool chains
+Try them out: https://webassembly.studio/    
+
+<p align="center">
+<img with="200" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/toolchains.jpg"> 
+<div align="center"><sub><sup>©maudnals</sup></sub></div> 
+</p>  
+
+
+Decsiption + details: TBD   
+Links:  
+* https://developers.google.com/web/updates/2018/03/emscripting-a-c-library 
+* https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm 
+* https://github.com/AssemblyScript/assemblyscript 
+
+
+## Mapping: usage mode to tool chains  
+TBD
+
+
+## A note on dev teams  
+
+One dot !== one dev, one dot is one _skill unit_ ; e.g. a full-stack dev is one dark grey + one light grey dot.  
+
  
 <p align="center">
-<img with="300" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-case.png"> 
+<img with="200" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-case.png"> 
 <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
@@ -37,7 +67,7 @@ Benefits:
 * More dev resources can be allocated to the codebase, and the team can grow heterogeneous, emulating cross-learning.  
 
 
-## 3    
+## trash maybe 🚧WIP     
 
 What languages can be compiled to Wasm today?    
 Most of them - but with different levels of maturity.    
