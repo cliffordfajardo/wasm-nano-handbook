@@ -33,8 +33,9 @@ Try them out: https://webassembly.studio/
 </p>  
 
 
-Decsiption + details: TBD   
-Links:  
+Details: TBD    
+
+Sources/resources:  
 * https://developers.google.com/web/updates/2018/03/emscripting-a-c-library 
 * https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm 
 * https://github.com/AssemblyScript/assemblyscript 
