@@ -45,22 +45,23 @@ Source: https://superuser.com/questions/78362/what-is-the-relationship-between-c
 
 ## Processes and threads
 
-A process is an application’s executing program.
-A thread is the one that lives inside of process and executes any part of its process's program.
+A process is an application’s executing program.  
+A thread lives inside of process and executes any part of its process's program.
 
-When you start an application:
-
+### When you start an application 
 - A process is created.
 - The program might create thread(s) to help it do work
 - The OS gives the process a "slab" of memory to work with and all application state is kept in that private memory space.
 
-At runtime:
+### At runtime: 
 A process can ask the OS to spin up another process to run different tasks. When this happens, different parts of the memory are allocated for the new process. If two processes need to talk, they can do so by using Inter Process Communication (IPC). Many applications are designed to work this way so that if a worker process get unresponsive, it can be restarted without stopping other processes which are running different parts of the application.
 
-When you close the application:
-
+### When you close the application
 - the process goes away
-- the OS frees up the memory.
+- the OS frees up the memory.  
+
+<img src="https://developers.google.com/web/updates/images/inside-browser/part1/workerprocess.svg"/>
+
 
 One illustration: https://developers.google.com/web/updates/images/inside-browser/part1/workerprocess.svg
 
