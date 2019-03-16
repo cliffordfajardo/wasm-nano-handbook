@@ -11,7 +11,7 @@
 
 [1. Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#usage-modes)     
 [2. Toolchains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#toolchains)      
-[3. Mapping: usage modes to tool chains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#mapping-usage-modes-to-toolchains)  
+[3. Mapping: usage modes to toolchains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#mapping-usage-modes-to-toolchains)  
 [4. A note on dev teams](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#a-note-on-dev-teams)  
 
 ---  
@@ -40,7 +40,7 @@ Sources/resources:
 * https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm 
 
 
-## Mapping: usage mode to tool chains  
+## Mapping: usage modes to toolchains  
 TBD
 
 
