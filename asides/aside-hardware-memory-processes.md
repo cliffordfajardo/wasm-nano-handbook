@@ -29,6 +29,7 @@ What's one pitfall of a GPU?
 Because large blocks are used, there are more parallel processing units, so a single GPU instruction uses more transistors => more space and energy needed, more heat is generated.   
 
 How does it look inside?  
+E.g. cores.  
 See Alex Danilo on threads. TBD.  
 
 Sources:
@@ -60,9 +61,8 @@ A process can ask the OS to spin up another process to run different tasks. When
 - the process goes away
 - the OS frees up the memory.  
 
-<img src="https://developers.google.com/web/updates/images/inside-browser/part1/workerprocess.svg"/>
 
-
-One illustration: https://developers.google.com/web/updates/images/inside-browser/part1/workerprocess.svg
-
-https://developers.google.com/web/updates/2018/09/inside-browser-part1
+<p align="center">
+<img width="400" src="https://developers.google.com/web/updates/images/inside-browser/part1/workerprocess.svg">   
+  	<div align="center"><sub><sup>Src: @kosamari on https://developers.google.com/web/updates/2018/09/inside-browser-part1</sup></sub></div> 
+</p>  
