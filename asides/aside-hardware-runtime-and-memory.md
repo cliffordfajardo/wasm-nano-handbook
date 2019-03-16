@@ -1,26 +1,40 @@
 # // 🚧WIP
 
 
-## CPU vs GPU
+## CPU and GPU
 
 CPU = central processing unit.
 
-A CPU is good at doing complex manipulations on a small set of data.  
-A GPU is good at doing simple manipulations on a large set of data.
+A CPU is good at doing **complex manipulations** on a small set of data, i.e. data-parallel processing (having many programs open at once). 
 
-MacBook pro CPU = 3.8GHz (= CPU clock speed = how much work a processor can do in a certain time. 1GHz = 1 billion bits per second, and # of cores = how many bits can be processed at once. Dual core 2.2 GHz can process 4.4 billion bits per second).
+A GPU is good at doing **simple manipulations** on a large set of data, i.e. data-parallel computing. It used to be mostly good for graphic operations (matrix operations = simple manips on a large dataset, but more and more computations is becoming possible on GPU alone. It's more efficient because it has less instruction decoding overhead.    
 
-How a GPU works: it's a special kind of CPU, designed to perform SIMD = Single Instruction, Multiple Data. It's more efficient because less instruction-decoding overhead. But because large blocks are used, there are more parallel processing units, so a single GPU instructions uses more transistors (=> more space and energy needed, more heat is generated).
+Note that they both enable SIMD (Single Instruction, Multiple Data): the CPU parallelize instructions, and the GPU parallelize pipelines.  
 
-Only the GPU is very good at data-parallel computing. It used to be only good for graphic operations, but more and more computations is becoming possible on GPU alone.
+How do the CPU and the GPU relate to each other?   
+* The CPU orchestrates the GPU's work  
+* A GPU is a special kind of CPU
+* New systems have GPU integrated in the CPU  
 
-CPU is good at parallel processing, i.e. having many programs open at once.
+How do apps use the CPU and GPU?   
+Usually, applications run on the CPU and GPU using mechanisms provided by the Operating System.  
 
-When you start an application on your computer or phone, the CPU and GPU are the ones powering the application. Usually, applications run on the CPU and GPU using mechanisms provided by the Operating System.
+How do we measure their power?   
+In Hz = CPU clock speed = how much work a processor can do in a certain time. 1GHz = 1 billion bits per second.  
+Number of cores = how many bits can be processed at once.
+Example:  
+MacBook pro CPU = 3.8GHz. Dual core 2.2 GHz can process 4.4 billion bits per second.   
 
-Source:
+What's one pitfall of a GPU?   
+Because large blocks are used, there are more parallel processing units, so a single GPU instruction uses more transistors => more space and energy needed, more heat is generated.   
+
+How does it look inside?  
+See Alex Danilo on threads. TBD.  
+
+Sources:
 https://superuser.com/questions/308771/why-are-we-still-using-cpus-instead-of-gpus
-https://developers.google.com/web/updates/2018/09/inside-browser-part1
+https://developers.google.com/web/updates/2018/09/inside-browser-part1  
+https://stackoverflow.com/questions/27333815/cpu-simd-vs-gpu-simd
 
 ## CPU, GPU and RAM
 
