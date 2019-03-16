@@ -23,22 +23,22 @@ _Before digging into this chapter: if you're a bit rusty on the basics of browse
 ## Wasm, JS, and the browser(s)   
 
 Before we dig deeper into the details of how browsers run Wasm, let's clarify:
-* Wasm won't replace JS. You might have read that Wasm will instead _complement_ JS.    
+* **Wasm won't replace JS**. You might have read that Wasm will instead _complement_ JS.    
 In fact, we can even go one step further and say that Wasm will push JS forward.   
 TBD explain.     
-* Wasm (v1) is supported in **all** modern major browsers: Chrome, Firefox, Safari and Edge.
+* Wasm (v1) is supported in **all modern major browsers**: Chrome, Firefox, Safari and Edge.
 
 ## Wasm is fast, Wasm is fast
 
 TBD add sources
 
-### Disclaimer 
-* Performance issues are often rather caused by rendering/paint 
-* GC adds overhead; see Google devs article 
+### A grain of salt 
+* Performance issues are often rather caused by rendering/paint; see Google devs article  
+* GC adds overhead; see wasmer podcast
 
 ### A brief history of JS performance in the browser
 
-* JS was created in 1995 ; it was interpreted, so still slow. 
+* JS was created in 1995; it was interpreted, so running slow. 
 * In 2008, the performance war started, leading to JIT (just in time compilers). They lead to a manyfold perf improvement: JS was running 10 times faster. JIT compilers make JS run faster, by monitoring it as it's running and sending hot code paths to be optimized. Also, the JIT has added some overhead runtime: optim+deoptim, plus memory (e.g. to store baseline and optimized version of a function).    
 
 Source: hacks.mozilla.org 
