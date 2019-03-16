@@ -1,6 +1,6 @@
  # Usage modes today - from a developer's perspective // 🚧WIP
  
- _On how to get started with Wasm as a developer, depending on your context._  
+ _On how you can use Wasm today, depending on your context._  
  _Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md)_
 
 <p align="center">
