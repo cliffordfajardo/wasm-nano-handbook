@@ -35,10 +35,10 @@ Try them out: https://webassembly.studio/
 
 Details: TBD    
 
-Sources/resources:  
+Sources/resources:   
+* **AssemblyScript**: https://github.com/AssemblyScript/assemblyscript 
 * https://developers.google.com/web/updates/2018/03/emscripting-a-c-library 
 * https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm 
-* https://github.com/AssemblyScript/assemblyscript 
 
 
 ## Mapping: usage mode to tool chains  
