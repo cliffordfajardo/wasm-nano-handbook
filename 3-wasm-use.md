@@ -28,7 +28,7 @@
 Try them out: https://webassembly.studio/    
 
 <p align="center">
-<img with="200" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/toolchains-3.jpg"> 
+<img with="200" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/toolchains-4.jpg"> 
 <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>  
 
