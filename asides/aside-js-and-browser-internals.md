@@ -1,5 +1,41 @@
-# // 🚧WIP 
+# How browsers run web applications  
 
+Between the moment you type a URL in your browser and the time the page is displayed and usable, a lot is going on.  
+You might have heard the expression "URL to interactive" - it refers to all these steps that happen after you enter a new URL.  
+And once you're using it, there is _still_ a lot going on: rendering, JS execution, etc. And what if you open a new tab? What about service workers? What happens if you close the tab?  
+
+network, application processes and threads, rendering...
+
+Many excellent resources detail the different steps of URL to interactive, but I was always missing an overview.
+they tend to focus on one topic, eluding the others.   
+
+To get a holistic view of how browsers run web apps, we need to look at this from **multiple angles**. Each of them represents a specific aspect of the reality.  
+
+Let's go! 
+
+* The processes angle   
+* The browser engine angle    
+* The rendering path angle  
+* Sumup: "URL to interactive"
+
+
+moment you open your browser
+
+
+
+
+
+to look at this:   
+
+So let's have a look at how browsers work under s
+
+
+JS and browsers internals.   
+There are a couple of angles under which look at this:  
+
+
+
+Let'
 
 ## Performance - sizes
 
@@ -248,7 +284,6 @@ I say "finishes", because client side JavaScript could still load additional res
 ### How V8 works
 
 https://cdn-images-1.medium.com/max/1200/1*ZIH_wjqDfZn6NRKsDi9mvA.png
-
 also see Lin Clark's talk
 
 ### Runtime
