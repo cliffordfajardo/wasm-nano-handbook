@@ -10,8 +10,8 @@
 
 
 [1. Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#usage-modes)     
-[2. Tool chains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#tool-chains)      
-[3. Mapping: usage mode to tool chains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#mapping-usage-modes-to-tool-chains)  
+[2. Toolchains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#toolchains)      
+[3. Mapping: usage modes to tool chains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#mapping-usage-modes-to-toolchains)  
 [4. A note on dev teams](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#a-note-on-dev-teams)  
 
 ---  
@@ -24,9 +24,8 @@
 5. Others: see wasmer with docker use case + iOT // TBD 
 
 
-## Tool chains
+## Toolchains
 Try them out: https://webassembly.studio/    
-
 <p align="center">
 <img with="200" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/toolchains-4.jpg"> 
 <div align="center"><sub><sup>©maudnals</sup></sub></div> 
