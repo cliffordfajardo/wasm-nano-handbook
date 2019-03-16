@@ -20,7 +20,7 @@
 ## Modes 1 and 2: example of a JS/TS app  
  
 <p align="center">
-<img src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-case.png"> 
+<img with="300" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/wasm-use-case.png"> 
 <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
@@ -35,12 +35,6 @@ Actually rewrite some hot code portions of yours in Wasm.
 Benefits: 
 * An even smaller, faster codebase  
 * More dev resources can be allocated to the codebase, and the team can grow heterogeneous, emulating cross-learning.  
-
-### Get started
-* Examples in prod: TBD
-* Tutorials: TBD
-* Mode 1: npm packages (+ all the hidden ones) 
-* Mode 2: TBD. Refer to section 3 to see with languages are supported. 
 
 
 ## 3    
@@ -69,5 +63,11 @@ Note: This will evolve. You might be able to write Wasm from TypeScript someday!
 ## 4 
 Mostly with C++.  
 
+## Get started 
+
+* Examples in prod: TBD
+* Tutorials: C#, Rust, TBD
+* Mode 1: npm packages (+ all the hidden ones) 
+* Mode 2: TBD. Refer to section 3 to see with languages are supported. 
 
 <div align="center"><sub><sup>©maudnals</sup></sub></div>
