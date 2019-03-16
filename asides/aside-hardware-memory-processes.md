@@ -1,13 +1,13 @@
-# // 🚧WIP
+# Basics of Hardware, Memory, and Processes // 🚧WIP
 
 
 ## CPU and GPU
 
 CPU = central processing unit.
 
-A CPU is good at doing **complex manipulations** on a small set of data, i.e. data-parallel processing (having many programs open at once). 
+A CPU is good at doing **complex manipulations** on a **small** set of data, i.e. data-parallel processing (having many programs open at once). 
 
-A GPU is good at doing **simple manipulations** on a large set of data, i.e. data-parallel computing. It used to be mostly good for graphic operations (matrix operations = simple manips on a large dataset, but more and more computations is becoming possible on GPU alone. It's more efficient because it has less instruction decoding overhead.    
+A GPU is good at doing **simple manipulations** on a **large** set of data, i.e. data-parallel computing. It used to be mostly good for graphic operations (matrix operations = simple manips on a large dataset, but more and more computations is becoming possible on GPU alone. It's more efficient because it has less instruction decoding overhead.    
 
 Note that they both enable SIMD (Single Instruction, Multiple Data): the CPU parallelize instructions, and the GPU parallelize pipelines.  
 
@@ -36,16 +36,12 @@ https://superuser.com/questions/308771/why-are-we-still-using-cpus-instead-of-gp
 https://developers.google.com/web/updates/2018/09/inside-browser-part1  
 https://stackoverflow.com/questions/27333815/cpu-simd-vs-gpu-simd
 
-## CPU, GPU and RAM
+## RAM
 
 The RAM is a temporary storage area from which retrieval is faster than from disk / permanent storage.
 When the CPU needs to process some data, the data will be first loaded onto the RAM so that the CPU can retrieve it faster, which will speed things up alltogether. CPU is the brain, RAM is the book, permanent storage is the bookshelf.
 NB: GPU also uses RAM, new systems have GPU integrated in the CPU.
 Source: https://superuser.com/questions/78362/what-is-the-relationship-between-cpu-usage-and-ram
-
-## The stack and the heap
-
-TBD
 
 ## Processes and threads
 
