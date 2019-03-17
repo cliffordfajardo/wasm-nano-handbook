@@ -36,11 +36,14 @@ https://superuser.com/questions/308771/why-are-we-still-using-cpus-instead-of-gp
 https://developers.google.com/web/updates/2018/09/inside-browser-part1  
 https://stackoverflow.com/questions/27333815/cpu-simd-vs-gpu-simd 
 
-### For the curious: GPU-accelerated rendering in the browser   
-
-* https://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome  
-* https://csstriggers.com/
+### One exapmple: GPU-accelerated rendering in the browser   
 TBD
+* https://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome  
+* https://csstriggers.com/  
+* https://www.urbaninsight.com/article/improving-html5-app-performance-gpu-accelerated-css-transitions  
+* https://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome  
+* https://www.lifewire.com/hardware-acceleration-in-chrome-4125122
+
 
 ## RAM
 
