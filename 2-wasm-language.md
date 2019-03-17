@@ -103,7 +103,9 @@ Good for: humans. E.g. source maps (browsers display "wasm" but it reality what 
 )
 ```   
 * Opcodes are represented as mnemonics instead of bytes.
-* S-expressions are used. Code written in s-expressions can be concisely expressed in a tree structure, which is why s-expressions were chosen for WebAssembly’s text format.  
+* S-expressions are used. Code written in s-expressions can be concisely expressed in a tree structure, which is why s-expressions were chosen for WebAssembly’s text format.   
+
+More: https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format
 
 
 ### The abstract syntax tree (AST)
