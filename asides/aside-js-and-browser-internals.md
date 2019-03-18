@@ -135,6 +135,10 @@ https://developers.google.com/web/updates/2018/09/inside-browser-part1
 
 ### URL to interactive
 
+
+<img src="https://cdn-images-1.medium.com/max/2600/1*PiFyb7IV8vTDCGEeUOWLVQ.jpeg"/>  
+Source: https://medium.com/@francesco_rizzi/javascript-main-thread-dissected-43c85fce7e23
+
 https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a and https://developers.google.com/web/updates/2018/09/inside-browser-part2
 
 _(User starts typing maps.google.com into the browser address bar)_
