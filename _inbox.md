@@ -1,5 +1,17 @@
 ---
+If you're here, you might already know why Wasm will be key for web developers and their peers.
 
+Yet you've also opened this page named "Why am I reading this". Not jumping to conclusions here, but you might have your doubts!
+
+Let's talk about it.
+
+And you could argue it has a hype touch to it.  
+(Also, it can be described as a thing - it doesn't mean it should, but words belong everybody)
+
+=> let's not invest your time in it just yet, since it might fade out soon anyways
+
+But:  
+WebAssembly 
 Myth debunking suit: on.
 No hard feelings, healthy skeptiscism is healthy.
 
