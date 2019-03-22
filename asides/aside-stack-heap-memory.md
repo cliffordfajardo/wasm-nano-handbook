@@ -3,6 +3,3 @@
 TBD
 
 ## GC vs others
-
-
-

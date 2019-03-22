@@ -56,7 +56,8 @@ It suddenly makes a lot of sense to break free from these constraints.
  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
-Let's take a closer look at how (1) and (2) impact both the developer experience and the user experience:
+Let's take a closer look at how (1) and (2) impact both the developer experience and the user experience.  
+As it turns out, (1) tends to impact DevX while (2) tends to impact UX.
 
 - Web apps can get slow.
 - Some use cases are simply not supported on the web. This is an extension of the previous point: infinitely slow is just not an option.
