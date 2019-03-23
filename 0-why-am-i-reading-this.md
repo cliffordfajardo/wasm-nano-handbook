@@ -14,8 +14,8 @@ What do you do?
 
 WebAssembly is to this tool/framework what the moon is to a street lamp - they look the same from afar, but really they're not.
 
-**Wasm is not just a new hype thing.**
-It is both **highly transformative** and **here to stay**.
+### **Wasm is not just a new hype thing.**
+### It is both **highly transformative** and **here to stay**.
 
 How is that?
 
