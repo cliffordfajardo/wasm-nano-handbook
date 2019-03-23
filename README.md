@@ -14,6 +14,7 @@ And this, in a **time-efficient** way.
 
 ## Content  
 
+#### 0. [Why am I reading this][why-am-i] 
 #### 1. [Origins and Vision][origin-and-vision]  **👈Start here** 
 #### 2. [The language][language]     
 #### 3. [Using Wasm][use]   
@@ -22,6 +23,7 @@ And this, in a **time-efficient** way.
 #### 6. [Wasm in real-life][irl]    
 #### 7. [FAQ][faq]   
 
+[why-am-i]: https://github.com/maudnals/wasm-nano-handbook/blob/master/0-why-am-i-reading-this.md
 [origin-and-vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md 
 [language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md
 [use]: https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md
