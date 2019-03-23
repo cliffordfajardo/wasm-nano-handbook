@@ -1,5 +1,3 @@
-The space guide to wasm for web developers
-
 # Origins and vision // 🚧WIP
 
 _On what WebAssembly is, where it comes from, and where it is taking us to._  
