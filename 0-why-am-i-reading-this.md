@@ -1,4 +1,12 @@
-# Why am I reading this
+# Why am I reading this 
+
+
+<p align="center">
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/why-am-i.jpg">  
+  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
+</p>   
+
+
 
 Good question.
 
