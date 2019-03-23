@@ -14,8 +14,8 @@ And this, in a **time-efficient** way.
 
 ## Content  
 
-#### 0. [Why am I reading this][why-am-i] 
-#### 1. [Origins and Vision][origin-and-vision]  **👈Start here** 
+#### 0. [Why am I reading this][why-am-i] **👈Start here** 
+#### 1. [Origins and Vision][origin-and-vision]  
 #### 2. [The language][language]     
 #### 3. [Using Wasm][use]   
 #### 4. [Wasm in the web][web]   
