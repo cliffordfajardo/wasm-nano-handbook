@@ -44,7 +44,13 @@ When learning about Wasm, you might often read/hear the words "MVP" and "early".
 However:
 
 - Being young doesn't make it non-production-ready. It is.
-- This isn't just greenfield ; Wasm is the **joined** result of various approaches. It builds upon previously accumulated knowledge, and there is a strong consensus around it.
+- This isn't just greenfield ; Wasm is the **joined** result of various approaches. It builds upon previously accumulated knowledge, and there is a strong consensus around it.  
+
+<p align="center">
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/sketchup.png">  
+  <div align="center"><sub><sup>SketchUp in production, using wasm modules</sup></sub></div> 
+</p>   
+
 
 ## 3. No borders aka "It's not just fast"
 
