@@ -14,7 +14,7 @@ A new tool/framework is making headlines.
 
 WebAssembly is to this tool/framework what the moon is to a street lamp - **they look the same from afar, but really they're not**.
 
-### Wasm is not just a new hype thing. It is both **highly transformative and **here to stay.
+### Wasm is not just a new hype thing. It is both highly transformative and here to stay.
 
 How is that?
 
@@ -41,7 +41,7 @@ However:
 
 Speed in the browser is certainly one benefit of Wasm. It makes performance-demanding web apps possible.
 
-But it's only one part of the story.  
+**But it's only one part of the story.**  
 Since Wasm is also a compilation target, it can transform:
 
 - How we write apps // e.g. write in C++ for the web
@@ -54,7 +54,7 @@ What this means: Wasm may **diffuse through mutiple layers of your stack**, web 
 Understanding Wasm goes hand-in-hand with understanding how JavaScript (JS) runs - not just the event loop and the callback queue, but how browsers actually execute JS code.  
 After all, this is at the core of how web apps work. Kind of good to know!
 
-To be clear: you don't _need_ to understand browser internals to use it ; it's just something you get for free if you understand Wasm.
+**To be clear:** you don't _need_ to understand browser internals to use it ; it's just something you get for free if you understand Wasm.
 
 ## Good news
 
