@@ -1,26 +1,23 @@
-# Why am I reading this? 
-
+# Why am I reading this?
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/why-am-i.jpg">  
   <div align="center"><sub><sup>©maudnals</sup></sub></div> 
-</p>   
-
-
+</p>
 
 Good question.
 
 Why would developers want to learn about WebAssembly over spending time on other techs/tools?
 
-Picture yourself, on a weekday morning, drinking the Hot Drink while opening your tech newsletters.
+Picture yourself, on a weekday morning. You're drinking the Hot Drink while opening your tech newsletters.
 A new tool/framework is making headlines.  
 **What do you do?**
 
 1. Laugh and burn these pixels
-2. Keep that tool/framework in mind, and come back to it later when it has taken off.
-3. It catches your attention, you give it a try, you love it, you adopt it. Until the next best tool comes in, in which case you might go for option 1.
+2. Keep that tool/framework in mind. You'll come back to it later when/if it has taken off.
+3. It catches your attention. You give it a try, you love it, you adopt it. Until the next best tool comes in, in which case you might go for option 1.
 
-WebAssembly is to this tool/framework what the moon is to a street lamp.   
+WebAssembly is to this tool/framework what the moon is to a street lamp.  
 **They look the same from afar, but really they're not**.
 
 ### Wasm is not just a new hype thing. It is both highly transformative and here to stay.
@@ -29,30 +26,29 @@ How is that?
 
 ## 1. A matter of space
 
-WebAssembly (Wasm for short) is a flexible technology that doesn't make assumptions about where it's being run ; you could use it in a wide variety of environments.
+WebAssembly (Wasm for short) is a flexible technology that doesn't make assumptions about where it runs. You could use it in a wide variety of environments.
 
 Luckily, some environments have already taken care of integrating it.  
-And these environments are ubiquitous ones: Wasm is supported in **all four major browsers** (Chrome, Edge, Firefox, and WebKit). This means it's **already usable almost everywhere**.
+And these environments are ubiquitous: Wasm is supported in **all four major browsers** (Chrome, Edge, Firefox, and WebKit). This means it's **already usable almost everywhere**.
 
-Besides, it's part of the web platform. Browser APIs for WebAssembly are similar to the `fetch` API. It's a web standard. Standards are solid.
+Besides, it's part of the web platform. Browser APIs for WebAssembly are like the `fetch` API. It's a web standard. Standards are solid.
 
-And because the WebAssembly Community Group members represent four browsers and is backed by w3c, Wasm's future tends to be bright and safe.
+Last but not least: the WebAssembly Community Group is backed by w3c and its members represent four browsers. Doesn't it feel like Wasm's future is bright and safe?
 
-## 2. There's "early" and "early"
+## 2. There's _early_ and _early_
 
-When learning about Wasm, you might often read/hear the words "MVP" and "early". It is indeed a young technology.  
+When learning about Wasm, you might often read/hear the words _MVP_ and _early_. It is indeed a young technology.  
 However:
 
 - Being young doesn't make it non-production-ready. It is.
-- This isn't just greenfield ; Wasm is the **joined** result of various approaches. It builds upon previously accumulated knowledge, and there is a strong consensus around it.  
+- This isn't greenfield ; Wasm is the **joint result** of multiple approaches. It builds upon accumulated knowledge, and there is a strong consensus around it.
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/sketchup.png">  
   <div align="center"><sub><sup>SketchUp in production, using wasm modules</sup></sub></div> 
-</p>   
+</p>
 
-
-## 3. No borders aka "It's not just fast"
+## 3. No borders aka _It's not just fast_
 
 Speed in the browser is certainly one benefit of Wasm. It makes performance-demanding web apps possible.
 
@@ -66,23 +62,19 @@ What this means: Wasm may **diffuse through mutiple layers of your stack**, web 
 
 ## 4. Under the hood
 
-Understanding Wasm goes hand-in-hand with understanding how JavaScript (JS) runs - not just the event loop and the callback queue, but how browsers actually execute JS code.  
+Understanding Wasm goes hand-in-hand with understanding how JavaScript (JS) runs. Not just the event loop and the callback queue, but how browsers actually execute JS code.  
 After all, this is at the core of how web apps work. Kind of good to know!
 
-**To be clear:** you don't _need_ to understand browser internals to use it ; it's just something you get for free if you understand Wasm. 
+**To be clear:** you don't _need_ to understand browser internals to use it ; it's just something you get for free if you understand Wasm.
 
 <p align="center">
 <img width="520" src="https://cdn-images-1.medium.com/max/1440/1*ZIH_wjqDfZn6NRKsDi9mvA.png">  
   <div align="center"><sub><sup>Chrome V8’s compiler pipeline by @fhinkel - https://medium.com/dailyjs/understanding-v8s-bytecode-317d46c94775</sup></sub></div> 
-</p>   
-
-
+</p>
 
 ## Good news
 
-Wasm's basics are simple, and it's a breeze to try it out.  
-
-
+Wasm's basics are simple, and it's a breeze to try it out.
 
 So, let's go!  
 Up next: [Origins and Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md).
