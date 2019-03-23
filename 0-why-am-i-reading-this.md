@@ -66,4 +66,8 @@ After all, this is at the core of how web apps work. Kind of good to know!
 
 ## Good news
 
-Wasm's basics are simple, and it's a breeze to try it out.
+Wasm's basics are simple, and it's a breeze to try it out.  
+
+
+So, let us go.    
+Up Next: [Origins and Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-origins-and-vision.md).
