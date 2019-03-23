@@ -33,7 +33,7 @@ And these environments are ubiquitous: Wasm is supported in **all four major bro
 
 Besides, it's part of the web platform. Browser APIs for WebAssembly are like the `fetch` API. It's a web standard. Standards are solid.
 
-Last but not least: the WebAssembly Community Group is backed by w3c and its members represent four browsers. Doesn't it feel like Wasm's future is bright and safe?
+Last but not least: the WebAssembly Community Group is backed by w3c and its members represent four browsers. You'd have guessed that Wasm is not going extinct anytime soon - quite the contrary, this is just the start.
 
 ## 2. There's _early_ and _early_
 
