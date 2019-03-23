@@ -1,7 +1,6 @@
 # wasm-nano-handbook
 
-Wasm is a large, ever-expanding territory to explore.
-
+Wasm is a large, ever-expanding territory to explore.  
 This handbook aims at helping developers, **no matter their background**:
 
 * **Understand** Wasm, its ecosystem and its future // theory
@@ -9,12 +8,11 @@ This handbook aims at helping developers, **no matter their background**:
 
 And this, in a **time-efficient** way.    
 
-
 **🚧 This is WIP, publication to come (GitBook + blogpost series).**
 
 ## Content  
 
-#### 0. [Why am I reading this][why-am-i] **👈Start here** 
+#### 0. [Why am I reading this?][why-am-i] **👈Start here** 
 #### 1. [Origins and Vision][origin-and-vision]  
 #### 2. [The language][language]     
 #### 3. [Using Wasm][use]   
