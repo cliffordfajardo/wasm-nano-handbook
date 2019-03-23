@@ -1,7 +1,32 @@
 ---
+Early tech = Uncertain survival.
+although it could be just floating alone in mid air, 
 If you're here, you might already know why Wasm will be key for web developers and their peers.
-
+backwards compatibility
 Yet you've also opened this page named "Why am I reading this". Not jumping to conclusions here, but you might have your doubts!
+
+
+<!-- And many other rippled effects. -->
+<!-- - What apps we write // e.g. performance-demanding apps for the web -->
+<!-- Wasm doesn't make assumptions about the environment it's running in.
+- how you write it
+- where it runs: everywhere
+also it's a compilation target.
+It is highly portable, which means in might. -->
+
+<!-- Contrary to a new tool/framework, no matter how good:
+
+- allows for incremental adoption
+  A technology that is now supported by the most ubiquitous pieces fof software is here to stay.
+- they know what they're doing
+- it will permeate
+  Wasm doesn't make assumptions about the environment it's running in - which is a powerful feature. -->
+
+  <!-- - not learn a new language -->
+
+<!--
+So if this is still a bit of a black box to you, Wasm will make this clearer. -->
+
 
 Let's talk about it.
 

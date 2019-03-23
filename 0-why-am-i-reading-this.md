@@ -1,16 +1,15 @@
 # Why am I reading this
 
-Good question, why?
+Good question.
 
-Why would developers want to learn about WebAssembly (Wasm for short)?  
-Why spend the next minutes reading about Wasm _over_ other techs/tools?
+Why would developers want to learn about WebAssembly (Wasm for short), _over_ spending time on other techs/tools?
 
-Picture yourself, on a weekday morning, opening your tech newsletters.
+Picture yourself, on a weekday morning, drinking the hot drink while opening your tech newsletters.
 A new tool/framework is making the headlines.  
 What do you do?
 
 1. Laugh and burn these pixels
-2. Keep that tool/framework in mind, and come back to it later when it has taken off. Early tech = Uncertain survival.
+2. Keep that tool/framework in mind, and come back to it later when it has taken off.
 3. It catches your attention, you give it a try, you love it, you adopt it. Until the next best tool comes in, in which case you might go for option 1.
 
 WebAssembly is to this tool/framework what the moon is to a street lamp - they look the same from afar, but really they're not.
@@ -22,61 +21,42 @@ How is that?
 
 ## 1. A matter of space
 
-Wasm is supported in **all 4 major browsers**; this means that the possibility of Wasm is already almost everywhere.
+Wasm is a flexible technology that doesn't make assumptions about where it's being run ; you could use it in a wide variety of environments.
 
-Wasm is part of the **web platform**. Wasm browser APIs can be compared to the `fetch` API. It's a standard. Standard don't go away that easily.
+Luckily, some environments have already taken care of integrating it.  
+And these environments are ubiquitous ones: Wasm is supported in **all four major browsers** (Chrome, Edge, Firefox, and WebKit). This means it's **already usable almost everywhere**.
 
-WebAssembly CG members representing four browsers, Chrome, Edge, Firefox, and WebKit.
+Besides, it's part of the web platform. Browser APIs for WebAssembly are similar to the `fetch` API. It's a web standard. Standards are solid.
 
-backed with w3c
-and its specs is backed by bcjcjccj.
-As a side observation, the fact that all 4 major browser vendors have agreed to push it forward is probably a sogn that this tech has a bright future ahead.
-
-backwards compatibility
+And because the WebAssembly Community Group members represent four browsers and is backed by w3c, Wasm's future tends to be bright and safe.
 
 ## 2. There's "early" and "early"
 
 When learning about Wasm, you might often read/hear the words "MVP" and "early". It is indeed a young technology.  
-But it doesn't mean that it's not ready for production: it is.
+However:
 
-<!-- It has been succesfully shipped before.  -->
-<!-- Also its roadmap is solid. -->
+- Being young doesn't make it non production-ready: it is.
+- It's not just greenfield ; it's actually the **joined** result of various approaches. It builds upon previously accumulated knowledge, and there is a strong consensus around it.
 
-## 3. No borders aka It's not just fast
+## 3. No borders aka "It's not just fast"
 
-Speed in the browser is certainly one solid benefit of WebAssembly. But it's only one part of the story.  
-Because it's a compilation target and because it's highly portable, Wasm can transform:
+Speed in the browser is certainly one benefit of WebAssembly. It makes performance-demanding web apps possible.
 
-- what apps we write // e.g. performance-demanding apps for the web
-- how we write apps // e.g. write in C++ for the web
-- where code run // e.g. a wasm module could run anywhere -> a way to universal libraries?
+But it's only one part of the story.  
+Since Wasm is also a compilation target, it can also transform:
 
-And many other rippled effects.
+- How we write apps // e.g. write in C++ for the web
+- Where code runs // e.g. a wasm module could run anywhere -> Could Wasm be a way to universal libraries?
 
-<!-- Wasm doesn't make assumptions about the environment it's running in.
-- how you write it
-- where it runs: everywhere
-also it's a compilation target.
-It is highly portable, which means in might. -->
-
-<!-- Contrary to a new tool/framework, no matter how good:
-
-- allows for incremental adoption
-  A technology that is now supported by the most ubiquitous pieces fof software is here to stay.
-- they know what they're doing
-- it will permeate
-  Wasm doesn't make assumptions about the environment it's running in - which is a powerful feature. -->
+That means that it may **diffuse through mutiple layers of your stack**, web or non-web.
 
 ## 4. Under the hood
 
-Understanding Wasm goes hand-in-hand with understanding how browsers execute JavaScript code - not just the event loop and the callback queue, but really how JS is transformed at runtime and run.  
-After all, this is at the core of how web apps work, and worth having an idea about.
+Understanding Wasm goes hand-in-hand with understanding how JavaScript (JS) runs - not just the event loop and the callback queue, but how browsers actually execute JS code.  
+After all, this is at the core of how web apps work, so it's worth knowing!  
+To be clear: you don't _need_ to understand browser internals to use Wasm ; it's just something you get for free if you read about it.
 
-<!-- And isn't this the core of web development? -->
+## Good news
 
-## 6. Good news
-
-- not learn a new language
-
-<!--
-So if this is still a bit of a black box to you, Wasm will make this clearer. -->
+Wasm's basics are simple.  
+And it's a breeze to try it out.
