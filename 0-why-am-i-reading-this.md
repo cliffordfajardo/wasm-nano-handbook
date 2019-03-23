@@ -29,7 +29,7 @@ How is that?
 WebAssembly (Wasm for short) is a flexible technology that doesn't make assumptions about where it runs. You could use it in a wide variety of environments.
 
 Luckily, some environments have already taken care of integrating it.  
-And these environments are ubiquitous: Wasm is supported in **all four major browsers** (Chrome, Edge, Firefox, and WebKit). This means it's **already usable almost everywhere**.
+And these environments are ubiquitous: Wasm is supported in **all four major browsers** (Chrome, Edge, Firefox, and WebKit/Safari). This means it's **already usable almost everywhere**.
 
 Besides, it's part of the web platform. Browser APIs for WebAssembly are like the Fetch API or the Web Workers API. They're standards. Standards are solid.
 
