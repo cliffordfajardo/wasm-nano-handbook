@@ -1,4 +1,13 @@
-# How browsers run web applications  
+# How browsers run web applications    
+
+
+<p align="center">
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/angle.jpg">  
+  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
+</p>   
+
+
+
 
 Between the moment you type a URL in your browser and the time the page is displayed and usable, a lot is going on.  
 You might have heard the expression "URL to interactive" - it refers to all these steps that happen after you enter a new URL.  
