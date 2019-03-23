@@ -71,4 +71,4 @@ Wasm's basics are simple, and it's a breeze to try it out.
 
 
 So, let's go!  
-Up Next: [Origins and Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-origins-and-vision.md).
+Up next: [Origins and Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/1-origins-and-vision.md).
