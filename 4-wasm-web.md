@@ -93,6 +93,7 @@ GC:
 - Wasm is shipped as a module (`.wasm`) (tbd link to section on modules). Just like a JS module, it has sections within it that export and import functions.
 - The Wasm module can be loaded in JS, and the Wasm code can be invoked from JS.
 - Under the hood, rather than that function being interpreted as JS code, that function will be running in the Wasm virtual machine ; i.e. will be compiled at runtime.
+- You can debug wasm directly
 
 Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brendan Eich).
 
