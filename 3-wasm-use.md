@@ -17,7 +17,8 @@ _On how you can use Wasm today, depending on your context._
 
 ## TL;DR
 
-You can use wasm today.
+You can use WebAssembly today.  
+Usually, one wouldn't write it directly, but instead use another language and then compile this code down to Wasm.
 
 ## Usage modes
 
@@ -43,6 +44,10 @@ Try them out: https://webassembly.studio/
 </p>
 
 Details: TBD
+
+### C/C++ -> wasm with Emscripten
+
+Emscripten requires JS "glue" code for memory allocation/leaks, etc. About 2000 lines for just a hello world (but this also includes instantiation).
 
 Sources/resources:
 
