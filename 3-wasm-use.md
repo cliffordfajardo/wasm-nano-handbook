@@ -15,7 +15,7 @@ _On how you can use Wasm today, depending on your context._
 
 ---
 
-## TL;DR
+## ⚡ TL;DR
 
 You can use WebAssembly today.  
 Usually, one wouldn't write it directly, but instead use another language and then compile this code down to Wasm.

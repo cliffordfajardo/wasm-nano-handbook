@@ -18,9 +18,9 @@ _Before digging into this chapter: if you're a bit rusty on what "machine langua
 
 ---
 
-## TL;DR
+## ⚡ TL;DR
 
-Wasm is very different from a language like JS. What makes it different is also what makes it fast.  
+Wasm looks very different from JS. What makes it different is also what makes it fast.  
 But you don't need to be able to write Wasm directly to benefit from it.
 
 ## Wasm is Assembly
@@ -29,7 +29,7 @@ But you don't need to be able to write Wasm directly to benefit from it.
 
 Basics:
 
-- Assembly is "symbolic machine code" ie human readable.
+- Assembly is "symbolic machine code" i.e. human-readable.
 - Assembly code depends on the machine type
 
 When delivering code on a user's machine across the web, we don't know what the target architecture will be. So, Wasm is a special assembly: it's a machine language for a VM.
