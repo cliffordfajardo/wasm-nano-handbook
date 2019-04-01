@@ -100,7 +100,7 @@ Note that it’s the same one engine ("1vm") that deals with wasm and JS (Brenda
 ### JS <-> Wasm interop
 
 - At the moment, Wasm can only use numbers (int and floating points) as params and return values
-- To deal with strings, one must use Wasm's Memory API, which is a way for Wasm and JS to share memory.
+- To deal with strings, one must use Wasm's Memory API. which is a way for Wasm and JS to share memory.
 - wasm-bindgen: TBD
 
 https://www.infoq.com/podcasts/colin-eberhardt-webassembly
