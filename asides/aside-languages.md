@@ -1,5 +1,63 @@
 # // 🚧WIP 
 
+Machines and humans don't speak the same language.  
+- You write your code in a language you understand. 
+- Then, that language is translated into something the machine can understand.
+
+Let's have a look at the spectrum of languages, between human and machines, and what they're good for.
+
+## Human to metal
+### Basics 
+Machine code = Native code ~= binary = the actual bytes (as instructions) that the CPU executes. Each machine code instruction causes the CPU to perform a very specific task: a load, a jump, or an ALU (arithmetic logic unit) operation on a unit of data in a CPU register or memory. 
+**Machine code depends on the machine's architecture.** 
+Example:
+```javascript
+1111 // in binary (base 2)
+```
+
+High-level language = what language you write your code in. A high-level language can be more or less high-level. C++ is considered lower-level than JS, because you need to be a little more explicit about how you manage memory, for example. We'll come back to that.
+Example: JS, Rust
+```javascript
+const a = ' Hello ';
+const b = a.trim();
+```
+
+Basic workflow: 
+- Write your code in C++ 
+- Compile it ahead-of-time into a binary
+- Give the binary to the machine, and let it run it.
+
+### With VMs
+Now that this is clear, let's have a look at how virtual machines fit in.  
+Machine code is hardware-dependent. Because you don't want to target multiple architectures, you can instead add another layer. This layer will
+<!-- This all works based on the assumption that your VM -->
+
+## When that translation happen
+
+## Zoom on the browser
+
+## Compilers 
+
+
+## Terminology
+* "Executable": an overloaded term, that means "something the computer can run". It can be meant as "machine code", or "anything I can run on the computer provided that the runtime is also installed", e.g. a Ruby or Rust script.
+* Machine code: 
+* Engine: a special kind of virtual machine.
+
+## What's the point of stack machines?  
+It's a model on how the code will be run. It's just another way to put it.
+
+## Workflows
+JS: 
+- you write JS // high-level
+
+
+
+
+
+
+
+
 
 ## LLVM and compilers
 
@@ -56,14 +114,7 @@ const b = a.trim();
 
 Workflow:
 Programmer writes high-level language OR assembly language, that is then compiled to executable machine code (by a compiler or assembler, respectively).
-NB: interpreted programs are an exception, they're not comnpiled to machine code.
-
-NB:
-Executable = something the computer can run.
-Can be meant as...
-Machine code // 01010100100001
-OR
-"anything I can run on the computer provided that the runtime is also installed" // e.g. a ruby or rust script.
+NB: interpreted programs are an exception, they're not compiled to machine code.
 
 Sources:
 https://en.wikipedia.org/wiki/Machine_code
