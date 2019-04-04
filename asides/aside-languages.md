@@ -28,11 +28,42 @@ Basic workflow:
 - Give the binary to the machine, and let it run it.
 
 ### With VMs
-Now that this is clear, let's have a look at how virtual machines fit in.  
-Machine code is hardware-dependent. Because you don't want to target multiple architectures, you can instead add another layer. This layer will
-<!-- This all works based on the assumption that your VM -->
+Now that this is clear, let's have a look at how virtual machines fit in.   
+Warning: this term is overloaded. What we'll talk about is not: 
+* VMs such as docker
+* LLVM: it's more of a compile time VM.
 
-## When that translation happen
+Instead, we'll focus on runtime virtual machines.
+Machine code is hardware-dependent.  
+But because you don't want to target multiple physical architectures i.e. you want to be portable, you can instead add another layer. This layer is the virtual machine. 
+
+A virtual machine is an abstraction over multiple kinds of machines.   
+A VM is both: 
+* what runs your code
+* facilities that are needed to run your code. 
+
+An engine is a specific kind of VM.  
+For example, V8 is an engine that can run JS code. It provides the event loop and other APIs needed by JS.  
+On top of that, comes the concept of the host - we'll touch on this later. 
+
+Example:
+* SpiderMonkey, Chakra 
+
+Disambiguation: 
+You might hear that "WebAssembly is a VM". What that means is that WebAssembly is a language that can run in a VM.
+
+## When that translation happen  
+AOT. "AOT" really could be called AORT, ie ahead of Runtime. 
+Example:  
+* C++ is usually compiled down to binary
+* LLVM-compiled WebAssembly. Note that in that case, there will be one more step at runtime: the JS/wasm engine will compile it to machine code and run it. We don't care yet whether Ignition or Turbofan or LiftOff will take care of it - the core idea is is that 
+
+JIT.  
+Example: 
+- Turbofan
+
+Interpretation 
+...is usually not referred to as a compilation. But note that if you ship JS to the browser, the engine will need at some point to translate it to machine code! So the interpreter also does some compilation.
 
 ## Zoom on the browser
 
@@ -47,9 +78,13 @@ Machine code is hardware-dependent. Because you don't want to target multiple ar
 ## What's the point of stack machines?  
 It's a model on how the code will be run. It's just another way to put it.
 
-## Workflows
+## Flows
 JS: 
-- you write JS // high-level
+- you write JS // high-level 
+- JS is shipped as is over to the browser. In a compressed (gzipped), minified (uglified) format - but it's still text // 
+- The engine runs it:
+  - The interpreter (Ignition) runs some portions, via its internal assembly. Note that this will also need to be compiled down to machine code at some point!
+  - The optimizing compiler optimizes and runs hot portions. 
 
 
 

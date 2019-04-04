@@ -30,9 +30,8 @@ But you don't need to be able to write Wasm directly to benefit from it.
 Basics:
 
 - Assembly is "symbolic machine code" i.e. human-readable.
-- Assembly code depends on the machine type
-
-When delivering code on a user's machine across the web, we don't know what the target architecture will be. So, Wasm is a special assembly: it's a machine language for a VM.
+- Assembly code normally depends on the machine type But when delivering code on a user's machine across the web, we don't know what the target architecture will be. So, Wasm is a special assembly: **it's a machine language for a VM**.
+- Wasm is a rather simple kind of Assembly.
 
 // TBD add schema + source.
 
