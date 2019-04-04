@@ -17,9 +17,10 @@ Example:
 
 ```javascript
 1111; // in binary (base 2)
+F; // same binary in hexadecimal i.e. base 16 (but still referred to "binary" as oversimplification). hexa is often used because it takes less space than binary, so errors are less likely.
 ```
 
-High-level language = what language you write your code in. A high-level language can be more or less high-level. C++ is considered lower-level than JS, because you need to be a little more explicit about how you manage memory, for example. We'll come back to that.
+High-level language = what language you write your code in ("source code"). A high-level language can be more or less high-level: for example, C++ is considered lower-level than JS, because you need to be a little more explicit about how you manage memory. We'll come back to that.
 Example: JS, Rust
 
 ```javascript
@@ -33,7 +34,7 @@ Basic workflow:
 - Compile it ahead-of-time into a binary
 - Give the binary to the machine, and let it run it.
 
-### With VMs
+### Now with VMs
 
 Now that this is clear, let's have a look at how virtual machines fit in.  
 Warning: this term is overloaded. What we'll talk about is not:
@@ -58,7 +59,25 @@ Example:
 
 - SpiderMonkey, Chakra
 
-## Let's talk about timing
+### The last piece: Bytecode and Assembly language
+
+Both are "intermediate languages" between source code and machine code.  
+They're here for us humans to still be able to get a feeling for machine code ; they're not high-level, but human-readable. Language that is human-readable, but still closely associated with machine code instructions.
+
+= ASM = "symbolic machine code" = "human-readable machine code"
+
+Historically, the difference was:
+
+- Bytecode targets a virtual machine (software)
+- Assembly targets a specific CPU architecture / operating system.
+
+Wasm is bytecode. You'll note that it's considered "assembly" even though it doesn't target a physical architecture, but a virtual machine. Wasm is a virtual assembly language. So, the line is a bit blurred±
+
+https://techterms.com/definition/bytecode
+
+`A* name$i`
+
+## "Timing is everything"
 
 So whenever you write code, it needs to be translated (= compiled) at some point into machine code.
 
@@ -84,23 +103,9 @@ Interpretation
 ...is usually not referred to as a compilation. But some compilation happens for sure!
 If you ship JS to the browser, the engine will need at some point to translate it to machine code! So the interpreter also does some compilation.
 
-## Zoom on the browser
-
-## Compilers
-
-## Terminology
-
-- "Executable": an overloaded term, that means "something the computer can run". It can be meant as "machine code", or "anything I can run on the computer provided that the runtime is also installed", e.g. a Ruby or Rust script.
-- Machine code:
-- Engine: a special kind of virtual machine.
-
-## Disambiguations
-
-- You might hear that "WebAssembly is a VM". What that means is that WebAssembly is a language that can run in a VM.
-
 ## Flows
 
-JS:
+For example JS:
 
 - you write JS // high-level
 - JS is shipped as is over to the browser. In a compressed (gzipped), minified (uglified) format - but it's still text //
@@ -114,47 +119,15 @@ backend frontend of a compiler
 immediate representation  
 LLVM backend vs emscripten
 
-### Machine code
+## Wrapup: the browser
 
-= Native code ~= binary = the actual bytes (as instructions) that the CPU executes. Each machine code instruction causes the CPU to perform a very specific task: a load, a jump, or an ALU (arithmetic logic unit) operation on a unit of data in a CPU register or memory.
-Example:
-`1111` // in binary (base 2)
-`F` // same binary in hexadecimal i.e. base 16 (but still referred to "binary" as oversimplification). hexa is often used because it takes less space than binary, so errors are less likely.
+---
 
-### Bytecode
+## Glossary/Disambiguations
 
-= compiled code that targets a virtual machine (rather than a specific computer architecture). Contrary to binaries, bytecode isn't machine code.
-
-But (!!! to check): it can look like it.
-Example: xxxx todo
-
-### Assembly language
-
-= ASM = "symbolic machine code"
-
-Language that is human-readable, but still closely associated with machine code instructions. Each assembly language (except WASM I think) is specific to a particular computer architecture and operating system. In contrast, most high-level programming languages are generally portable across multiple architectures but require interpreting or compiling.
-NB: Bytecode and assembly language are similar: not high-level but readable ; both are "intermediate languages" between source code and machine code. Main difference: bytecode is generated for a virtual machine (software), while assembly language is created for a CPU (hardware). Src: https://techterms.com/definition/bytecode
-Example:
-A C compiler generates native machine code for a native machine architecture.
-In the most common implementations, some python code (somefile.py) when imported creates a file (somefile.pyc) in the same directory; this is bytecode that will be run by the python VM. So python is semi-compiled (compiled invisibly).
-There is yet another concept called JIT, where code is actually compiled to native machine code on the fly.
-Also, there is interpreted: Ruby is no doubt an interpreted language since the source code is processed by an interpreter at the point of execution.
-
-`A* name$i`
-
-### High-level language
-
-E.g. JS, Rust, ...  
-Example:
-
-```javascript
-const a = ' Hello ';
-const b = a.trim();
-```
-
-Workflow:
-Programmer writes high-level language OR assembly language, that is then compiled to executable machine code (by a compiler or assembler, respectively).
-NB: interpreted programs are an exception, they're not compiled to machine code.
+- Executable: an overloaded term, that means "something the computer can run". It can be meant as actual machine code, or "anything you can run on the computer provided that the runtime is also installed", e.g. a Ruby or Rust script.
+- Engine: a special kind of virtual machine.
+- You might hear that "WebAssembly is a VM". What that means is that WebAssembly is a language that can run in a VM.
 
 ---
 
