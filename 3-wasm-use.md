@@ -30,6 +30,12 @@ Usually, one wouldn't write it directly, but instead use another language and th
 
 ## How does it run, How does memory work?
 
+## Interop
+
+### How Wasm calls x
+
+Wasm doesn’t have any built­in knowledge of JS ; it has a general way to import functions that can accept either JS or Wasm functions.
+
 ## Debug
 
 ## Toolchains

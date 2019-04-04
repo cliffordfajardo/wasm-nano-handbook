@@ -11,7 +11,7 @@ Let's have a look at the spectrum of languages, between human and machines, and 
 
 ### Basics
 
-Machine code = Native code ~= binary = the actual bytes (as instructions) that the CPU executes. Each machine code instruction causes the CPU to perform a very specific task: a load, a jump, or an ALU (arithmetic logic unit) operation on a unit of data in a CPU register or memory.
+Machine code = Native code ~= binary = the actual bytes (as instructions) that the CPU executes. Each machine code instruction causes the CPU to perform a very specific task: a load, a jump, or an ALU (arithmetic logic unit) operation on a unit of data in a CPU register or memory. Can't write it by hand.
 **Machine code depends on the machine's architecture.**
 Example:
 
@@ -71,9 +71,15 @@ Historically, the difference was:
 - Bytecode targets a virtual machine (software)
 - Assembly targets a specific CPU architecture / operating system.
 
-Wasm is bytecode. You'll note that it's considered "assembly" even though it doesn't target a physical architecture, but a virtual machine. Wasm is a virtual assembly language. So, the line is a bit blurred±
+Wasm is bytecode. You'll note that it's considered "assembly" even though it doesn't target a physical architecture, but a virtual machine. Wasm is a **virtual assembly language**: it's hardware-independent.
 
-https://techterms.com/definition/bytecode
+So, the line is a bit blurred!
+
+Example:
+
+- Wasm
+- Java bytecode, that targets a VM
+- ARM assembly
 
 `A* name$i`
 
@@ -89,10 +95,11 @@ Example:
 - C++ is usually compiled down to binary
 - LLVM-compiled WebAssembly. Note that in that case, there will be one more step at runtime: the JS/wasm engine will compile it to machine code and run it. We don't care yet whether Ignition or Turbofan or LiftOff will take care of it - the core idea is is that
 
-If you don't compile it ahead of time:
+If you don't compile ahead of time:
 
-- your destination needs to be able to compile it.
-- your destination will need to compile it, which might take time
+- Your destination needs to be able to compile it. It's all good in the browser though, because the browser embeds a compiler/ an interpreter that's able to run it.
+- Your destination will need to compile it, which might take time.
+- On the bright side, your dev experience will be smooth and fast. It's easy to get up and running with JS.
 
 JIT
 Example:
@@ -136,4 +143,5 @@ https://en.wikipedia.org/wiki/Machine_code
 https://stackoverflow.com/questions/21571709/difference-between-machine-language-binary-code-and-a-binary-file
 https://en.wikipedia.org/wiki/Executable
 https://en.wikipedia.org/wiki/Assembly_language
-https://en.wikipedia.org/wiki/Machine_code
+https://en.wikipedia.org/wiki/Machine_code  
+https://techterms.com/definition/bytecode
