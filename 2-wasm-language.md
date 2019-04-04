@@ -41,8 +41,8 @@ Basics:
 
 1. WASM is a **stack machine** language.
 
-- A stack is a LIFO (last in first out) data structure that has two operations: push and pop.
-- A stack machine is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack.
+- A **stack** is a LIFO (last in first out) data structure that has two operations: push and pop.
+- A **stack machine** is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack.
 
 Basic stack example:
 
@@ -53,15 +53,18 @@ i32.add // Call add, that takes 2 args, by just popping them off the stack
 call $log // Push the result onto the stack"
 ```
 
+**What's the point of stack machines?**
+It's a model on how the code will be run.
+
 WASM implements a stack-machine ; it is a virtual stack and not the program stack.
 
-2. WASM supports **4 types**.  
+1. WASM supports **4 types**.  
    2 integer types and 2 floating point types.  
    To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both WASM and JS.
 
-3. Code is organized into separate **functions**.
+2. Code is organized into separate **functions**.
 
-4. A WASM binary takes the form of a **module**, that has:
+3. A WASM binary takes the form of a **module**, that has:
 
 - Function: index of functions defined in this module
 - Type: functions signatures defined in thie module

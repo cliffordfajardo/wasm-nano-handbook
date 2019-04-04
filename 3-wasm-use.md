@@ -28,13 +28,17 @@ Usually, one wouldn't write it directly, but instead use another language and th
 4. Deliver existing applications over the web, such as games / 3D Graphics
 5. Others: see wasmer with docker use case + iOT // TBD
 
-## How does it run?? How does memory work??
+## How does it run, How does memory work?
 
 ## Debug
 
 ## Toolchains
 
-Because Wasm is an assembly-like format, it's rather hard to write it directly by hand. Usually,
+Because Wasm is an assembly-like format, it's rather hard to write it directly by hand. Usually, you'd write it in another language and compile it to wasm ahead of time.
+
+What languages can you compile down to wasm?
+As of today, the support is best for languages which memory is managed - understand "managed manually or semi-manually". That is the case of Rust and C++, for which the toolchains are the most mature.  
+But other projects are out there, such as AssemblyScript.
 
 Try them out: https://webassembly.studio/
 
@@ -59,7 +63,7 @@ Sources/resources:
 
 TBD
 
-## A note on dev teams
+## Aside: dev teams
 
 One dot !== one dev, one dot is one _skill unit_ ; e.g. a full-stack dev is one dark grey + one light grey dot.
 
