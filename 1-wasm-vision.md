@@ -16,7 +16,7 @@ _Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/
 
 ## ⚡ TL;DR
 
-Wasm is the result of a concerted approach to improve web performance and build more flexibily for the web. Its features also make it fantastic for use cases outisde the web. It's not here to replace JS - the same way X and Y coexists, JS ans Wasm will help each other (and us) to make the web better.
+Wasm is the result of a concerted approach to improve web performance and build more flexibily for the web. Its features also make it fantastic for use cases outside the web. It's not here to replace JS - the same way X and Y coexists, JS ans Wasm will help each other (and us) to make the web better.
 Wasm is still at an early stage, but it's already available in all major browsers.  
 Think of it like the `fetch` API or `localStorage`: it will soon become part of your toolbox.
 
