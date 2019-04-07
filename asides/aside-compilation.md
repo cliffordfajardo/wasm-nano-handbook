@@ -1,9 +1,7 @@
 # // 🚧WIP
 
 Machines and humans don't speak the same language.
-
-- You write your code in a language you understand.
-- What you wrote needs to be translated at some point into something the machine can understand.
+You write your code in a language you understand. Once your code is ready, it needs to run on a machine. So at some point, What you wrote needs to be translated into something the machine can understand.
 
 Let's have a look at the spectrum of languages, between human and machines, and what they're good for.
 
