@@ -18,7 +18,7 @@ _On how you can use Wasm today, depending on your context._
 ## ⚡ TL;DR
 
 You can use WebAssembly today.  
-Usually, one wouldn't write it directly, but instead use another language and then compile this code down to Wasm.
+You typically wouldn't write it directly ; instead you would write it another language and then compile this code down to Wasm. Rust and C++ are best supported for now, but alternatives such as AssemblyScript are also available. 
 
 ## Usage modes
 
