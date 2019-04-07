@@ -68,7 +68,7 @@ After all, this is at the core of how web apps work. Kind of good to know!
 **To be clear:** you don't _need_ to understand browser internals to use it ; it's just something you get for free if you understand Wasm.
 
 <p align="center">
-<img width="520" src="https://cdn-images-1.medium.com/max/1440/1*ZIH_wjqDfZn6NRKsDi9mvA.png">  
+<img width="380" src="https://cdn-images-1.medium.com/max/1440/1*ZIH_wjqDfZn6NRKsDi9mvA.png">  
   <div align="center"><sub><sup>Chrome V8’s compiler pipeline by @fhinkel - https://medium.com/dailyjs/understanding-v8s-bytecode-317d46c94775</sup></sub></div> 
 </p>
 
