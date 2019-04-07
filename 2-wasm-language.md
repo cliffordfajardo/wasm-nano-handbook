@@ -1,6 +1,8 @@
 # Language // 🚧WIP
 
-_On how Wasm code looks, feels, and executes._  
+_On how Wasm code looks, feels, and executes.
+Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out (TBD add link)._  
+
 _Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md)._
 
 <p align="center">
@@ -12,8 +14,6 @@ _Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/mast
 [2. Wasm is a stack machine](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#wasm-is-a-stack-machine)  
 [3. Two shapes](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#two-shapes)  
 [4. Module](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md#module)
-
-_Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out (TBD add link)._
 
 ---
 
