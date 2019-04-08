@@ -22,6 +22,8 @@ _Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/mast
 Wasm looks very different from JS. What makes it different is also what makes it fast.  
 But you don't need to be able to write Wasm directly to benefit from it.
 
+## Where
+
 ## Wasm is Assembly
 
 💡 [What is Assembly?](https://github.com/maudnals/wasm-nano-handbook/blob/master/asides/aside-languages.md)
@@ -34,16 +36,20 @@ Basics:
 
 // TBD add schema + source.
 
-## WASM is a stack machine
+## Wasm is a stack machine
 
-// TBD add illustration
+Because Wasm is low-level, the way it's represented should be closer to how machines run code. Two commons approaches for this are registers and stack machines.
 
-1. WASM is a **stack machine** language.
+Wasm is a **stack machine** language.
 
-- A **stack** is a LIFO (last in first out) data structure that has two operations: push and pop.
-- A **stack machine** is a stack for which items are instructions, which run and evaluate, and push and pop values on this stack. e.g.: a call stack.
+Wasm implements a stack-machine ; it is a virtual stack and not the program stack. Under the hood, registers will be used.
+
+- A **stack** is a LIFO (last in first out) data structure. It has two operations: push and pop.
+- A **stack machine** is a stack for which items are **instructions**. Each instruction run and evaluate, and push and pop values on this stack. e.g.: a call stack.
 
 Basic stack example:
+
+// TBD add illustration
 
 ```wasm
 i32.const 1 // Add 1 to the stack
@@ -53,26 +59,28 @@ call $log // Push the result onto the stack"
 ```
 
 **What's the point of stack machines?**
-It's a model on how the code will be run.
+It's a model to run your code against.
 
-WASM implements a stack-machine ; it is a virtual stack and not the program stack.
+## Wasm core concepts
 
-1. WASM supports **4 types**.  
-   2 integer types and 2 floating point types.  
-   To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both WASM and JS.
+1. A Wasm implementation will typically be embedded into a **host environment**.  
+   This environment defines how loading modules and import/exports work.
 
-2. Code is organized into separate **functions**.
-
-3. A WASM binary takes the form of a **module**, that has:
+2. A Wasm binary takes the form of a **module**, that has:
 
 - Function: index of functions defined in this module
 - Type: functions signatures defined in thie module
-- Code: tha actual function bodies
+- Code: the actual function bodies
 - Import/export functionalities
 - Can also define a start function that is automatically executed.
 
-5. A WASM implementation will typically be embedded into a **host environment**.  
-   This environment defines how loading of modules and import/exports work.
+3. Code is organized into separate **functions**.
+
+4. Wasm supports **4 types**.
+
+   - 2 integer types
+   - 2 floating point types.  
+     To model strings, one would share the same piece of linear memory ; for example in the web, memory that can be read from and written to from both Wasm and JS.
 
 More:
 
@@ -98,7 +106,7 @@ Good for: network transfer, use by JS engine (which will only need to decode it)
 Opcodes are represented as bytes, e.g.:
 `0x6a` // add operation.
 
-Remember: Assembly code (e.g. WASM) is VM-specific.
+Remember: Assembly code (e.g. Wasm) is VM-specific.
 
 ### Text format: .wat
 
