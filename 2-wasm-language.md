@@ -1,7 +1,7 @@
 # Language // 🚧WIP
 
 _On how Wasm code looks, feels, and executes.
-Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out (TBD add link)._  
+Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out (TBD add link)._
 
 _Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md)._
 
@@ -103,7 +103,9 @@ Remember: Assembly code (e.g. WASM) is VM-specific.
 ### Text format: .wat
 
 .wat is the human-readable form of .wasm. It’s a light syntactic sugar ; the text format and the binary format map almost 1:1.  
-Good for: humans. E.g. source maps (browsers display "wasm" but it reality what you see is "wat")
+Good for: humans.
+
+E.g. source maps (browsers display "wasm" but it reality what you see is "wat")
 
 ```
 (call $log
@@ -114,8 +116,8 @@ Good for: humans. E.g. source maps (browsers display "wasm" but it reality what 
 )
 ```
 
-- Opcodes are represented as mnemonics instead of bytes.
-- S-expressions are used. Code written in s-expressions can be concisely expressed in a tree structure, which is why s-expressions were chosen for WebAssembly’s text format.
+- Code is represented with S-expressions, a format that represents trees well. Note that a Wasm tree is rather flat.
+- Opcodes (= operation codes = the ID of an operation) are represented with mnemonics i.e. human-redable names instead of bytes.
 
 More: https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format
 
@@ -125,6 +127,8 @@ More: https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_tex
 .wat and .wasm both map 1-1 to the abstract syntax tree.
 
 ## Module
+
+A module is Wasm's fundamental unit of code.
 
 A module is the "distributable, loadable, and executable unit of code in WebAssembly" - the packaged version, if you will.
 At runtime, a module can be instantiated with a set of import values to produce an instance.
