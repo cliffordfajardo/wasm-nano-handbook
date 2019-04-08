@@ -36,16 +36,16 @@ Basics:
 
 // TBD add schema + source.
 
-## Wasm is a stack machine
+## Wasm is a stack machine language
 
 Because Wasm is low-level, the way it's represented should be closer to how machines run code. Two commons approaches for this are registers and stack machines.
 
-Wasm is a **stack machine** language.
-
-Wasm implements a stack-machine ; it is a virtual stack and not the program stack. Under the hood, registers will be used.
+Wasm's execution is represented as a **stack machine**.
 
 - A **stack** is a LIFO (last in first out) data structure. It has two operations: push and pop.
-- A **stack machine** is a stack for which items are **instructions**. Each instruction run and evaluate, and push and pop values on this stack. e.g.: a call stack.
+- A **stack machine** is a stack for which items are **instructions**. Each instruction and pushes and pops values to/from this stack. e.g.: a call stack.
+
+But remember: wasm is virtual assembly code. It means that the host environment, e.g. the browser, will compile it to machine code at runtime. So going back to our stack representation: it's just a representation. Under the hood when wasm code is run, registers will be used.
 
 Basic stack example:
 
