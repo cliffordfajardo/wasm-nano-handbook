@@ -96,7 +96,9 @@ Let's decrypt this, one piece after another.
 
 > New
 
-Wasm 1.0 is an MVP, that has shipped in 4 major browser engines in 2018. As mentioned before, the idea behind wasm is not new, though. Wasm is the combined solution of different attempts to solve the same problem.
+Wasm 1.0 is an MVP. As mentioned before, the idea behind wasm is not new, though. Wasm is the combined solution of different attempts to solve the same problem.  
+One thing to keep in mind is that because it's new, it's moving - and rather fast.  
+MDN has fantastic documentation for basic to intermediate cases ; but if you're in the mood to try more experimental things, you'll need to do some reading on how things work.
 
 > Efficient
 
@@ -105,7 +107,7 @@ This implicitely means _in comparison to JS_. Even minified JS is text, whereas 
 > Low-level assembly-like
 
 This simply means that WebAssembly is closer to machine code than a language like JS. That is what makes it fast.  
-Because it's close tp machine code, you typically wouldn't write it by hand. We'll dive deeper into the language in the Language chapter.
+Because it's close to machine code, you typically wouldn't write it by hand. We'll dive deeper into the language in the Language chapter.
 
 > Runs at near-native speed
 
