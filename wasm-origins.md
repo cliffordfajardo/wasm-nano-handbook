@@ -10,7 +10,8 @@ _↠ Up Next: [Vision](https://github.com/maudnals/wasm-nano-handbook/blob/maste
 
 ## ⚡ TL;DR
 
-Wasm is the result of a concerted approach to improve web performance and enable more flexibility for the web - and outside of it.
+Wasm is not the brainchild of one genius web developer hiding in the mountains.  
+It is the result of a concerted approach and of the accumulated knowledge of browser developers.
 
 ## Hard times of Old Web Land
 
