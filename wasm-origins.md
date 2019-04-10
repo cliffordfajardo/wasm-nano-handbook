@@ -1,6 +1,6 @@
 # Wasm: Origins
 
-_On what WebAssembly is, where it comes from, and where it is taking us to._  
+_On how everything began._  
 _↠ Up Next: [Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md)._
 
 <p align="center">
