@@ -18,15 +18,11 @@ _Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/
 
 Wasm is the result of a concerted approach to improve web performance and build more flexibily for the web. Its features also make it fantastic for use cases outside the web. It's not here to replace JS - the same way X and Y coexists, JS ans Wasm will help each other (and us) to make the web better.
 Wasm is still at an early stage, but it's already available in all major browsers.  
-Think of it like the `fetch` API or `localStorage`: it will soon become part of your toolbox.
+Think of it like the `Fetch` API or `localStorage`: it will soon become part of your toolbox.
 
 ## Reasons to care
 
 Wasm is not a new framework. It's a whole new universe
-
-<!-- which you could hesitate to learn because it's just hype.
-It's an actual new tool that's embedded in browsers.
-It's as serious as the new ES6 syntax was, or as any cross-browser feature. -->
 
 ## Origins
 
@@ -34,7 +30,7 @@ It's as serious as the new ES6 syntax was, or as any cross-browser feature. -->
 
 OK, that's overdramatic - The web is great, and JS is great!
 
-But they're not perfect.
+But we can take them to the next level.
 
 When building and running web apps, we must face two significant constraints:
 
@@ -54,49 +50,53 @@ It suddenly makes a lot of sense to break free from these constraints.
  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
+### Build time pain, runtime struggle
+
 Let's take a closer look at how (1) and (2) impact both the developer experience and the user experience.  
 As it turns out, (1) tends to impact DevX while (2) tends to impact UX.
 
 - Web apps can get slow.
 - Some use cases are simply not supported on the web. This is an extension of the previous point: infinitely slow is just not an option.
-- Our CPUs are under stress. Because JS used to run very slowly, browser engines teams have designed advanced optimization techniques to make it run faster, such as JIT (Just-in-Time compiling ; TBD link. Don't worry if you don't know what this is, we'll cover that later). This proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.
+- Our CPUs are under stress. Because JS used to run slowly, browser engines teams have designed advanced optimization techniques to make it run faster. JIT (Just-in-Time compiling) is one such example. Don't worry if you don't know what this is, we'll cover that later. JIT proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.
 - The power of millions (yes, millions) of native developers is not leveraged for the web. Inversely JS devs as of today can't build for truly native performance.
-- No flexibility when writing for the web
-- The JS toolchain is convoluted. There are a ton of tools out there that help us developers deliver JS code that loads and runs as fast as it gets. That is both amazing and overwhelming - it gets difficult to keep up.
+- We lack flexibility when writing for the web: JS is our only choice.
+- The JS toolchain is convoluted. There are numerous of tools out there that help us developers deliver JS code that loads and runs as fast as it gets. That is both amazing and overwhelming - it gets difficult to keep up.
 
 ### Solution
 
-(1) and (2) are not new problems. Different actors and organizations have attempted to solve them in the past. All these approaches were innovative and solved some part of the problem, but none of them really won the game.  
-You think things have always been like today.
+(1) and (2) are not new problems.  
+Different actors have attempted to solve them in the past, by running native(-ish) code in the browser:
 
-Let's have a quick look at them to better understand what makes Wasm special:
+- Browser plugins, such as Flash: Plugins were great in their time. But: they created security issues, couldn't leverage Web APIs, and didn't play out great on mobile.
+- Portable Native Client: PNaCl was developed by Google, and could run code fast. But its architecture was rather complex and it only ran on Chrome.
+- asm.js: Backed my Mozilla, asm was a subset of JS that could be run really fast by Firefox - but not consistently fast. Also, asm was _still_ JS, i.e. a rather inefficient text format. And just like PNaCl, it didn't propagate to other browsers.
 
-- PNcl:
-- browser plugins:
-- p language:
-- asm.js
+(TBD link and details: Alex Danilo on browser plugins, ASM.js, PNaCl, p-code ; google i/o 17 https://www.youtube.com/watch?v=6v4E6oksar0)
 
-Their success was always mitigated: the performance was better, but not consistently better ; or the approach worked but not on all browsers ; or not cross-platforms e.g. not on mobile devices. (TBD link and details: Alex Danilo on browser plugins, ASM.js, PNaCl, p-code ; google i/o 17 https://www.youtube.com/watch?v=6v4E6oksar0)
-
-Luckily, all these approaches have brought us forward: the people and organizations working on them built up a solid experience.
+All these approaches solved some aspect of the problem. But none of them really won.  
+Luckily, they have brought us forward: the people and organizations working on them built up experience.
 
 ### Re:Solution
 
-Later on, they joined forces to think of a sustainable, cross-browsers, cross-platforms solution to (1) and (2): **WebAssembly, or Wasm for short**.
+Later on, they joined forces to think of a safe cross-browsers solution to (1) and (2), that wouldn't suffer from the pitfalls of the previous solutions.
 
-**So, Wasm is born for the web.**
+**WebAssembly** was born.
+
+**So, Wasm was created with the web in mind.**
 
 But in fact, there is way more to it - because it's also a compilation target, **its benefits go way beyond the web**.
 
 ## So, what is Wasm?
 
-**Wasm is a new efficient, low-level assembly-like language / bytecode,** that:  
-(3) runs at at near-native speed [performant](4) on all modern browsers [portable](5) and is a compilation target for a wide range of other languages such as C++ and Rust [portable].
+**Wasm is a new efficient, low-level assembly-like language**. It runs at at near-native speed [performant] on all modern browsers [portable]. It is a compilation target for a wide range of other languages such as C++ and Rust [portable].
+
+OK, that was a mouthful.  
+Let's take these pieces one by one.
 
 Wait, how new?
 Wasm 1.0 is an MVP, that has shipped in 4 major browser engines.
 
-- (5): there is consensu around it. Understand: that is also part of what makes it special.
+- (5): there is consensus around it. Understand: that is also part of what makes it special.
   Other core features:
 
 - (6) safe
@@ -140,10 +140,9 @@ https://webassembly.org/
 
 ## Game changer
 
-Now it's not an overstatement to say that Wasm will change .
-It will change what we build, how we build it, but also who builds it.
+Wasm will change what we build, how we build it, and also who builds it.
 
-Why it will change the world? / Benefits 🚧WIP
+Why that?
 
 1. UX: Wasm will make (the web) faster  
    Native speed  

@@ -58,10 +58,10 @@ Fetching Wasm is faster (less network bandwith because Wasm files are more compa
 
 Parse/Decode:
 
-- The browser must parse JS into an Abstract Syntax Tree then converted into an Immediate Representation (bytecode),
+- The browser must parse JS into an Abstract Syntax Tree then converted into an Immediate Representation (bytecode).
 - Wasm syntax is already an IR/AST.
 
-Compile+ptimize:
+Compile+optimize:
 
 - JS: with JIT, JS is compiled _during_ execution.
 - Wasm:
