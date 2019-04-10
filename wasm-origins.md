@@ -10,8 +10,9 @@ _↠ Up Next: [Vision](https://github.com/maudnals/wasm-nano-handbook/blob/maste
 
 ## ⚡ TL;DR
 
-Wasm is not the brainchild of one genius web developer hiding in the mountains.  
-It is the result of a concerted approach and of the accumulated knowledge of browser developers.
+Wasm aims at helping web perfomance get better, and offering more flexibility when building for the web.
+
+WebAssembly is not the brainchild of one genius web developer hiding in the mountains. Instead, it's the result of combined accumulated knowledge of browser developers - they've observed what worked and what didn't, and combined their efforts to create Wasm.
 
 ## Hard times of Old Web Land
 
