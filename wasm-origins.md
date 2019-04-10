@@ -74,5 +74,5 @@ Later on, they joined forces to think of a safe cross-browsers solution to (1) a
 
 But in fact, there is way more to it - because it's also a compilation target, **its benefits go way beyond the web**.
 
-Let's explore what makes Wasm pwerful.
-Up next: [Wasm: Origins](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md).
+Really? Let's explore what makes Wasm powerful.
+Up next: [Wasm: Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md).
