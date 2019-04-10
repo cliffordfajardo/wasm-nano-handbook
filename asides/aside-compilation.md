@@ -7,7 +7,7 @@ Let's have a look at the spectrum of languages, between human and machines, and 
 
 
 <p align="center">
-<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/spectrum-wasm.jpg">   
+<img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/spectrum-wasm-2.jpg">   
 	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
