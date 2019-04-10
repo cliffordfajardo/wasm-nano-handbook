@@ -1,7 +1,7 @@
 # Language // 🚧WIP
 
 _On how Wasm code looks, feels, and executes.
-Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out (TBD add link)._
+Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out the short primer [Human to Metal](https://github.com/maudnals/wasm-nano-handbook/blob/master/asides/aside-human-to-metal.md)._
 
 _↠ Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-use.md)._
 
