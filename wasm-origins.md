@@ -1,4 +1,4 @@
-# Origins and Vision // 🚧WIP
+# Wasm: Origins
 
 _On what WebAssembly is, where it comes from, and where it is taking us to._  
 _Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md)._
