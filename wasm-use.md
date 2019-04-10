@@ -1,17 +1,17 @@
 # Use case and usage modes today - from a developer's perspective // 🚧WIP
 
 _On how you can use Wasm today, depending on your context._  
- _↠ Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md)_
+ _↠ Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-web.md)_
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">   
  	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
-[1. Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#usage-modes)  
-[2. Toolchains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#toolchains)  
-[3. Mapping: usage modes to toolchains](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#mapping-usage-modes-to-toolchains)  
-[4. A note on dev teams](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md#a-note-on-dev-teams)
+[1. Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-use.md#usage-modes)  
+[2. Toolchains](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-use.md#toolchains)  
+[3. Mapping: usage modes to toolchains](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-use.md#mapping-usage-modes-to-toolchains)  
+[4. A note on dev teams](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-use.md#a-note-on-dev-teams)
 
 ---
 

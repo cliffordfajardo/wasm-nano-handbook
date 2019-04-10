@@ -1,18 +1,18 @@
 # Wasm for the web // 🚧WIP
 
 _On how Wasm runs in the environment that gave life to it._  
-_↠ Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbook/blob/master/5-wasm-ecosystem-and-resources.md)_
+_↠ Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-ecosystem-and-resources.md)_
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">   
   	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
 
-[1. Wasm, JS, and the browser(s)](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-js-and-the-browsers)  
-[2. Wasm is fast, Wasm is fast](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#wasm-is-fast-wasm-is-fast)  
-[3. Under the hood](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#under-the-hood)  
-[4. Recent V8 improvements](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#recent-v8-improvements)  
-[5. Tools for web developers](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md#tools-for-web-developers)
+[1. Wasm, JS, and the browser(s)](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-web.md#wasm-js-and-the-browsers)  
+[2. Wasm is fast, Wasm is fast](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-web.md#wasm-is-fast-wasm-is-fast)  
+[3. Under the hood](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-web.md#under-the-hood)  
+[4. Recent V8 improvements](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-web.md#recent-v8-improvements)  
+[5. Tools for web developers](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-web.md#tools-for-web-developers)
 
 _Before digging into this chapter: if you're a bit rusty on the basics of browsers engines, check out (TBD add link)._
 
