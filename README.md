@@ -10,7 +10,7 @@ And this, in a **time-efficient** way.
 
 **🚧 This is WIP, publication to come (GitBook + blogpost series).**
 
-## Content
+## Contents
 
 #### 0. [Why am I reading this?][why-am-i] **👈Start here**
 
