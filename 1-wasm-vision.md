@@ -88,33 +88,59 @@ But in fact, there is way more to it - because it's also a compilation target, *
 
 ## So, what is Wasm?
 
-**Wasm is a new efficient, low-level assembly-like language**. It runs at at near-native speed [performant] on all modern browsers [portable]. It is a compilation target for a wide range of other languages such as C++ and Rust [portable].
+**WebAssembly is a new efficient, low-level assembly-like language that runs at near-native speed in all modern browsers ; it's debuggable and part of the open web. Wasm can also be used as a compilation target for a wide range of other languages ; it is designed around portability and safety.**
 
-OK, that was a mouthful.  
-Let's take these pieces one by one.
+OK. That was a mouthful.
 
-Wait, how new?
-Wasm 1.0 is an MVP, that has shipped in 4 major browser engines.
+Let's decrypt this, one piece after another.
 
-- (5): there is consensus around it. Understand: that is also part of what makes it special.
-  Other core features:
+> New
 
-- (6) safe
-- (7) debuggable
-- (8) part of the open web.
+Wasm 1.0 is an MVP, that has shipped in 4 major browser engines in 2018. As mentioned before, the idea behind wasm is not new, though. Wasm is the combined solution of different attempts to solve the same problem.
 
-Let's walk through these characteristics, to understand what makes Wasm powerful:
+> Efficient
 
-(3) Efficiency
+This implicitely means _in comparison to JS_. Even minified JS is text, whereas Wasm is a binary format. A binary format is more compact. It takes up less bandwidth (fast travel over the network) and less storage space.
 
-- has bindings that enable that code to access the capabilities of the browser / of JS
+> Low-level assembly-like
+
+This simply means that WebAssembly is closer to machine code than a language like JS. That is what makes it fast.  
+Because it's close tp machine code, you typically wouldn't write it by hand. We'll dive deeper into the language in the Language chapter.
+
+> Runs at near-native speed
+
+Benchmarks have showed that Wasm runs at 1.2x native speed.
+
+> In all 4 major browsers
+
+Chrome, Firefox, Safari and Edge have built-in Wasm support. There is more to this info than it looks. Not only does this mean that you can ship wasm to all these browsers ; it also means that there is _consensus_ around WebAssembly. Wasm is a standard.
+
+> Part of the open web
+
+> “Open web” is a sweeping term — it encompasses technical concepts like open-source code and open standards. But there’s a single underlying principle connecting all these ideas: An open web is a web by and for all its users, not select gatekeepers or governments. (...) we compare the open web to a global public resource, like clean water or the environment.  
+> https://www.yearofopen.org/november-open-perspective-what-is-open-web/what-is-the-open-web-and-why-is-it-important-submitted-by-mark-surman-executive-director-of-the-mozilla-foundation/
+
+Actors from multiple organizations have a say in how Wasm will develop.
+
+> Can be used as a compilation target
+
+Wasm's design makes it easy for many other languages to be compiled _into it_.  
+This widens the entry surface for Wasm code - think of it like English. Many humans speak English - that makes it easier to talk to each other. Some think of Wasm as the way to universal libraries!  
+C++ and Rust offer the best support for wasm today, but there are alternatives. We'll touch on that later.
+
+> designed around safety...
+
+Safety is a big deal on the web. Browsing is essentially allowing your computer to download untrusted code from anywhere in the world, and execute it.  
+The reason your computer and the world haven't burst into radioactive flames yet is called sandboxing. Sandboxing means that your code is run is a close, safe environment. A Wasm application runs inside a sandbox.
+Wasm's security model also protects developers from control flow hijacking, and various memory errors. This is important because languages with a managed memory (understand: manually managed - this is the case of C++ and Wasm) are usually prone to developer errors.
+
+> ... and portability
 
 (4) and (5) Portability
 
-- One of the strengths of Wasm is the **consensus** there is around it.
-- But it's also technically designed for portability.
-
 Wasm could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity.
+
+has bindings that enable that code to access the capabilities of the browser / of JS
 
 https://webassembly.org/docs/non-web/
 
@@ -131,9 +157,6 @@ Because:
   WebAssembly does not specify any APIs or syscalls, only an import mechanism where the set of available imports is defined by the host environment. In a Web environment, functionality is accessed through the Web APIs defined by the Web Platform. Non-Web environments can choose to implement standard Web APIs, standard non-Web APIs (e.g. POSIX), or invent their own.
 
 e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs.
-
-> “Open web” is a sweeping term — it encompasses technical concepts like open-source code and open standards. But there’s a single underlying principle connecting all these ideas: An open web is a web by and for all its users, not select gatekeepers or governments. (...) we compare the open web to a global public resource, like clean water or the environment.  
-> https://www.yearofopen.org/november-open-perspective-what-is-open-web/what-is-the-open-web-and-why-is-it-important-submitted-by-mark-surman-executive-director-of-the-mozilla-foundation/
 
 Sources:  
 https://webassembly.org/
