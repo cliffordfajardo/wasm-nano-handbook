@@ -3,7 +3,7 @@
 _On how Wasm code looks, feels, and executes.
 Before digging into this chapter: if you're a bit rusty on what "machine language" vs. "high-level language" mean, check out (TBD add link)._
 
-_Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md)._
+_↠ Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md)._
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/language.jpg">   

@@ -1,7 +1,7 @@
 # Wasm: Origins
 
 _On what WebAssembly is, where it comes from, and where it is taking us to._  
-_Up Next: [Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md)._
+_↠Up Next: [Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md)._
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
@@ -75,4 +75,5 @@ Later on, they joined forces to think of a safe cross-browsers solution to (1) a
 But in fact, there is way more to it - because it's also a compilation target, **its benefits go way beyond the web**.
 
 Really? Let's explore what makes Wasm powerful.
-Up next: [Wasm: Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md).
+
+↠ Up Next: [Wasm: Vision](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md).
