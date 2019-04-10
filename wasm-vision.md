@@ -1,4 +1,4 @@
-# Wasm: Vision
+# Wasm: Vision // 🚧WIP
 
 _On what WebAssembly is, and where it is taking us to._  
 _↠ Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-language.md)._

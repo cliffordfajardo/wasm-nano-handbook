@@ -17,7 +17,8 @@ A new tool/framework is making headlines.
 2. Keep that tool/framework in mind. You'll come back to it later when/if it has taken off.
 3. It catches your attention. You give it a try, you love it, you adopt it. Until the next best tool comes in, in which case you might go for option 1.
 
-WebAssembly is to this tool/framework what the moon is to a street lamp.  
+WebAssembly is to this tool/framework what the moon is to a street lamp.    
+🌚  
 **They look the same from afar, but really they're not**.
 
 ### Wasm is not just a new hype thing. It is both highly transformative and here to stay.
