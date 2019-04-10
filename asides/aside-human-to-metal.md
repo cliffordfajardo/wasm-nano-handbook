@@ -1,8 +1,10 @@
 # Human to VM, VM to Metal
 
-Machines and humans don't speak the same language.
-You write your code in a language you understand. Once your code is ready it needs to run on a machine.   
-So at some point, your code needs to be translated into something the machine can understand. 
+Machines and humans don't speak the same language:  
+*  You write your code in a language you understand.   
+*  Once your code is ready it needs to run on a machine.    
+
+So at some point in this story, your code needs to be translated into something the machine can understand. 
 
 
 Let's have a look at the spectrum of languages, between human and machines, and what they're good for.    
