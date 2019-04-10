@@ -53,12 +53,14 @@ It suddenly makes a lot of sense to break free from these constraints.
 Let's take a closer look at how (1) and (2) impact both the developer experience and the user experience.  
 As it turns out, (1) tends to impact DevX while (2) tends to impact UX.
 
-- Web apps can get slow.
-- Some use cases are simply not supported on the web. This is an extension of the previous point: infinitely slow is just not an option.
-- Our CPUs are under stress. Because JS used to run slowly, browser engines teams have designed advanced optimization techniques to make it run faster. JIT (Just-in-Time compiling) is one such example. Don't worry if you don't know what this is, we'll cover that later. JIT proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.
-- The power of millions (yes, millions) of native developers is not leveraged for the web. Inversely JS devs as of today can't build for truly native performance.
-- We lack flexibility when writing for the web: JS is our only choice.
-- The JS toolchain is convoluted. There are numerous of tools out there that help us developers deliver JS code that loads and runs as fast as it gets. That is both amazing and overwhelming - it gets difficult to keep up.
+- **Runtime/UX impacts**:
+  - Web apps can get slow.
+  - Some use cases are simply not supported on the web. This is an extension of the previous point: infinitely slow is just not an option.
+  - Our CPUs are under stress. Because JS used to run slowly, browser engines teams have designed advanced optimization techniques to make it run faster. JIT (Just-in-Time compiling) is one such example. Don't worry if you don't know what this is, we'll cover that later. JIT proved very effective: JS today runs manyfold faster that it used too - it was a huge leap. But nothing comes for free. Running JS fast is resource-intensive, especially on smaller devices such as smartphones.
+- **Build time/DevX impacts**: 
+  - The power of millions (yes, millions) of native developers is not leveraged for the web. Inversely JS devs as of today can't build for truly native performance.
+  - We lack flexibility when writing for the web: JS is our only choice.
+  - The JS toolchain is convoluted. There are numerous of tools out there that help us developers deliver JS code that loads and runs as fast as it gets. That is both amazing and overwhelming - it gets difficult to keep up.
 
 ### Solution
 
