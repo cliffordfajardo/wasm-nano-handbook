@@ -20,7 +20,7 @@ Wasm is the result of a concerted approach to improve web performance and enable
 
 Wasm not here to replace JS. JS and Wasm will help each other (and us) make the web better.
 
-Wasm is still at an early stage ; but it's already available in all major browsers. Think of it like the `Fetch` API or `localStorage`: it will soon become part of your toolbox.
+Wasm is still at an early stage, but it's already available in all major browsers.
 
 ## Origins
 
