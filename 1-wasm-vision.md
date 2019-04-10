@@ -136,28 +136,18 @@ Wasm's security model also protects developers from control flow hijacking, and 
 
 > ... and portability
 
-(4) and (5) Portability
+Portability means that Wasm can be run on mutliple browsers, platforms, environments and devices.
 
-Wasm could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity.
+- First, any environment that embeds a JS engine - understand, a browser or node - can already run Wasm code.
+- So Wasm can be run on the web, but it doesn't _need_ a JS VM to run. It has an import/export mechanism that's environment-agnostic. You could import C functions into a wasm module, and export wasm functions back to use them in your C application. Also, the Wasm spec is clear on that point: even if Wasm was primarily built with the web in mind, a wasm module won't _require_ web APIs to run.
+- Wasm's spec is rather small and simple compared to ther formats. This means that implementing support for it is simple.
+- Wasm takes advantage of common hardware capabilities available on a wide range of platforms, including mobile and IoT. Understand: wasm doesn't require a crazy 20-core achitecture ; all it needs to run is what the simplest Rasperry Pi can offer.
 
-has bindings that enable that code to access the capabilities of the browser / of JS
+There are even cross-platform Wasm virtual machine projects, such as Life and wasmer.
+
+You could run wasm in your frontend, your backend, a servers in datacenters, IoT devices, a desktop apps, or even embedded within larger programs. Using Wasm like this, as a portable binary format on many platforms would bring great benefits in portability, tooling and language-agnosticity.
 
 https://webassembly.org/docs/non-web/
-
-(4) and (5)
-Because:
-
-- it runs on the web (JS VM supports Wasm), which is on a lot of platforms
-- Non-Web environments may include JavaScript VMs (e.g. node.js), however WebAssembly is also being designed to be capable of being executed without a JavaScript VM present.
-- it takes advantage of common hardware capabilities available on a wide range of platforms, including mobile and IoT.
-- the plan is to keep non-Web path such that it doesn’t require Web APIs (the core features will be within Wasm itself: certain features that are core to Wasm semantics that are similar to functions found in native libc would be part of the core Wasm spec as primitive operators)
-- because it's closer to machine language (it supports C/C++ level semantics), VMs are easier to implement on multiple platforms
-- There is even a project for a cross-platform Wasm virtual machine: Life is written in Go, built for running computationally heavy code on practically any device you can imagine.
-- its AMI is platform-agnostic:
-  WebAssembly does not specify any APIs or syscalls, only an import mechanism where the set of available imports is defined by the host environment. In a Web environment, functionality is accessed through the Web APIs defined by the Web Platform. Non-Web environments can choose to implement standard Web APIs, standard non-Web APIs (e.g. POSIX), or invent their own.
-
-e.g. on servers in datacenters, on IoT devices, or mobile/desktop apps, or even embedded within larger programs.
-
 Sources:  
 https://webassembly.org/
 
