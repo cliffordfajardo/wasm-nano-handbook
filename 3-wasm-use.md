@@ -1,7 +1,7 @@
 # Use case and usage modes today - from a developer's perspective // 🚧WIP
 
 _On how you can use Wasm today, depending on your context._  
- _↠Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md)_
+ _↠ Up Next: [Wasm for the Web](https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md)_
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/use.jpg">   
@@ -18,7 +18,7 @@ _On how you can use Wasm today, depending on your context._
 ## ⚡ TL;DR
 
 You can use WebAssembly today.  
-You typically wouldn't write it directly ; instead you would write it another language and then compile this code down to Wasm. Rust and C++ are best supported for now, but alternatives such as AssemblyScript are also available. 
+You typically wouldn't write it directly ; instead you would write it another language and then compile this code down to Wasm. Rust and C++ are best supported for now, but alternatives such as AssemblyScript are also available.
 
 ## Usage modes
 

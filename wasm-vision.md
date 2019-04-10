@@ -1,7 +1,7 @@
 # Wasm: Vision
 
 _On what WebAssembly is, and where it is taking us to._  
-_↠Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-language.md)._
+_↠ Up Next: [Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-language.md)._
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/vision.jpg">  
