@@ -13,17 +13,19 @@ And this, in a **time-efficient** way.
 ## Content  
 
 #### 0. [Why am I reading this?][why-am-i] **👈Start here** 
-#### 1. [Origins and Vision][origin-and-vision]  
-#### 2. [The language][language]     
-#### 3. [Using Wasm][use]   
-#### 4. [Wasm in the web][web]   
-#### 5. [Ecosystem][ecosystem]   
-#### 6. [Wasm in real-life][irl]    
-#### 7. [FAQ][faq]   
+#### 1. [Origins][origins]   
+#### 2. [Vision][vision]  
+#### 3. [The language][language]     
+#### 4. [Using Wasm][use]   
+#### 5. [Wasm in the web][web]   
+#### 6. [Ecosystem][ecosystem]   
+#### 7. [Wasm in real-life][irl]    
+#### 8. [FAQ][faq]   
 
-[why-am-i]: https://github.com/maudnals/wasm-nano-handbook/blob/master/0-why-am-i-reading-this.md
-[origin-and-vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/1-wasm-vision.md 
-[language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/2-wasm-language.md
+[why-am-i]: https://github.com/maudnals/wasm-nano-handbook/blob/master/why-am-i-reading-this.md
+[origins]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-origins.md  
+[vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md 
+[language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-language.md
 [use]: https://github.com/maudnals/wasm-nano-handbook/blob/master/3-wasm-use.md
 [web]: https://github.com/maudnals/wasm-nano-handbook/blob/master/4-wasm-web.md
 [ecosystem]: https://github.com/maudnals/wasm-nano-handbook/blob/master/5-wasm-ecosystem-and-resources.md
