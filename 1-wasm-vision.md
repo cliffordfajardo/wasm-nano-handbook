@@ -145,10 +145,6 @@ Portability means that Wasm can be run on mutliple browsers, platforms, environm
 - Wasm's spec is rather small and simple compared to ther formats. This means that implementing support for it is simple.
 - Wasm takes advantage of common hardware capabilities available on a wide range of platforms, including mobile and IoT. Understand: wasm doesn't require a crazy 20-core achitecture ; all it needs to run is what the simplest Rasperry Pi can offer.
 
-There are even cross-platform Wasm virtual machine projects, such as Life and wasmer.
-
-You could run wasm in your frontend, your backend, a servers in datacenters, IoT devices, a desktop apps, or even embedded within larger programs. Using Wasm like this, as a portable binary format on many platforms would bring great benefits in portability, tooling and language-agnosticity.
-
 https://webassembly.org/docs/non-web/
 Sources:  
 https://webassembly.org/
@@ -180,6 +176,9 @@ Why that?
    Developer experience: no more tower of Babel
 
 4. More
+
+There are even cross-platform Wasm virtual machine projects, such as Life and wasmer.
+You could run wasm in your frontend, your backend, a servers in datacenters, IoT devices, a desktop apps, or even embedded within larger programs. Using Wasm like this, as a portable binary format on many platforms would bring great benefits in portability, tooling and language-agnosticity.
 
 ## Use cases
 
