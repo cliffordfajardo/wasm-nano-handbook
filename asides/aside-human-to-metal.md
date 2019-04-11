@@ -1,20 +1,18 @@
 # Human to VM, VM to Metal // 🚧WIP
 
-Machines and humans don't speak the same language:  
-*  You write your code in a language you understand.   
-*  Once your code is ready it needs to run on a machine.    
+Machines and humans don't speak the same language:
 
-So at some point in this story, your code needs to be translated into something the machine can understand. 
+- You write your code in a language you understand.
+- Once your code is ready it needs to run on a machine.
 
+So at some point in this story, your code needs to be translated into something the machine can understand.
 
-Let's have a look at the spectrum of languages, between human and machines, and what they're good for.    
-
+Let's have a look at the spectrum of languages, between human and machines, and what they're good for.
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/spectrum-wasm-2.jpg">   
 	<div align="center"><sub><sup>©maudnals</sup></sub></div> 
 </p>
-
 
 ## Human to metal
 
@@ -90,7 +88,7 @@ Example:
 - Java bytecode, that targets a VM
 - ARM assembly
 
-`A* name$i`  
+`A* name$i`
 
 ## "Timing is everything"
 
