@@ -10,9 +10,10 @@ _↠ Up Next: [Vision](https://github.com/maudnals/wasm-nano-handbook/blob/maste
 
 ## ⚡ TL;DR
 
-Wasm aims at helping web perfomance get better, and offering more flexibility when building for the web.
 
-WebAssembly is not the brainchild of one genius web developer hiding in the mountains. Instead, it's the result of combined accumulated knowledge of browser developers - they've observed what worked and what didn't, and combined their efforts to create Wasm.
+WebAssembly (Wasm for short) will help us developers take web performance to the next level, while offering us more flexibility when we build for the web.
+
+Wasm is not the brainchild of one genius developer hiding far in the mountains. Instead, it's the result of combined accumulated knowledge of browser developers - they've observed what worked and what didn't, and combined their efforts to create Wasm.
 
 ## Hard times of Old Web Land
 
