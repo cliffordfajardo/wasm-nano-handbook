@@ -21,7 +21,7 @@ OK, that's overdramatic - The web is great, and JS is great!
 
 But we can take them to the next level.
 
-When building and running web apps, we must face two significant constraints:
+When building and running web apps, we face two major constraints:
 
 - (1) Browsers, one of the most ubiquitous pieces of software, can only be targeted with **one single language**: JavaScript. Or so was it, until recently.
 - (2) JS loads and runs **slower** than native code.
