@@ -13,7 +13,7 @@ _↠ Up Next: [Vision](https://github.com/maudnals/wasm-nano-handbook/blob/maste
 
 WebAssembly (Wasm for short) will help us developers take web performance to the next level, while offering us more flexibility when we build for the web.
 
-Wasm is not the brainchild of one genius developer hiding far in the mountains. Instead, it's the result of combined accumulated knowledge of browser developers - they've observed what worked and what didn't, and combined their efforts to create Wasm.
+Wasm is a great example of what can happen when we "stand on the shoulders of giants". Browser developers have observed what worked and what didn't, and combined their efforts to create Wasm.
 
 ## Hard times of Old Web Land
 
