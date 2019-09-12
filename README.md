@@ -1,4 +1,4 @@
-# wasm-nano-handbook
+# wasm-web-nano-handbook
 
 WebAssembly (wasm for short) is a large, ever-expanding territory to explore.  
 This handbook aims at helping web developers and their peers:
