@@ -114,3 +114,7 @@ You could run wasm in your frontend, your backend, a servers in datacenters, IoT
 - web: Accelerate hot code portions of ordinary JavaScript apps
 - web/others: you'll be consuming compiled binaries
 - web/others: Develop in your language of choice (for example .NET or Java).
+
+
+## Future
+Link to specs
