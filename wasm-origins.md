@@ -41,7 +41,7 @@ It suddenly makes a lot of sense to break free from these constraints.
 
 ## Build time pain, runtime struggle
 
-Let's take a closer look at how these constraints impact us.  
+Let's take a closer look at how the constraints mentioned above (numbered 1) and 2)) impact us.  
 As it turns out, (1) tends to impact DevX while (2) tends to impact UX.
 
 - **Runtime/UX impacts**:
