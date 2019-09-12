@@ -22,8 +22,6 @@ _↠ Up Next: [Usage modes](https://github.com/maudnals/wasm-nano-handbook/blob/
 Wasm looks very different from JS. What makes it different is also what makes it fast.  
 But you don't need to be able to write Wasm directly to benefit from it.
 
-## Where
-
 ## Wasm is Assembly
 
 💡 [What is Assembly?](https://github.com/maudnals/wasm-nano-handbook/blob/master/asides/aside-languages.md)
@@ -34,7 +32,7 @@ Basics:
 - Assembly code normally depends on the machine type But when delivering code on a user's machine across the web, we don't know what the target architecture will be. So, Wasm is a special assembly: **it's a machine language for a VM**.
 - Wasm is a rather simple kind of Assembly.
 
-// TBD add schema + source.
+// TBD +++++ add schema + source.
 
 ## Wasm is a stack machine language
 
