@@ -18,26 +18,20 @@ And this, in a **time-efficient** way.
 
 #### 2. [Vision][vision]
 
-#### 3. [The language][language]
+#### 3. [Wasm in the web][web]
 
 #### 4. [Using Wasm][use]
 
-#### 5. [Wasm in the web][web]
+#### 5. Your turn!
 
-#### 6. [Ecosystem][ecosystem]
-
-#### 7. [Wasm in real-life][irl]
-
-#### 8. [FAQ][faq]
+#### 6. [FAQ][faq]
 
 [why-am-i]: https://github.com/maudnals/wasm-nano-handbook/blob/master/why-am-i-reading-this.md
 [origins]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-origins.md
 [vision]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-vision.md
-[language]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-language.md
 [use]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-use.md
 [web]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-web.md
-[ecosystem]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-ecosystem-and-resources.md
-[irl]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-irl.md
+[live]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-live.md
 [faq]: https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-disambiguations-and-faq.md
 
 ## DNA

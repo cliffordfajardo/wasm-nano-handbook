@@ -12,8 +12,6 @@
 - It is still early stage: no native strings nor exception handling ; these can be emulated within the basic Wasm but the resulting code is slow. Also, interop between for example JS and Wasm is still complex (calling functions is easy, but it’s the types to send back and forth that is the challenge)
   https://www.i-programmer.info/news/98-languages/10563-webassembly-is-ready-for-use.html
 
-_↠ Up Next: [The Language](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-language.md)_
-
 ### Future of Wasm 🚧WIP
 
 ### Future

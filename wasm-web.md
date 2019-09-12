@@ -1,7 +1,7 @@
 # Wasm for the web // 🚧WIP
 
 _On how Wasm runs in the environment that gave life to it._  
-_↠ Up Next: [Ecosystem and Resources](https://github.com/maudnals/wasm-nano-handbook/blob/master/wasm-ecosystem-and-resources.md)_
+_↠ Up Next:_
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/web.jpg">   
@@ -30,6 +30,12 @@ Before we dig deeper into the details of how browsers run Wasm, let's clarify:
 ## Wasm is fast, Wasm is fast
 
 TBD add sources
+* basics about the language + why it can run fast
+* benchmarks (it's really faster only when hot portions)
+* Basic concepts: it's assembly, it has modules, it has only 4 types, it has 2 shapes (wasm and whar) ,+ touch on memory management
+More about the language: see aside language (## Wasm core concepts)
+
+WHY is it fast???? ---> todo add my diagram 
 
 ### A grain of salt
 
@@ -89,6 +95,8 @@ GC:
 ## Under the hood
 
 ### How the browser deals with WASM modules / how WASM runs on the web
+
+++++ todo add diagrams with v8 etc
 
 - Wasm is shipped as a module (`.wasm`) (tbd link to section on modules). Just like a JS module, it has sections within it that export and import functions.
 - The Wasm module can be loaded in JS, and the Wasm code can be invoked from JS.
