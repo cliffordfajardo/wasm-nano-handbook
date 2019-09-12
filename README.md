@@ -1,10 +1,10 @@
 # wasm-nano-handbook
 
-Wasm is a large, ever-expanding territory to explore.  
+WebAssembly (wasm for short) is a large, ever-expanding territory to explore.  
 This handbook aims at helping web developers and their peers:
 
 - **Understand** Wasm, its ecosystem and its future // theory
-- **Use** it today // practice
+- **Try** it today // practice
 
 And this, in a **time-efficient** way.
 
