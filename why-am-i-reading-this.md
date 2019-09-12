@@ -21,7 +21,7 @@ WebAssembly is to this tool/framework what the moon is to a street lamp.
 🌚  
 **They look the same from afar, but really they're not**.
 
-### Wasm is not just a new hype thing. It is both highly transformative and here to stay.
+### Wasm is not just a new hype thing. Much more likely, it is both highly transformative and here to stay.
 
 How is that?
 
@@ -30,9 +30,9 @@ How is that?
 WebAssembly (Wasm for short) is a flexible technology that doesn't make assumptions about where it runs. You could use it in a wide variety of environments.
 
 Luckily, some environments have already taken care of integrating it.  
-And these environments are ubiquitous: Wasm is supported in **all four major browsers** (Chrome, Edge, Firefox, and WebKit/Safari). This means it's **already usable almost everywhere**.
+And these environments happen to be ubiquitous: Wasm is supported in **all four major browsers** (Chrome, Edge, Firefox, and WebKit/Safari). This means it's **already usable almost everywhere**.
 
-Besides, it's part of the web platform. Browser APIs for WebAssembly are like the Fetch API or the Web Workers API. They're standards. Standards are solid.
+Besides, it's part of the web platform. Browser APIs for WebAssembly are like the Fetch API or the Web Workers API. They're standards. 
 
 Last but not least: the WebAssembly Community Group is backed by w3c and its members represent four browsers. You'd have guessed that Wasm is not going extinct anytime soon - quite the contrary, this is just the start.
 
