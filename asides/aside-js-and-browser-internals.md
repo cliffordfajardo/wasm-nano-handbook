@@ -124,15 +124,15 @@ Let’s take the example of V8, which is chrome’s browser engine.
   * No. That’s where the optimizing compiler comes in. The optimimizing compiler is called Turbofan in v8. Turbofan transforms hot codes into actually super efficient machine code. Maybe you’ve heard about JIT compiling (just in time) - that’s what it is. So, Ignition (baseline compiler) starts fast but runs code slowly, and Turbofan (optimizing compiler) takes longer to generate code but can run it really fast.
 
 NB:
-    * Note that there this is not sequential, this happens by chunks: run, observe, optimize, run... Optimization relies on assumptions on the types of your JS objects. Assumptions can be wrong! optimize/deoptimize cycles
-    * One more thing that also takes time (although it’s on another thread): GC
-    * Before V8 and others, JS was only interpreted (= managed by interpreter). That was slow. From 2012 on, browsers have been implementing new JS engines to COMPILE some portions of code; it speeded JS up. Most browsers today do high-performance, optimized JIT (just-in-time) compiling.
-    * In v8 there’s a new, dedicated component that takes care of wasm. It’s called LiftOff, a streaming compiler. LiftOff generates wasm code as soon as it receives it. Then your code can be executed. Additionally, if your wasm code is hot, it will be passed to Turbofan for optimization, just like for JS.
+
+* Note that there this is not sequential, this happens by chunks: run, observe, optimize, run... Optimization relies on assumptions on the types of your JS objects. Assumptions can be wrong! optimize/deoptimize cycles
+* One more thing that also takes time (although it’s on another thread): GC
+* Before V8 and others, JS was only interpreted (= managed by interpreter). That was slow. From 2012 on, browsers have been implementing new JS engines to COMPILE some portions of code; it speeded JS up. Most browsers today do high-performance, optimized JIT (just-in-time) compiling.
+* In v8 there’s a new, dedicated component that takes care of wasm. It’s called LiftOff, a streaming compiler. LiftOff generates wasm code as soon as it receives it. Then your code can be executed. Additionally, if your wasm code is hot, it will be passed to Turbofan for optimization, just like for JS.
 
 Sources:
 https://v8.dev/
 https://stackoverflow.com/questions/21571709/difference-between-machine-language-binary-code-and-a-binary-file
-
 
 <p align="center">
 <img width="820" src="https://user-images.githubusercontent.com/9762897/72212473-287e3d00-34dd-11ea-9141-95aa4264f9da.png">  
@@ -190,7 +190,7 @@ _(User hit enter)_
 
 The network thread takes care of the connection.
 
-- In order for my computer to connect with the server that hosts maps.google.com, I need the IP address of maps.google.com. DNS(Domain Name System) is a DB that maintains the name of the website (URL) and the particular IP address it links to. Every single URL on the internet has a unique IP address assigned to it. The IP address belongs to the computer which hosts the server of the website we are requesting to access. For an example, www.google.com has an IP address of 209.85.227.104. DNS is a list of URLs and their IP addresses just like how a phone book is a list of names and their corresponding phone numbers. So:
+- In order for my computer to connect with the server that hosts maps.google.com, I need the IP address of maps.google.com. DNS (Domain Name System) is a DB that maintains the name of the website (URL) and the particular IP address it links to. Every single URL on the internet has a unique IP address assigned to it. The IP address belongs to the computer which hosts the server of the website we are requesting to access. For an example, www.google.com has an IP address of 209.85.227.104. DNS is a list of URLs and their IP addresses just like how a phone book is a list of names and their corresponding phone numbers. So:
 
   - check the cache for a DNS record to find the corresponding IP address of maps.google.com: Browser Cache, OS cache, router cache, ISP cache.
   - If the requested URL is not in the cache, ISP’s DNS server (=DNS Recursor) initiates a DNS query to find the IP address of the server that hosts maps.google.com. The purpose of a DNS query is to search multiple DNS servers on the internet until it finds the correct IP address for the website.
@@ -213,9 +213,9 @@ Once the response body (payload) starts to come in, the network thread looks at 
 
 The response's Content-Type header should say what type of data it is, but since it may be missing or wrong, MIME Type sniffing is done here.
 
-Also some security checks.
+Some security checks take place.
 
-If the response is an HTML file, then the next step would be to pass the data to the renderer process, but if it is a zip file or some other file then that means it is a download request so they need to pass the data to download manager.
+If the response is an HTML file, then the next step would be to pass the data to the renderer process. But if it is a zip file or some other file then that means it is a download request so they need to pass the data to download manager.
 
 _(Once all of the checks are done and Network thread is confident that browser should navigate to the requested site, the Network thread tells UI thread that the data is ready.)_
 
@@ -264,31 +264,24 @@ Fix: In an optimal case, you drop JS all together for the initial rendering of t
 * CSS:
 
   - is RENDER blocking because needed for the CSSOM.
-  - CSSOM blocks JS execution ie is SCRIPT blocking. Because: JS might ask for an element’s color. So the CSSOM has to be present before the script can be run. CSS is therefore also SCRIPT blocking.
+  - is SCRIPT blocking. Because: JS might ask for an element’s color. So the CSSOM must be present before the script can be run.
 
     Fix: get it to the client as soon and as quickly as possible to optimize the time to first render. Make sure all the CSS link tags are in the head of your HTML code so the browser can dispatch the requests immediately. Another strategy is to lower the amount of render blocking CSS with media queries.
 
 Other fix: minimize the Bytes that Go Down the Network: minify, compress, cache
 
-Script types:
-See https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html +++
+Script types (! not working for inline scripts) (See https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html):
 
-async (! not working for inline scripts)
-the browser should, if possible, load the script asynchronously.
-Browsers usually assume the worst case scenario and load scripts synchronously, (i.e. async="false") during HTML parsing.
+* Async: the browser loads the script asynchronously (browsers usually assume the worst case scenario and load scripts synchronously during HTML parsing)
+* Defer: the browser executes the script after the document has been parsed, but before firing `DOMContentLoaded`.
+Scripts with the defer attribute will execute in the order in which they appear in the document.
 
-defer (! not working for inline scripts)
-the script is meant to be executed after the document has been parsed, but before firing DOMContentLoaded.
-Scripts with the defer attribute will prevent the DOMContentLoaded event from firing until the script has loaded and finished evaluating.
-This attribute must not be used if the src attribute is absent (i.e. for inline scripts), in this case it would have no effect.
-To achieve a similar effect for dynamically inserted scripts use async="false" instead. Scripts with the defer attribute will execute in the order in which they appear in the document.
-
-Src:
+Source:
 https://www.sitepoint.com/optimizing-critical-rendering-path/
 https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css
 
 RequestAnimationFrame:  
-Requests an callback (whatever it is, but obvisouly we use it for animations) to be called just before a render (+ layout + paint) event.
+Requests an callback (whatever it is, but obviously we use it for animations) to be called just before a render (+ layout + paint) event.
 https://flaviocopes.com/requestanimationframe/
 
 #### 9. Initial load complete
