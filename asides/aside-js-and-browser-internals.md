@@ -34,7 +34,7 @@ So far JS was the only language that could be run by browsers; it was mostly des
 Wait. Can a webpage run at hardware-native speed?
 Yes, With WASM.
 
-source: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
+Source: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
 
 ## Architecture
 
@@ -68,7 +68,7 @@ NB: Chrome initially used the WebKit rendering engine but forked in 2013 to crea
 
 ## JS and the engine
 
-## Where did JS come from?
+### Where did JS come from?
 
 JS is the language of the web. It's a high-level language run in single thread in in non-blocking, asynchrony-enabling environements.
 
@@ -95,9 +95,12 @@ JS engine = a VM than can run JS.
 
 ### About V8
 
-V8 = JS (and Wasm) engine.
+V8 is Google's JS and Wasm engine.
+It's open source and written in C++.
 
-V8 is used in chrome and other embedders such as node and electron. Other chromium based browsers such as Opera and soon Edge are built on top of v8.
+V8 is used in Chrome and other embedders such as Node.js and Electron. Other chromium based browsers such as Opera and soon Edge are built on top of v8.
+V8 can run standalone or embedded into any C++ application.
+
 
 V8 has:
 
@@ -106,12 +109,15 @@ V8 has:
 
 ### How the JS engine runs JS code
 
-You as a human, write JS code, and at some point later in time it will be executed on a user’s machine. What you wrote is called high-level, and what the machine/CPU runs is called low-level. So if you just ship JS to the user’s machine and it runs, it means something must happen in between, right? Well, that’s the job of your browser engine / virtual machine: it will take care of execution and translation.
+You as a human write JS code, that's high-level. At some point later in time, your code needs to be executed on a user’s machine. But the machine/CPU doesn't understand high-level language, it needs low-level instead. So if you just ship JS to the user’s machine and it runs, something must happen in between, right? Well, that’s the job of your JS engine that's in your browser: it will take care of execution and translation.
+The JS ENGINE (=COMPILER) is a program that takes human-readable source code, in our case JS, and from it generates machine-readable instructions (= MACHINE code = NATIVE code) for your computer.
+"Compiling" in the browser context implicitely means "compiling to MACHINE CODE".
+
 So, how exactly does that work?
 
-Your browser contains a JS engine. Let’s take the example of V8, which is chrome’s browser engine.
+Let’s take the example of V8, which is chrome’s browser engine.
 
-* When receiving JS code, the engine will first parse this code and transform it in a less human-readable but more structured representation: the abstract syntax tree.
+* When receiving JS code, the engine first parses the code and transform it in a less human-readable but more structured representation: the abstract syntax tree (AST).
 * Then, two things might happen:
   * Either your code is translated line by line into some code that is close to machine code, and then executed as such. That’s the job of Ignition = the baseline compiler = the interpreter. But the machine code generated line by line from the bytecode is not optimized. So what if some portion of your code is run over and over again (like the React diffing algo; such code is called "hot" because it;'s run again)? then we’re running over and over some code that is not really optimized?
   * No. That’s where the optimizing compiler comes in. The optimimizing compiler is called Turbofan in v8. Turbofan transforms hot codes into actually super efficient machine code. Maybe you’ve heard about JIT compiling (just in time) - that’s what it is. So, Ignition (baseline compiler) starts fast but runs code slowly, and Turbofan (optimizing compiler) takes longer to generate code but can run it really fast.
@@ -119,8 +125,12 @@ Your browser contains a JS engine. Let’s take the example of V8, which is chro
 NB:
     * Note that there this is not sequential, this happens by chunks: run, observe, optimize, run... Optimization relies on assumptions on the types of your JS objects. Assumptions can be wrong! optimize/deoptimize cycles
     * One more thing that also takes time (although it’s on another thread): GC
-    * Engines used to have only interpreters; optimizing compilers came to web browsers around 2012 and really improved speed.
+    * Before V8 and others, JS was only interpreted (= managed by interpreter). That was slow. From 2012 on, browsers have been implementing new JS engines to COMPILE some portions of code; it speeded JS up. Most browsers today do high-performance, optimized JIT (just-in-time) compiling.
     * In v8 there’s a new, dedicated component that takes care of wasm. It’s called LiftOff, a streaming compiler. LiftOff generates wasm code as soon as it receives it. Then your code can be executed. Additionally, if your wasm code is hot, it will be passed to Turbofan for optimization, just like for JS.
+
+Sources:
+https://v8.dev/
+https://stackoverflow.com/questions/21571709/difference-between-machine-language-binary-code-and-a-binary-file
 
 
 <p align="center">
@@ -141,42 +151,24 @@ NB:
 Sources:
 
 * https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/
-* https://softwareengineeringdaily.com/2018/09/26/javascript-engines-with-mathias-bynens/ 
+* ++++++ https://softwareengineeringdaily.com/2018/09/26/javascript-engines-with-mathias-bynens/ 
 
 ## Processes
 
-https://developers.google.com/web/updates/2018/09/inside-browser-part1
-// TBD insert diagrams
+Chrome is special because it has one process per tab.
 
-## Zoom on performance and sizes
-
-170kB
-
-## Prerequisite: main building blocks of a browser
-
-When a browser receives JS code, it needs to execute it.
-But JS is a high-level language, that the computer doesn't understand as is.
-
-Need for a JS ENGINE (also referred to as a COMPILER): a program that takes human-readable source code (in our case JS), and from it generates machine-readable instructions (= MACHINE code = NATIVE code) for your computer.
-"Compiling" in the browser context implicitely means "compiling to MACHINE CODE".
-
-In the past:
-Before V8 and other compilers, Javascript was interpreted (= dealt with by interpreter). That was slow.
-
-Now:
-From 2012 on, browsers have been implementing new Javascript engines, trying to COMPILE some portions of code, to speed JS up. Most browsers today do high-performance, optimized JIT (just-in-time) compiling.
-
-For example, V8 is Google’s open source high-perf JavaScript and WebAssembly engine. It's written in C++ and implements ECMAScript and WebAssembly. V8 can run standalone or embedded into any C++ application ; it's used in Google Chrome, Node.js and others.
+<p align="center">
+<img width="520" src="ttps://user-images.githubusercontent.com/9762897/72212586-f372ea00-34de-11ea-9f42-a51a93e5fc10.png">  
+  <div align="center"><sub><sup>Mariko Kosaka https://developers.google.com/web/updates/2018/09/inside-browser-part1</sup></sub></div>
+</p>
 
 Sources:
-https://v8.dev/
-https://stackoverflow.com/questions/21571709/difference-between-machine-language-binary-code-and-a-binary-file
+
+* ++++++ https://developers.google.com/web/updates/2018/09/inside-browser-part1
+* ++++++ https://softwareengineeringdaily.com/2018/06/28/chrome-and-chromium-with-david-bokan/
 
 
 ## URL to interactive
-
-<img src="https://cdn-images-1.medium.com/max/2600/1*PiFyb7IV8vTDCGEeUOWLVQ.jpeg"/>  
-Source: https://medium.com/@francesco_rizzi/javascript-main-thread-dissected-43c85fce7e23
 
 https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a and https://developers.google.com/web/updates/2018/09/inside-browser-part2
 
@@ -258,7 +250,7 @@ https://developers.google.com/web/fundamentals/performance/critical-rendering-pa
 
 (https://developers.google.com/web/fundamentals/performance/critical-rendering-path/images/analysis-dom-css-js-async.png)
 
-is script is async: the only blocking thing now is the CSS
+if script is async: the only blocking thing now is the CSS
 
 - JS blocks DOM construction ie is PARSER blocking. Because: it can both change the DOM and CSSOM, so the parser has to stop its work until the script is fully executed.
 
@@ -276,19 +268,6 @@ Fix: In an optimal case, you drop JS all together for the initial rendering of t
     Fix: get it to the client as soon and as quickly as possible to optimize the time to first render. Make sure all the CSS link tags are in the head of your HTML code so the browser can dispatch the requests immediately. Another strategy is to lower the amount of render blocking CSS with media queries.
 
 Other fix: minimize the Bytes that Go Down the Network: minify, compress, cache
-
-DOM events:
-
-- DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. Synchronous JavaScript pauses parsing of the DOM. If you want the DOM to get parsed as fast as possible after the user has requested the page, you can make your JavaScript asynchronous and optimize loading of stylesheets. If loaded as usual, stylesheets slow down DOM parsing as they're loaded in parallel, "stealing" traffic from the main HTML document.
-- load: should be used only to detect a fully-loaded page. Emitted when a resource and its dependent resources have finished loading.
-
-Other APIs:
-
-- Is it happening? First Paint (FP) / First Contentful Paint (FCP)
-- Is it useful? First Meaningful Paint (FMP)
-- Is it usable? Time to Interactive (TTI)
-
-https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics
 
 Script types:
 See https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html +++
@@ -317,6 +296,23 @@ Once the renderer process "finishes" rendering, it sends an IPC back to the brow
 
 I say "finishes", because client side JavaScript could still load additional resources and render new views after this point.
 
+## Zoom on performance
+
+170kB
+
+### DOM events
+
+* `DOMContentLoaded` fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. Synchronous JavaScript pauses parsing of the DOM. If you want the DOM to get parsed as fast as possible after the user has requested the page, you can make your JavaScript asynchronous and optimize loading of stylesheets. If loaded as usual, stylesheets slow down DOM parsing as they're loaded in parallel, "stealing" traffic from the main HTML document.
+* `load` fires when a resource and its dependent resources have finished loading. Should be used only to detect a fully-loaded page.
+
+### APIs
+
+* Is it happening? First Paint (FP) / First Contentful Paint (FCP)
+* Is it useful? First Meaningful Paint (FMP)
+* Is it usable? Time to Interactive (TTI)
+
+https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics
+
 ## Questions
 
 * What happens when I run C code on my computer? And rust code? and JS code? what's compiled, what's not, what uses a vm?
@@ -334,3 +330,6 @@ Rendering path
 - ! requestAnimation frame
 multiple renderer process
 running JavaScript is the main thread's job
+
+<img src="https://cdn-images-1.medium.com/max/2600/1*PiFyb7IV8vTDCGEeUOWLVQ.jpeg"/>  
+Source: https://medium.com/@francesco_rizzi/javascript-main-thread-dissected-43c85fce7e23
