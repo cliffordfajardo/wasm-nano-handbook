@@ -98,7 +98,8 @@ JS engine = a VM than can run JS.
 V8 is Google's JS and Wasm engine.
 It's open source and written in C++.
 
-V8 is used in Chrome and other embedders such as Node.js and Electron. Other chromium based browsers such as Opera and soon Edge are built on top of v8.
+V8 is used in Chrome and other chromium-based browsers such as Opera and soon Edge.
+V8 is also used in other embedders such as Node.js and Electron. 
 V8 can run standalone or embedded into any C++ application.
 
 
