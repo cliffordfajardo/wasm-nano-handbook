@@ -145,7 +145,7 @@ https://stackoverflow.com/questions/21571709/difference-between-machine-language
 </p>
 
 <p align="center">
-<img width="320" src="https://user-images.githubusercontent.com/9762897/72212507-e275a900-34dd-11ea-8e44-cfcfe9986950.png">  
+<img width="280" src="https://user-images.githubusercontent.com/9762897/72212507-e275a900-34dd-11ea-8e44-cfcfe9986950.png">  
   <div align="center"><sub><sup>WASM run steps - Lin Clark https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/</sup></sub></div> 
 </p>
 
