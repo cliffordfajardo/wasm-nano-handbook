@@ -24,7 +24,7 @@ It's **thread-specific** and operates in LIFO. When a new thread is started by a
 
 * Very fast access (it's a stack: the place to access new data is always the top);
 * No explicit deallocation needed (when a function exits its variables are popped off the stack);
-* Efficient space management by the CPU
+* Efficient space management by the CPU.
 
 ❌ Drawbacks:
 
@@ -59,30 +59,30 @@ NB: In order to quickly find heap-data when doing operations, a pointer to it is
 
 ## V8 and memory
 
+V8 has a heap and a stack.
 JS' ECMA-262 standard does not define memory layout, so whatever V8 uses depends on how the interpreter is implemented.
 
-JS is a garbage-collected language; this means that there is data scattered around which has to be cleaned up. Does that sound like the data is stored on the stack? Rather... no, because the stack has strictly ordered data.
-So, in V8 variables are allocated on the heap.
+JS is garbage-collected: there is data scattered around which has to be cleaned up. Does that sound like the data is stored on the stack? No, because the stack has strictly ordered data.
 
-The most direct way to find out how V8 handles things so is to take a look at the actual source code (hooray for opensource!). In order to find out the basic data type, I used the NodeJS unofficial V8 reference, and looked up how to pass a Boolean value around inside V8. In order to do so, a class called "Boolean" is used. Whenever I use a boolean value, that class is instantiated. Well, basically that's C++ land. C++, like C, stores data structures on the heap and only works with pointers to it in the stack. So, whenever V8 has to allocate a new variable, it allocates a structure holding the data plus additional information on the heap (so much for the answer to your original question). What's interesting is what the optimizer does later on, because if a variable is always used as a boolean, it might as well drop the structure and use it as a boolean on the stack, which would bring us to system-performance without all that soft abstraction stuff on top.
+**So, in V8 variables are allocated on the heap.**
+V8's C++ **STORES data structures on the HEAP** and **works with pointers to it in the STACK**.
 
-TBD
+What's interesting is what the optimizer does later on: if a variable is always used as a boolean, it might as well drop the structure and use it as a boolean on the stack.
+
+The stack for storing objects is the same as the runtime call stack. It records where in the program we are, keeps track of execution contexts (stack frames). If we step into a function we push a new frame onto the stack, if we return we pop off it. In V8 there's just ONE stack because one thread => one call stack.
+
+One stack frame = all the data for one function call (gets popped off the stack when the function returns) =
+
+* parameters e.g. pointers to the heap;
+* local variables including stack-allocated objects;
+* return address: which code to run after the function returns.
 
 V8 has:
 
-* A (call) stack // It records where in the program we are, keeps track of execution contexts (stack frames). If we step into a function we push a new frame onto the stack, if we return we pop off it. In V8 there's just one stack because one thread => one call stack.
-* A heap // for memory allocation. If the stack has stuff on it, it's stuck. We don't want that, that freezes the UI.
+* A (call) stack // to keep track of the execution contexts, and potentially stores variables that the optimizer knows are always of the same type;
+* A heap // to allocate memory. Because if the stack has to much stuff on it, it's stuck and that freezes the UI, we don't want that.
 
-
-The stack and heap concept stem from the early days of processors when memory was more or less statically allocated and the stack was typically accessed using a fast 1 opcode instruction as opposed to 3-4 opcodes for a heap or direct memory access. Modern CPU architectures work differently and don't really make a huge difference between stacks and heaps. As long as there is no cache-miss, performance difference should be minor if not negligible. In reality it comes down to how good or bad the the VM is at realtime optimisation and memory management.
-
-JS allocates everything on the heap in order to run GC on the memory regions easily.
-
-Heap has to be garbage-collected
-
-
-
-The simple answer is: Heap. But it doesn't really matter because:
+Note it doesn't really matter because:
 
 JS is a dynamic language and as such memory allocation happens dynamically.
 JS has loose typing which generally makes it less useful to keep data on the stack. I'm sure the VM uses the stack when it sees fit though.
