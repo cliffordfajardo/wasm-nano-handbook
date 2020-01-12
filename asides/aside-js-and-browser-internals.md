@@ -1,93 +1,170 @@
-# How browsers run web applications    
-
+# How browsers work
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/wasm-nano-handbook/master/img/angle.jpg">  
   <div align="center"><sub><sup>©maudnals</sup></sub></div> 
-</p>   
+</p>
 
-
-
-
-Between the moment you type a URL in your browser and the time the page is displayed and usable, a lot is going on.  
-You might have heard the expression "URL to interactive" - it refers to all these steps that happen after you enter a new URL.  
+Between the moment you type a URL in your browser and the moment the page is displayed and usable, a lot is going on.  
+You might have heard the expression "URL to interactive" - it refers to all these steps that happen after you enter a URL.  
 But once you're using the web app, there is _still_ a lot going on: rendering, JS execution, etc. And what if you open a new tab? And what happens if there are a lot of UI animations?
 
 Many excellent resources detail the different steps of URL to interactive, but I was always missing an overview. To get a holistic view of how browsers run web apps, we need to look at this from **multiple angles**. Each of them represents a specific aspect of the reality.  
 
-Let's go! 
+Let's go!
 
-* The processes angle   
-* The browser engine angle    
-* The rendering path angle  
-* Sumup: "URL to interactive"
+* The architecture lens
+* JS and the engine lens (which browser uses what etc.)
+* The rendering path lens
+* The processes lens
+* Sumup: URL to interactive
 
-network, application processes and threads, rendering...
-moment you open your browser
-they tend to focus on one topic, eluding the others.  
+## Prerequisite: a short browser history
 
+* 1995: /index.html = static HTML content
+* 2005: /index.php = dynamic content generated from server-side code
+* TODAY: /api/v1/todos = semi-raw data in a browser-understandable format
 
-to look at this:   
-
-So let's have a look at how browsers work under s
-
-
-JS and browsers internals.   
-There are a couple of angles under which look at this:  
-
-
-
-Let'
-
-## Performance - sizes
-
-TBD
-
-## A short browser history
-
-- 1995: /index.html = static HTML content
-- 2005: /index.php = dynamic content generated from server-side code
-- TODAY: /api/v1/todos = semi-raw data in a browser-understandable format
-
-So far JS was the only language that could be run by browsers ; it was mostly designed for user interactions, but now we can build fully-fledged apps with it
+So far JS was the only language that could be run by browsers; it was mostly designed for user interactions, but now we can build fully-fledged apps with it.
 --> How to make it faster?
 
-- use a framework
-- precompile: TypeScript, Dart
+* Use a framework
+* Precompile: TypeScript, Dart
 
 Wait. Can a webpage run at hardware-native speed?
 Yes, With WASM.
 
 source: https://fosdem.org/2019/schedule/event/the_state_of_webassembly_in_2019/
 
-## Where did JavaScript come from?
+## Architecture
 
-Prior to JS, the web was a very static place: If you wanted to create interactivity in the browser, it involved a round-trip to the server.
+### Building blocks of a browser
 
+1. Transform HTML and other resources of a web page into an interactive visual representation on a user's device
+
+* Rendering engine = layout engine = browser engine, provided by the browser
+NB: In addition to layout and rendering, a browser engine enforces the security policy between documents, handles navigation through hyperlinks and data submitted through forms, and implements the Document Object Model (DOM) data structure.
+
+2. Run JS and use Web APIs
+
+* JS engine e.g. V8 for chrome, this includes garbage collection
+* Event loop, provided by the browser (aka it's not in V8!)
+* Callback queue, provided by the browser (aka it's not in V8!)
+* Web APIs: DOM, ajax, setTimeOut... coming from the environment
+
+3. Others
+
+* Networking, Data and other logics
+
+NB: JS was originally created for use in browsers, but it is now used elsewhere too. So the implementation of JS engines is decoupled from browser engines. The two engines work in concert via the shared DOM data structure.
+
+### Different browsers, different engines
+
+* Chrome (and its open source sibling Chromium): V8 + Blink
+* Edge: soon V8 + Blink
+* Firefox: SpiderMonkey + Gecko
+* Safari: Nitro + WebKit
+NB: Chrome initially used the WebKit rendering engine but forked in 2013 to create their own, Blink. V8 is the JS engine that's used both in node and the browser. In node, the event loop is provided by libuv.
+
+## JS and the engine
+
+## Where did JS come from?
+
+JS is the language of the web. It's a high-level language run in single thread in in non-blocking, asynchrony-enabling environements.
+
+Prior to JS, the web was a very static place: iif you wanted to create interactivity in the browser, it involved a round-trip to the server.
 JS was designed to support a modest amount of interactivity client-side, such as form validation.
-
-So JS was developed in a short space of time, and everyone knows it’s a bit of a quirky language. Browser makers spend a lot of time testing to make sure changes don’t break existing websites.
-
+So in 1995, Brendan Eich developed JS for Netscape in a short time.
 No one expected it to become as fundamental as it has become.
+JS has become a runaway success:
 
-JS has become a runaway success - not just within the browser, but extensively on the mobile or smart watches. You can run JavaScript programs anywhere.
-JS is now very mature - it’s evolving at a rapid space. When new language features come along, transpilers can be used to backport those features into older versions of JavaScript.
+* All browsers can run JS
+* This went much further: engines are now embedded in many other types of host software, JS is also used in the backend. You can run JS programs anywhere like on smart watches.
+
+Everyone knows JS started off as a bit of a quirky language. Browser makers spend a lot of time testing to make sure changes don’t break existing websites.
+JS is now very mature - it’s evolving at a rapid space. When new language features come along, transpilers can be used to backport those features into older versions of JS.
+
+JS is high-level which means it’s human readable - surely methods like “filter” or “fetch” are understandable in human language. 
+It’s dynamically typed which makes it very flexible.
+
+### Terminology
+
+Runtime = VM = everything needed for the code to run.
+An engine is a type of VM.
+JS engine = a VM than can run JS.
+
+### About V8
+
+V8 = JS (and Wasm) engine.
+
+V8 is used in chrome and other embedders such as node and electron. Other chromium based browsers such as Opera and soon Edge are built on top of v8.
+
+V8 has:
+
+* A (call) stack // It records where in the program we are, keeps track of execution contexts (stack frames). If we step into a function we push a new frame onto the stack, if we return we pop off it. In V8 there's just one stack because one thread => one call stack.
+* A heap // for memory allocation. If the stack has stuff on it, it's stuck. We don't want that, that freezes the UI.
+
+### How the JS engine runs JS code
+
+You as a human, write JS code, and at some point later in time it will be executed on a user’s machine. What you wrote is called high-level, and what the machine/CPU runs is called low-level. So if you just ship JS to the user’s machine and it runs, it means something must happen in between, right? Well, that’s the job of your browser engine / virtual machine: it will take care of execution and translation.
+So, how exactly does that work?
+
+Your browser contains a JS engine. Let’s take the example of V8, which is chrome’s browser engine.
+
+* When receiving JS code, the engine will first parse this code and transform it in a less human-readable but more structured representation: the abstract syntax tree.
+* Then, two things might happen:
+  * Either your code is translated line by line into some code that is close to machine code, and then executed as such. That’s the job of Ignition = the baseline compiler = the interpreter. But the machine code generated line by line from the bytecode is not optimized. So what if some portion of your code is run over and over again (like the React diffing algo; such code is called "hot" because it;'s run again)? then we’re running over and over some code that is not really optimized?
+  * No. That’s where the optimizing compiler comes in. The optimimizing compiler is called Turbofan in v8. Turbofan transforms hot codes into actually super efficient machine code. Maybe you’ve heard about JIT compiling (just in time) - that’s what it is. So, Ignition (baseline compiler) starts fast but runs code slowly, and Turbofan (optimizing compiler) takes longer to generate code but can run it really fast.
+
+NB:
+    * Note that there this is not sequential, this happens by chunks: run, observe, optimize, run... Optimization relies on assumptions on the types of your JS objects. Assumptions can be wrong! optimize/deoptimize cycles
+    * One more thing that also takes time (although it’s on another thread): GC
+    * Engines used to have only interpreters; optimizing compilers came to web browsers around 2012 and really improved speed.
+    * In v8 there’s a new, dedicated component that takes care of wasm. It’s called LiftOff, a streaming compiler. LiftOff generates wasm code as soon as it receives it. Then your code can be executed. Additionally, if your wasm code is hot, it will be passed to Turbofan for optimization, just like for JS.
+
+
+<p align="center">
+<img width="520" src="https://user-images.githubusercontent.com/9762897/72212473-287e3d00-34dd-11ea-9141-95aa4264f9da.png">  
+  <div align="center"><sub><sup>©maudnals</sup></sub></div> 
+</p>
+
+<p align="center">
+<img width="520" src="https://user-images.githubusercontent.com/9762897/72212505-e0134f00-34dd-11ea-9c7c-82e58adbad9f.png">  
+  <div align="center"><sub><sup>JS run steps - Lin Clark https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/</sup></sub></div> 
+</p>
+
+<p align="center">
+<img width="520" src="https://user-images.githubusercontent.com/9762897/72212507-e275a900-34dd-11ea-8e44-cfcfe9986950.png">  
+  <div align="center"><sub><sup>WASM run steps - Lin Clark https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/</sup></sub></div> 
+</p>
+
+Sources:
+
+* https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/
+* https://softwareengineeringdaily.com/2018/09/26/javascript-engines-with-mathias-bynens/ 
+
+## Processes
+
+https://developers.google.com/web/updates/2018/09/inside-browser-part1
+// TBD insert diagrams
+
+## Zoom on performance and sizes
+
+170kB
 
 ## Prerequisite: main building blocks of a browser
-
-what happens at runtime? what gets loaded onto the browser, what gets executed, and by what????
 
 When a browser receives JS code, it needs to execute it.
 But JS is a high-level language, that the computer doesn't understand as is.
 
-Need for a JS ENGINE (also referred to as a COMPILER): a program that takes human-readable source code (in our case JavaScript), and from it generates machine-readable instructions (= MACHINE code = NATIVE code) for your computer.
+Need for a JS ENGINE (also referred to as a COMPILER): a program that takes human-readable source code (in our case JS), and from it generates machine-readable instructions (= MACHINE code = NATIVE code) for your computer.
 "Compiling" in the browser context implicitely means "compiling to MACHINE CODE".
 
 In the past:
 Before V8 and other compilers, Javascript was interpreted (= dealt with by interpreter). That was slow.
 
 Now:
-From 2012 on, browsers have been implementing new Javascript engines, trying to COMPILE some portions of code, to speed Javascript up. Most browsers today do high-perf, optimized JIT (just-in-time) compiling.
+From 2012 on, browsers have been implementing new Javascript engines, trying to COMPILE some portions of code, to speed JS up. Most browsers today do high-performance, optimized JIT (just-in-time) compiling.
 
 For example, V8 is Google’s open source high-perf JavaScript and WebAssembly engine. It's written in C++ and implements ECMAScript and WebAssembly. V8 can run standalone or embedded into any C++ application ; it's used in Google Chrome, Node.js and others.
 
@@ -95,55 +172,8 @@ Sources:
 https://v8.dev/
 https://stackoverflow.com/questions/21571709/difference-between-machine-language-binary-code-and-a-binary-file
 
-### Disambiguation: engine vs VM
 
-An engine, like V8, is a type of VM.
-A runtime is a VM ; i.e. everything needed for the code to run.
-
-- What happens when I run C code on my computer? And rust code? and JS code? what's compiled, what's not, what uses a vm?
--
-
-### Zoom: what an engine does
-
-Actually, an engine is more than just a compiler. Hdere's what it does.
-
-With JS code:
-
-With webassembly code:
-
-## JS
-
-JS is a non-blocking single-threaded language.
-It's run in non-blocking, asynchrony-enabling environements.
-
-## How browsers work
-
-### The inner workings of a browser lens: Building blocks:
-
-- JS engine = V8 = chrome's runtime = node's runtime <-- that's the part we're interested in.  
-  V8 has a (call) stack (for execution contexts, where the stack frames are - just one because one thread => one call stack. It records where in the program we are. If we step into a function we push, if we return we pop off.) and a heap (for memory allocation). If the stask has stuff on it, it's stuck. We don't want that, that freezes the UI.
-
-- event loop: provided by the browser
-- callback queue: provided by the browser
-- web APIs: DOM, ajax, setTimeOut...
-
-see https://www.youtube.com/watch?v=8aGhZQkoFbQ 3:36 and 12:57 for diagrams
-
-NB: V8 is the engine that's used both in node and the browser. In node, the event loop is provided by libuv.
-
-### The architecture lens
-
-rendering engine, memory, UI etc
-// TBD diagrams
-
-### The thread lens: Threads and processes
-
-https://developers.google.com/web/updates/2018/09/inside-browser-part1
-
-// TBD diagrams
-
-### URL to interactive
-
+## URL to interactive
 
 <img src="https://cdn-images-1.medium.com/max/2600/1*PiFyb7IV8vTDCGEeUOWLVQ.jpeg"/>  
 Source: https://medium.com/@francesco_rizzi/javascript-main-thread-dissected-43c85fce7e23
@@ -287,17 +317,20 @@ Once the renderer process "finishes" rendering, it sends an IPC back to the brow
 
 I say "finishes", because client side JavaScript could still load additional resources and render new views after this point.
 
-### How V8 works
+## Questions
 
+* What happens when I run C code on my computer? And rust code? and JS code? what's compiled, what's not, what uses a vm?
+* What happens at runtime? what gets loaded onto the browser, what gets executed, and by what?
+
+## Notes
+
+TBD insert my diagrams and sources
+See https://www.youtube.com/watch?v=8aGhZQkoFbQ 3:36 and 12:57 for diagrams
 https://cdn-images-1.medium.com/max/1200/1*ZIH_wjqDfZn6NRKsDi9mvA.png
 also see Lin Clark's talk
-
-### Runtime
+Whats the main thread in there?
 
 Rendering path
-
 - ! requestAnimation frame
-
 multiple renderer process
-
 running JavaScript is the main thread's job
