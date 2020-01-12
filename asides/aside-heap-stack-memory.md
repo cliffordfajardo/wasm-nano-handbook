@@ -13,7 +13,7 @@ Both the stack and the heap are regions in the RAM (where the computer stores va
 ### Stack
 
 <p align="center">
-<img width="520" src="https://images-na.ssl-images-amazon.com/images/I/71Ap7cgEglL._SX466_.jpg">  
+<img width="220" src="https://images-na.ssl-images-amazon.com/images/I/71Ap7cgEglL._SX466_.jpg">  
   <div align="center"><sub><sup>Stack</sup></sub></div>
 </p>
 
@@ -37,7 +37,7 @@ It's **thread-specific** and operates in LIFO. When a new thread is started by a
 ### Heap
 
 <p align="center">
-<img width="520" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjksYLht_7mAhUMCxoKHejACUEQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.masterfile.com%2Fsearch%2Fen%2Fpaper%2Bdump&psig=AOvVaw26zqku0CtE08UZGMOTYFNR&ust=1578931332460627">  
+<img width="220" src="https://image1.masterfile.com/getImage/700-00934468em-bundles-of-recycling.jpg">  
   <div align="center"><sub><sup>Heap</sup></sub></div>
 </p>
 
