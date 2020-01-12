@@ -158,7 +158,7 @@ Sources:
 Chrome is special because it has one process per tab.
 
 <p align="center">
-<img width="520" src="ttps://user-images.githubusercontent.com/9762897/72212586-f372ea00-34de-11ea-9f42-a51a93e5fc10.png">  
+<img width="520" src="https://user-images.githubusercontent.com/9762897/72212586-f372ea00-34de-11ea-9f42-a51a93e5fc10.png">  
   <div align="center"><sub><sup>Mariko Kosaka https://developers.google.com/web/updates/2018/09/inside-browser-part1</sup></sub></div>
 </p>
 
